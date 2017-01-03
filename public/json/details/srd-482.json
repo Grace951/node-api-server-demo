@@ -1,0 +1,80 @@
+{
+  "id": "srd-482",
+  "images": [
+    "/img/products/srd-482-2.jpg",
+    "/img/products/srd-482-1.jpg"
+  ],
+  "docs": [
+      {"desc": "SRD-482_140822.pdf", "size": 249, "filetype": "pdf", "src":"/docs/spec.pdf"},
+      {"desc": "User_Manual-SRD-482-Eng-0820.pdf", "size": 36420, "filetype": "pdf", "src":"/docs/spec.pdf"}
+  ],
+  "name": "SRD-482 (4ch)",
+  "brand": "Samsung",
+
+
+  "description": ["Real-time, 4CH@2M",
+                  "HDMI / VGA video output",
+                  "4CH audio inputs / 1CH audio output",
+                  "Max. 2 internal HDDs",
+                  "Smart searching, Tampering support",
+                  "Smart phone support (Android / iOS)",
+                  "Enhanced Network Bandwidth up to 64Mbp"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SRD-482"},
+        { "name": "Brand", "details": "Samsung"},
+        { "name": "Consumption", "details": "Max. 25.2W (With 1x HDD)"},
+        { "name": "Working Temperature", "details": "+0°C ~ +40°C (+32°F ~ +104°F)"},
+        { "name": "Working Humidity", "details": "20% ~ 85% RH"},
+        { "name": "Dimension mm (WxDxH)", "details": "370.0 x 319.4 x 44.0mm"},
+        { "name": "Weight (with HDD)", "details": "Approx. 2.64Kg (5.82 lb)"}
+      ]
+    },
+    { "name": "Video",
+      "members": [
+        { "name": "Video Input", "details": "4 HD-SDI SMPTE292M"},
+        { "name": "Compression", "details": "H.264"}
+      ]
+    },
+    { "name": "Audio",
+      "members": [
+        { "name": "Audio Input", "details": "4CH line in "},
+        { "name": "Audio Output", "details": "1CH line out"}
+      ]
+    },
+    { "name": "Display",
+      "members": [
+        { "name": "VGA Output", "details": "1 VGA (1280 x 720, 1280 x 1024, 1920 x 1080)"},
+        { "name": "BNC Output", "details": "No"},
+        { "name": "HDMI Output", "details": "1 HDMI (1280 x 720, 1280 x 1024, 1920 x 1080)"}
+      ]
+    },
+    { "name": "Recording",
+      "members": [
+        { "name": "Frame Rate", "details": "NTSC : Up to 120fps@1920 x 1080 / PAL : Up to 100fps@1920 x 1080 <br>NTSC : Up to 120fps@1280 x 720  / PAL : Up to 100fps@1280 x 720 "}
+      ]
+    },
+    { "name": "Playback",
+      "members": [
+        { "name": "Fast forward / backward", "details": "(2x, 4x, 8x, 16x, 32x, 64x) *Backward play with i-frame only"},
+        { "name": "Slow forward / backward", "details": "(1/2x, 1/4x, 1/8x)"}
+      ]
+    },
+    { "name": "Hard Disk",
+      "members": [
+        { "name": "internal HDD", "details": "Up to 2 SATA HDDs"},
+        { "name": "external (e-SATA interface)", "details": "Up to 2 expansion bays (*Model : SVS-5R/5E) "}
+      ]
+    },
+    { "name": "External Interface",
+      "members": [
+        { "name": "Network Interface", "details": "1 RJ-45 10/100/1000 Base-T"},
+        { "name": "Serial Interface", "details": "RS-232/RS-485 (Full duplex) for PTZ, Samsung system keyboard"},
+        { "name": "USB", "details": "USB 2.0, 2 ports "},
+        { "name": "eSATA", "details": "2 External SATA ports"}
+      ]
+    }
+  ]
+}

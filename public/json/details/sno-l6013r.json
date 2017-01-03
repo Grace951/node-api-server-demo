@@ -1,0 +1,116 @@
+{
+  "id": "sno-l6013r",
+  "images": [
+    "/img/products/sno-l6013r.png",
+    "/img/products/sno-l6013r-1.png"
+  ],
+  "docs": [
+      {"desc": "SNO-6011R_Specifications.pdf", "size": 182, "filetype": "pdf", "src":"/docs/spec.pdf"},
+      {"desc": "SNO-6011R_UserManual.pdf", "size": 19068, "filetype": "pdf", "src":"/docs/spec.pdf"}
+  ],
+  "name": "SND-L6083R",
+  "brand": "Samsung",
+  "description": ["Max 2M (1920 x 1080), Full HD(1080p) resolution",
+                  "60fps @ 1920 x 1080",
+                  "Min.Illumination 0Lux (IR Distance 30m)",
+                  "Enhanced WDR (100dB)/ 30fps @2MP WDR",
+                  "Built-in 3~ 8.5mm(2.8x) Motorized Varifocal lens",
+                  "H.264 & MJPEG dual codec",
+                  "Multi-crop streaming; Face/Motion/Audio Detection",
+                  "UPnP (Auto Port Forwarding), Simple Focus, Defog, DIS support",
+                  "Day & Night(ICR), SD/SDHC/SDXC Memory slot",
+                  "IP66, IK10 Grade, PoE supports"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SND-L6083R"},
+        { "name": "Brand", "details": "Samsung"},
+        { "name": "Color / Material", "details": "Dark gray / Aluminum"},
+        { "name": "Dimensions(WxHxD) ", "details": "82.4 x 82.4 x 312.6mm (3.24” x 3.24” x 12.31”) (Without sunshield)"},
+        { "name": "Weight", "details": "1.19Kg (2.62 lb) (With sunshield)"},
+        { "name": "Opearating Temperature", "details": "24V AC : -50°C ~ +55°C (-58°F ~ +131°F)<br>12V DC, PoE :  -20°C ~ +55°C (-4°F ~ +131°F) <br>*Start up should be done at above -10°C (+14°F)"},
+        { "name": "Opearating Humidity", "details": "Less than 90% RH"},
+        { "name": "Storage Temperature", "details": "-30°C ~ +60°C (-22°F ~ +140°F)"},
+        { "name": "ingress Protection", "details": "IP66"},
+        { "name": "Vandal Resistance", "details": "IK10"}
+      ]
+    },
+    { "name": "Video",
+      "members": [
+        { "name": "imaging device", "details": "1/2.8” 2.38M CMOS (IMX136)"},
+        { "name": "Total Pixels", "details": "1,952(H) x 1,116(V)"},
+        { "name": "Effective Pixels", "details": "1,944(H) x 1,104(V)"},
+        { "name": "Scanning System", "details": "Progressive"},
+        { "name": "Min. Illumination", "details": "Color : 0.1Lux (1/30sec, F1.2, 50IRE), 0.0017Lux (2sec, F1.2, 50IRE), 0.03Lux (F1.2, 30IRE)<br>B/W : 0Lux (IR LED on), 0Lux (F1.2, 30IRE, IR LED on)"},
+        { "name": "S / N Ratio", "details": " 50dB"},
+        { "name": "Video Output", "details": "CVBS : 1.0 Vpp / 75Ω composite, 704 x 480(N), 704 x 576(P), for installation<br>DIP connector type"}
+      ]
+    },
+    { "name": "Lens",
+      "members": [
+        { "name": "Focal Length (Zoom Ratio)", "details": "3.8mm fixed "},
+        { "name": "Max. Aperture Ratio", "details": "F2.0"},
+        { "name": "Angular Field of View", "details": "H : 84.5° / V : 45.8° / D : 98.8°"},
+        { "name": "Min. Object Distance", "details": "0.5m (1.64ft)"},
+        { "name": "Focus Control", "details": "Manual"},
+        { "name": "Lens / Mount Type", "details": "DC auto iris / Board-in type"}
+      ]
+    },
+    { "name": "Operational",
+      "members": [
+        { "name": "IR Led ", "details": "20ea"},
+        { "name": "Viewable Length", "details": "30m (98.43ft)"},
+        { "name": "Camera Title", "details": "Off / On (Displayed up to 45 characters) "},
+        { "name": "Day & Night", "details": "Auto (ICR) / Color / B/W / External / Schedule"},
+        { "name": "Backlight Compensation", "details": "Off / BLC"},
+        { "name": "Wide Dynamic Range", "details": "120dB"},
+        { "name": "Contrast Enhancement", "details": "SSDR (Samsung Super Dynamic Range) (Off / On)"},
+        { "name": "Digital Noise Reduction", "details": "SSNR III  (2D+3D noise filter) (Off / On) "},
+        { "name": "Digital Image Stabilization", "details": "Off / On"},
+        { "name": "Defog ", "details": "Off / Auto / Manual"},
+        { "name": "Motion Detection", "details": "Off / On (4ea 4 points polygonal zones)"},
+        { "name": "Privacy Mask", "details": "Off / On (32 zones with 4 points of polygonal)"},
+        { "name": "Gain Control", "details": "Off / Low / Middle / High "},
+        { "name": "White Balance", "details": "ATW / AWC / Manual / Indoor / Outdoor"},
+        { "name": "Electronic Shutter Speed", "details": "Minimum / Maximum / Anti flicker"},
+        { "name": "Flip / Mirror", "details":"Off / On"},
+        { "name": "Intelligent Video Analytics ", "details": "Tampering, Virtual line, Enter / Exit, (Dis)Appear, Audio detection, Face detection "},
+        { "name": "Alarm I/O ", "details": "Input 1ea / Output 1ea"},
+        { "name": "Alarm Triggers", "details": "Motion detection, Tampering, Audio detection, Face detection, Video analytics, Network disconnection, Alarm input"},
+        { "name": "Alarm Events", "details": "File upload via FTP and E-mail, Notification via E-mail, Local storage (SD/SDHC/SDXC) or NAS recording at Event (Alarm triggers), External output"}
+      ]
+    },
+    { "name": "Network",
+      "members": [
+        { "name": "Ethernet", "details": "RJ-45 (10/100BASE-T)"},
+        { "name": "Video Compression Format", "details": "H.264 (MPEG-4 part 10/AVC), MJPEG"},
+        { "name": "Resolution", "details": "1920 x 1080, 1600 x 1200, 1280 x 1024, 1280 x 960, 1280 x 720, 1024 x 768, 800 x 600, 800 x 450, 640 x 480, 320 x 240, 320 x 180"},
+        { "name": "Max. Framerate", "details": "H.264 : Max. 30fps at all resolutions <br> MJPEG : 1920 x 1080, 1600 x 1200, 1280 x 1024, 1280 x 960, 1280 x 720, 1024 x 768 : Max. 15fps <br>800 x 600, 800 x 450, 640 x 480, 640 x 360, 320 x 240, 320 x 180 : Max.30fps"},
+        { "name": "Video Quality Adjustment", "details": "H.264 : Compression level, Target bitrate level control, MJPEG : Quality level control"},
+        { "name": "Bitrate Control Method", "details": "H.264 : CBR or VBR, MJPEG : VBR"},
+        { "name": "Streaming Capability", "details": "Multiple streaming (Up to 10 profiles)"},
+        { "name": "Audio in", "details":  "Selectable (Mic in / Line in), Max output level : 1 Vrms <br>Supply voltage : 2.5V DC (4mA), Input impedance : approx. 2K Ohm"},
+        { "name": "Audio out", "details":  "Line out (3.5mm stereo mini jack)"},
+        { "name": "Audio Compression Format", "details":  "G.711 u-law/G.726 selectable, G.726 (ADPCM) 8KHz, G.711 8KHz <br>G.726 : 16Kbps, 24Kbps, 32Kbps, 40Kbps"},
+        { "name": "Audio Communication", "details":  "Bi-directional audio"},
+        { "name": "IP", "details":  "IPv4, IPv6"},
+        { "name": "Protocol", "details":  "TCP/IP, UDP/IP, RTP(UDP), RTP(TCP), RTCP,RTSP, NTP, HTTP, HTTPS, SSL, DHCP, PPPoE, FTP, SMTP, ICMP, IGMP, SNMPv1/v2c/v3(MIB-2), ARP, DNS, DDNS, QoS, PIM-SM, UPnP, Bonjour "},
+        { "name": "Security", "details": "HTTPS(SSL) login authentication, Digest login authentication <br>IP address filtering, User access log, 802.1x authentication"},
+        { "name": "Streaming Method", "details":"Unicast / Multicast"},
+        { "name": "Max. User Access", "details": "15 users at unicast mode"},
+        { "name": "Edge Storage", "details": "micro SD/SDHC/SDXC <br>Motion images recorded in the SDXC/SDHC/SD memory card can be downloaded"},
+        { "name": "Application Programming Interface", "details": "ONVIF profile S, HTTP API (SUNAPI) 2.0, SVNP 1.2"},
+        { "name": "Webpage Language", "details": "English, French, German, Spanish, Italian, Chinese, Korean, Russian, Japanese, Swedish, Danish, Portuguese, Turkish, Polish, Czech, Rumanian, Serbian, Dutch, Croatian, Hungarian, Greek, Norwegian, Finnish"},
+        { "name": "Web Viewer", "details": "Supported OS : Windows XP / VISTA / 7 / 8 / 8.1, MAC OS X 10.7<br>Supported Browser :  Microsoft Internet Explorer (Ver. 11 ~ 8)<br>Mozilla Firefox (Ver. 19 ~9)  * Windows only <br>Google Chrome (Ver. 25 ~ 15)  * Windows only <br>Apple Safari (Ver. 6.0.2(Mac OS X 10.8, 10.7 only), 5.1.7)  * Mac OS X only"},
+        { "name": "Central Management Software", "details": "SmartViewer"}
+      ]
+    },
+    { "name": "Electrical",
+      "members": [
+        { "name": "Input Voltage / Current", "details": "12V DC, 24V AC, PoE (IEEE802.3af)"},
+        { "name": "Power Consumption", "details": "Max. 11.0W (Heater off), Max. 17.0W (24V AC - Heater on)"}
+      ]
+    }
+  ]
+}

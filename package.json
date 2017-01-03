@@ -1,0 +1,32 @@
+{
+  "name": "node-api-server-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grace951/node-api-server-demo.git"
+  },
+  "dependencies": {
+    "axios": "^0.15.2",
+    "babel-polyfill": "^6.16.0",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.5",
+    "es6-promise": "^4.0.5",
+    "express": "^4.14.0",
+    "fs-extra": "^1.0.0",
+    "http-proxy": "^1.16.2",
+    "object-assign": "^4.1.0",
+    "open": "0.0.5",
+  },  
+  "author": "Ching-Ching Yeh <learningg@gmail.com> (https://github.com/Grace951)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Grace951/node-api-server-demo/issues"
+  },
+  "homepage": "https://github.com/Grace951/node-api-server-demo#readme"
+}

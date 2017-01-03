@@ -1,0 +1,70 @@
+{
+  "id": "kce-cvdtit6636v",
+  "images": [
+    "/img/products/kce-cvdtit6636v.png"
+  ],
+  "docs": [
+      {"desc": "CVDTIT6636V.pdf", "size": 169, "filetype": "pdf", "src":"/docs/spec.pdf"}
+  ],
+  "name": "KCE-CVDTIT6636V",
+  "brand": "KCE",
+  "description": ["Full HD 1080P Video Output",
+                  "HD-TVI Technology, 2.8 ~ 12mm Vari-Focal Lens",
+                  "24pcs IR LEDs Day & Night",
+                  "3 Axis, DC12V only",
+                  "Up to 300m via Coaxial Cable or TVI Cat-5e Balun ",
+                  "P68 Rated, Vandal Resistant",
+                  "ICR Filter Change Function",
+                  "Built in OSD Controller & 2nd BNC Connector",
+                  "Warranty- 24 months"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "KCE-CVDTIT6636V"},
+        { "name": "Brand", "details": "KCE"},
+        { "name": "Weather Proof", "details": "IP68"},
+        { "name": "Working Temperature", "details": "-10ºC~ +50ºC/-20ºC~ +60ºC"},
+        { "name": "Working Humidity", "details": "MAX 90% RH"},
+        { "name": "Storage Temperature", "details": "-20ºC~ +0ºC/-20ºC~ +60ºC"},
+        { "name": "Storage Humidity", "details": "MAX 90% RH"}
+      ]
+    },
+    { "name": "Camera",
+      "members": [
+        { "name": "Image Sensor", "details": "1/2.7” 2.1Megapixel CMOS Image Sensor"},
+        { "name": "Effective Pixels", "details": "1920 (H) x 1080 (V)"},
+        { "name": "Signal System", "details": "Progressive"},
+        { "name": "Horizontal Resolution", "details": "1080P"},
+        { "name": "Video Output", "details": "TVI"},
+        { "name": "S / N Ratio", "details": "More than 50dB"},
+        { "name": "Min. Illumination", "details": "0.2Lux (F1.2)"},
+        { "name": "IRIS Adjustment", "details": "ESC"},
+        { "name": "Lens", "details": "2.8~12mm VARIFOCAL LENS (ICR)"},
+        { "name": "Electronic Shutter", "details": "AUTO(1/30~1/10,000)/FLK"},
+        { "name": "OSD Menu", "details": "Yes"},
+        { "name": "OSD Language", "details": "ENG / CHN"},
+        { "name": "Blacklight Compensation", "details": "Off / BLC / HSBLC"},
+        { "name": "Day & Night", "details": "COLOR / B&W / AUTO / EXT"},
+        { "name": "D-WDR", "details": "-"},
+        { "name": "Auto Gain Control", "details": "AUTO (1~5 Adj.)"},
+        { "name": "White Balance", "details": "AUTO/USER/PUSH/8000K/6000K/4200K/3200K/HOLD"},
+        { "name": "Privacy Mask", "details": "On / Off"},
+        { "name": "DNR", "details": "ON"},
+        { "name": "Smart IR", "details": "-"},
+        { "name": "LSC", "details": "-"},
+        { "name": "Gamma", "details": "0.45"},
+        { "name": "DEFOG", "details": "-"},
+        { "name": "DigitalL Zoom", "details": "-"},
+        { "name": "Daead Pixel Compensation", "details": "-"},
+        { "name": "SENS-UP", "details": "-"},
+        { "name": "Motion Detection", "details": "ON/OFF"},
+        { "name": "Digial Effect", "details": "MIRROR/FLIP"},
+        { "name": "Communication", "details": "-"},
+        { "name": "Iuput Voltage", "details": "DC 12V(± 10%)"},
+        { "name": "IR LEDs", "details": "36pcs"},
+        { "name": "Power Consumption", "details": "IR OFF : 150mA (MAX) / IR ON : 400mA (MAX)"}
+      ]
+    }
+  ]
+}

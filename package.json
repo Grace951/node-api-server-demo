@@ -10,6 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/Grace951/node-api-server-demo.git"
   },
+  "author": "Ching-Ching Yeh <learningg@gmail.com> (https://github.com/Grace951)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Grace951/node-api-server-demo/issues"
+  },
   "dependencies": {
     "axios": "^0.15.2",
     "babel-polyfill": "^6.16.0",
@@ -21,12 +26,7 @@
     "fs-extra": "^1.0.0",
     "http-proxy": "^1.16.2",
     "object-assign": "^4.1.0",
-    "open": "0.0.5",
-  },  
-  "author": "Ching-Ching Yeh <learningg@gmail.com> (https://github.com/Grace951)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Grace951/node-api-server-demo/issues"
+    "open": "0.0.5"
   },
   "homepage": "https://github.com/Grace951/node-api-server-demo#readme"
 }

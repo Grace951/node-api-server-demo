@@ -4,7 +4,7 @@ var path = require('path');
 
 var apiPort = process.env.PORT || 3000;
 var app = express();
-app.use( express.static(path.resolve(__dirname, './public/json')));
+app.use( express.static(path.resolve(__dirname, './public/')));
 
 app.listen(apiPort, (err) => {
   if (err) {

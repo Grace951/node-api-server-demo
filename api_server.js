@@ -1,8 +1,10 @@
 /* eslint no-console: 0 */
 var express = require('express');
 var path = require('path');
+require('./database/database');
+var route = require('./routes/index');;
 
-var apiPort = process.env.PORT || 3000;
+var apiPort = process.env.PORT || 3003;
 var app = express();
 
 app.use(function (req, res, next) {
@@ -24,8 +26,8 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use( express.static(path.resolve(__dirname, './public/')));
-
+// app.use( express.static(path.resolve(__dirname, './public/')));
+route(app);
 
 app.listen(apiPort, (err) => {
   if (err) {

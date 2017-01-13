@@ -3,28 +3,35 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var Categoryschema = Schema ({
-    id: {
+    _id :{
+        type: Number,
+        unique: true
+    },
+	categoryName:  {
         type: String,
         unique: true,
-        lowercase: true
+        uppercase: true
     },
-	categoryName: String,
-    imageUrl: boolean,
-    name: boolean,
-    snippet: boolean,
-    brand: boolean,
-    type: boolean,
-    channel: boolean,
-    remote: boolean,
-    backup: boolean,
-    HDD: boolean,
-    videoout: boolean,
-	compression: boolean,
-	sensor: boolean,
-	resolution: boolean,
-	lens: boolean,
-	feature: boolean
+    imageUrl: Boolean,
+    name: Boolean,
+    snippet: Boolean,
+    brand: Boolean,
+    type: Boolean,
+    channel: Boolean,
+    remote: Boolean,
+    backup: Boolean,
+    HDD: Boolean,
+    videoout: Boolean,
+	compression: Boolean,
+	sensor: Boolean,
+	resolution: Boolean,
+	lens: Boolean,
+	feature: Boolean,
+    desc: Boolean, 
+    PoEport: Boolean,
+    ir: Boolean,
+    io: Boolean,     
 });
 
-module.exports = mongoose.model('Category', Categoryschema);
+module.exports = mongoose.model('Category', Categoryschema, 'categories');
 

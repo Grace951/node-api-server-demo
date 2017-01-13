@@ -1,12 +1,20 @@
 /* eslint no-console: 0 */
 var express = require('express');
 var path = require('path');
-require('./database/database');
+var morgan = require('morgan');
 var route = require('./routes/index');;
+var bodyParser = require('body-parser');
+
+require('./database/database');
 
 var apiPort = process.env.PORT || 3003;
 var app = express();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extend: true
+}));
+app.use(morgan('dev'));
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
@@ -33,6 +41,6 @@ app.listen(apiPort, (err) => {
   if (err) {
     console.error(err);
   } else {
-    console.info(`Api listening on port ${apiPort}!`);
+    console.info(`Api server is listening on port ${apiPort}!`);
   }
 });

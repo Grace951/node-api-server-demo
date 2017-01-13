@@ -1,15 +1,34 @@
 module.exports = function(app){
     var Products = require('../models/product');
+    var Categories = require('../models/category');
 
-    app.post('/addproduct', function (req,res){
-        var product = new Products();
-        product.name = req.body.name;
-        product.save(function(err,product){
-            res.json({
-                product:product
-            });
-        })
+    // app.post('/addproduct', function (req,res){
+    //     var product = new Products();
+    //     product.name = req.body.name;
+    //     product.save(function(err,product){
+    //         res.json({
+    //             product:product
+    //         });
+    //     })
 
+    // });
+
+    
+    app.get('/api/categories', function (req, res){
+        // console.log(req.params.id);
+         Categories.find({},{}, function(err, categories){
+            if(err){
+                return res.status(500).json({
+                    err:err.toString()
+                });
+            } else if(!categories){
+                return res.status(404).json({
+                    err:'Not found'
+                });                
+            } else{
+                res.json(categories);
+            }  
+        });
     });
 
     app.get('/api/details/:id', function (req, res){

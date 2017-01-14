@@ -32,5 +32,8 @@
     "object-assign": "^4.1.0",
     "open": "0.0.5"
   },
-  "homepage": "https://github.com/Grace951/node-api-server-demo#readme"
+  "homepage": "https://github.com/Grace951/node-api-server-demo#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
 }

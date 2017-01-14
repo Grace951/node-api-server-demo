@@ -2,16 +2,31 @@ module.exports = function(app){
     var Products = require('../models/product');
     var Categories = require('../models/category');
 
-    // app.post('/addproduct', function (req,res){
-    //     var product = new Products();
-    //     product.name = req.body.name;
-    //     product.save(function(err,product){
-    //         res.json({
-    //             product:product
-    //         });
-    //     })
+    app.post('/api/details/:id', function (req,res){
+        var product = new Products.ProductModel();
+        product.id = req.params.id;
+        product.name = req.body.name;
+        product.brand = req.body.brand;
+        product.type = req.body.type;
+        product.channel = req.body.channel;
+        product.remote = req.body.remote;
+        product.backup = req.body.backup;
+        product.HDD = req.body.HDD;
+        product.videoout = req.body.videoout;
+        product.compression = req.body.compression;
+        product.sensor = req.body.sensor;
+        product.resolution = req.body.resolution;
+        product.lens = req.body.lens;
+        product.feature = req.body.feature;
+        product.desc = req.body.desc;
+        product.PoEport = req.body.PoEport;
+        product.ir = req.body.ir;
+        product.io = req.body.io;
+        product.save(function(err,product){
+            res.json(product);
+        })
 
-    // });
+    });
 
     
     app.get('/api/categories', function (req, res){

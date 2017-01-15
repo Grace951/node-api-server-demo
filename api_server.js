@@ -10,10 +10,10 @@ require('./database/database');
 var apiPort = process.env.PORT || 3003;
 var app = express();
 
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-    extend: true
+    extended: true
 }));
+app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(function (req, res, next) {
 

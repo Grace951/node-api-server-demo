@@ -14,6 +14,7 @@ module.exports = function(app){
     app.post('/api/details/:id', function (req,res){
         var product = new Products.ProductModel();
         product.id = req.params.id;
+        product.cat = req.body.cat;
         product.name = req.body.name;
         product.brand = req.body.brand;
         product.type = req.body.type;

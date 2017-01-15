@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+mongoose.Promise = Promise; 
 
 var Schema = mongoose.Schema;
 
@@ -27,7 +28,10 @@ var ProductSchema = new Schema({
         unique: true,
         lowercase: true
     },
-    cat: String,
+    cat: {
+        type: Number,
+        ref:'Category'
+    },
     images: [String],
     name: String,
     snippet: String,
@@ -56,32 +60,23 @@ var ProductSchema = new Schema({
 
 var ProductModel = mongoose.model('Products', ProductSchema, 'products');
 
-function getBriefObject (id, callback){
-    var category = {cat: id};
+function getBriefObject (id){    
+    var category = {"cat": id};
     if (category.cat === 'All')
         delete category.cat;
-    ProductModel
+    
+    return ProductModel
         .find(category,{
             docs: false,
             description: false,
             spec: false,
             _id: false,
             member: false,
-            optional: false,           
+            optional: false,
         })
-        .lean()
-        .exec(function (err, product) {
-            if (err){
-              return callback(err, product);
-            }
-
-            for (item of product){                
-                if(item.images && item.images[0])
-                    item.imageUrl = item.images[0]
-                delete item.images;   
-            }
-            return callback(err, product);        
-        });
+        // .populate('cat', 'categoryName -_id')
+        // .lean()
+        .exec();
 }
 
 

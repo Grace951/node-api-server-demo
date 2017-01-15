@@ -1,0 +1,84 @@
+{
+  "id": "srd-1680d",
+  "images": [
+    "/img/products/srd-1680d-1.png",
+    "/img/products/srd-1680d-2.png",
+    "/img/products/srd-1680d-3.png",
+    "/img/products/srd-1680d-4.png"
+  ],
+  "docs": [
+      {"desc": "SRD-1680D_Datasheet.pdf", "size": 963, "filetype": "pdf", "src":"/docs/spec.pdf"},
+      {"desc": "SRD-1680D_UserManual.pdf", "size": 28822, "filetype": "pdf", "src":"/docs/spec.pdf"}
+  ],
+  "name": "SRD-1680D (8CH Full HD + 16CH SD)",
+  "brand": "Samsung",
+
+
+  "description": ["16CH 700TV lines / 8CH Full HD 1080p real-time recording",
+                  "Up to 16CH audio inputs/1CH audio output",
+                  "Full HD Resolution Video out",
+                  "VGA/HDMI video output for main display",
+                  "Max 4 internal HDDs",
+                  "HDD Removable(Easy Install)",
+                  "Smart searching, Tampering support",
+                  "DVD, USB(2ports) backup"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SRD-1680D"},
+        { "name": "Brand", "details": "Samsung"},
+        { "name": "Consumption", "details": "Max. 60W (With 1x HDD)"},
+        { "name": "Working Temperature", "details": "+0°C ~ +40°C (+32°F ~ +104°F) / 20% ~ 85% RH"},
+        { "name": "Working Humidity", "details": "20% ~ 85% RH"},
+        { "name": "Dimension mm (WxDxH)", "details": "440.0 x 389.1 x 88.0 mm"},
+        { "name": "Weight (with HDD)", "details": "Approx. 5.2Kg (11.46 lb)"}
+      ]
+    },
+    { "name": "Video",
+      "members": [
+        { "name": "Video Input", "details": "8 HD-SDI SMPTE292M <br> 16 Composite video 0.5-1 Vp-p, 75 ohm automatic termination"},
+        { "name": "Compression", "details": "H.264"}
+      ]
+    },
+    { "name": "Audio",
+      "members": [
+        { "name": "Audio Input", "details": "16CH line in (Built-in 4CH, option : audio extension cable)"},
+        { "name": "Audio Output", "details": "1CH line out"}
+      ]
+    },
+    { "name": "Display",
+      "members": [
+        { "name": "VGA Output", "details": "1 VGA (1280 x 720, 1280 x 1024, 1920 x 1080)"},
+        { "name": "BNC Output", "details": "No"},
+        { "name": "HDMI Output", "details": "1 HDMI (1280 x 720, 1280 x 1024, 1920 x 1080)"}
+      ]
+    },
+    { "name": "Recording",
+      "members": [
+        { "name": "Record Rate", "details": "NTSC : Up to 240fps@1920 x 1080 / PAL : Up to 200fps@1920 x 1080 <br> NTSC : Up to 240fps@1280 x 720 / PAL : Up to 200fps@1280x720 <br> NTSC : Up to 480fps@960 x 480 / PAL : Up to 400fps@960 x 576 <br> NTSC : Up to 480fps@704 x 480 / PAL : Up to 400fps@704 x 576 <br> NTSC : Up to 480fps@704 x 240 / PAL : Up to 400fps@704 x 288 <br> NTSC : Up to 480fps@352 x 240 / PAL : Up to 400fps@352 x 288"}
+      ]
+    },
+    { "name": "Playback",
+      "members": [
+        { "name": "Fast forward / backward", "details": "(2x, 4x, 8x, 16x, 32x, 64x) *Backward play with i-frame only"},
+        { "name": "Slow forward / backward", "details": "(1/2x, 1/4x, 1/8x)"},
+        { "name": "Step forward / backward", "details": "(2x, 4x, 8x, 16x, 32x, 64x) *Backward play with i-frame only"}
+      ]
+    },
+    { "name": "Hard Disk",
+      "members": [
+        { "name": "internal HDD", "details": "Up to 4 SATA HDDs"},
+        { "name": "external (e-SATA Interface)", "details": "Up to 2 expansion bay (*Model : SVS-5R/5E) "}
+      ]
+    },
+    { "name": "External Interface",
+      "members": [
+        { "name": "Network Interface", "details": "1 RJ-45 10/100/1000 Base-T"},
+        { "name": "Serial Interface", "details": "RS-232/RS-485 for PTZ, Samsung system keyboard"},
+        { "name": "USB", "details": "USB 2.0, 2 ports (Front)"},
+        { "name": "eSATA", "details": "2 External SATA ports"}
+      ]
+    }
+  ]
+}

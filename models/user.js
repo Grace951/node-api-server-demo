@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+mongoose.Promise = Promise; 
 //#1 create schema
 var Schema = mongoose.Schema;
 

@@ -1,3 +1,12 @@
+function HttpErr(code, message) {
+  this.code = code || 500;
+  this.message = message || 'Internal Server Error';
+//   this.stack = (new Error()).stack;
+}
+HttpErr.prototype = Object.create(Error.prototype);
+HttpErr.prototype.constructor = HttpErr;
+
+
 module.exports = function(app){
     var Products = require('../models/product');
     var Categories = require('../models/category');
@@ -22,6 +31,7 @@ module.exports = function(app){
         product.PoEport = req.body.PoEport;
         product.ir = req.body.ir;
         product.io = req.body.io;
+
         product.save(function(err,product){
             res.json(product);
         })
@@ -31,18 +41,21 @@ module.exports = function(app){
     
     app.get('/api/categories', function (req, res){
         // console.log(req.params.id);
-         Categories.find({},{}, function(err, categories){
-            if(err){
-                return res.status(500).json({
-                    err:err.toString()
-                });
-            } else if(!categories){
-                return res.status(404).json({
-                    err:'Not found'
-                });                
-            } else{
+         Categories.find({},{})
+        .exec()
+        .then(function(categories){
+            if(!categories){
+                throw new HttpErr(404, 'Not Found');               
+            }
+            return categories;
+        })
+        .then( function(categories){
                 res.json(categories);
-            }  
+        })
+        .catch(function(err){
+            return res.status(err.code).json({
+                    err:err.message()
+            });
         });
     });
 
@@ -62,37 +75,50 @@ module.exports = function(app){
             resolution: false,
             lens: false,
             feature: false,           
-        }, function(err, product){
-            if(err){
-                return res.status(500).json({
-                    err:err.toString()
-                });
-            } else if(!product){
-                return res.status(404).json({
-                    err:'Not found'
-                });                
-            } else{
+        })
+        .exec()
+        .then(function(product){
+            if(!product){
+                throw new HttpErr(404, 'Not Found');               
+            }
+            return product;
+        })
+        .then( function(product){
                 res.json(product);
-            }  
+        })
+        .catch(function(err){
+            return res.status(err.code).json({
+                    err:err.message
+            });
         });
 
     });
 
     app.get('/api/category/:id', function (req, res){
-        // console.log(req.params.id);
-        Products.getBriefObject(req.params.id, function (err, product) {
-            if(err){
-                return res.status(500).json({
-                    err:err.toString()
-                });
-            } else if(!product){
-                return res.status(404).json({
-                    err:'Not found'
-                });                
-            } else{
-                res.json(product);
-            }  
-        });
+         Categories.find({categoryName: req.params.id},{_id: true}).exec()
+        .then(function(category){
+            if(!category){
+                throw new HttpErr(404, 'Not Found');               
+            }
+            return category;
+        })
+        .then( function(category){
+            return Products.getBriefObject(category[0]._id);
+        })
+        .then(function(products){
+            if(!products){
+                throw new HttpErr(404, 'Not Found');                
+            }
+            return products;
+        })
+        .then( function(products){
+                res.json(products);
+        })
+        .catch(function(err){
+            return res.status(err.code).json({
+                    err:err.message()
+            });
+        });;
     });
 
     app.get('*',function(req,res){

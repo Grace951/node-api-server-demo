@@ -1,0 +1,31 @@
+{
+  "id": "cz4",
+  "images": [
+    "/img/products/cz4.jpg"
+  ],
+  "docs": [
+    {"desc": "Futuro-SD4B_SD4_CP4_CZ4_manual.pdf", "size": 712, "filetype": "pdf", "src":"/docs/spec.pdf"},
+    {"desc": "Futuro-SD4B_SD4_CP4_CZ4.pdf", "size": 766, "filetype": "pdf", "src":"/docs/spec.pdf"}
+  ],
+  "name": "Futuro - CP4",
+  "brand": "Futuro",
+  "description": ["Latest CCD Technology to offer sharp & clear image",
+                  "White LEDs for night vision",
+                  "Weather resistance for Australian conditions (Rated IP54)",
+                  "CZ4 (Surface Mount) is die cast zinc finished",
+                  "99(W) x 148(H) x 28 (D) mm"
+                  ],
+  "spec": [
+    { "name": "Monitor",
+      "members": [
+        { "name": "Power", "details": "Operation Power (B+): 12vDC from Monitor<br>Button Back Light Power: 12VDC from Monitor"},
+        { "name": "Camera", "details": "1/3” Colour CCD sensor, Viewing angle 110°"},
+        { "name": "Door Release (D/O)", "details": "Voltage free Dry Contact, Normally Open"},
+        { "name": "Night Vision LED's", "details": "6 White LED's"},
+        { "name": "Working Temperature", "details": "0°C - 40°C"},
+        { "name": "Working Humidity", "details": "Less than 90% "},
+        { "name": "Dimensions (W/H/D)", "details": "99mm * 148mm * 28mm"}
+      ]
+    }
+  ]
+}

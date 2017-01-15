@@ -1,0 +1,91 @@
+{
+  "id": "srn-472s",
+  "images": [
+    "/img/products/srn-472s-1.png",
+    "/img/products/srn-472s-2.png",
+    "/img/products/srn-472s-3.png"
+  ],
+  "docs": [
+      {"desc": "SRN-472S.pdf", "size": 737, "filetype": "pdf", "src":"/docs/spec.pdf"},
+      {"desc": "SRN-472S_Usermanual.pdf", "size": 33170, "filetype": "pdf", "src":"/docs/spec.pdf"}
+  ],
+  "name": "SRN-472S (4ch)",
+  "brand": "Samsung",
+
+
+  "description": ["Up to 32Mbps network camera recording",
+                  "Easy camera installation via dedicated 4 PoE ports",
+                  "Full HD Resolution Video out",
+                  "Max 2 internal HDDs (Max 8TB, Over 2-months @2MP)",
+                  "Alarm, MD & VA event recording & search",
+                  "Support Samsung viewers (iPOLiS mobile, SmartViewer"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SRN-472S (4ch)"},
+        { "name": "Brand", "details": "Samsung"},
+        { "name": "Consumption", "details": "Max. 30W (With 1TB HDD 1ea)"},
+        { "name": "Working Temperature", "details": "+0°C ~ +40°C (+32°F ~ +104°F)"},
+        { "name": "Dimension mm (WxDxH)", "details": "370.0 x 320.0 x 44.0(1U)"},
+        { "name": "Weight (with HDD)", "details": "2.73Kg (6.02 lb) "}
+      ]
+    },
+    { "name": "Video",
+      "members": [
+        { "name": "Video Input", "details": "Up to 4CH CIF ~ 5M"},
+        { "name": "Compression", "details": "H.264, MJPEG"}
+      ]
+    },
+    { "name": "Audio",
+      "members": [
+        { "name": "Audio Input", "details": "4CH (Network)"},
+        { "name": "Audio Output", "details": "1ea (RCA, Line)"}
+      ]
+    },
+    { "name": "Display",
+      "members": [
+        { "name": "VGA Output", "details": "1 VGA "},
+        { "name": "BNC Output", "details": "No"},
+        { "name": "HDMI Output", "details": "1 HDMI"}
+      ]
+    },
+    { "name": "Recording",
+      "members": [
+        { "name": "Resolution", "details": "CIF ~ 5M"},
+        { "name": "Recording Bandwidth", "details": "32Mbps (2M 4CH real-time recording)"}
+      ]
+    },
+    { "name": "Playback",
+      "members": [
+        { "name": "Resolution", "details": "CIF ~ 5M"},
+        { "name": "Playback Control", "details": "Fast forward / backward, Move one step up / down"},
+        { "name": "Simultaneous Playback", "details": "[Local monitor] Up to 4CH, [Web, CMS] Up to 4CH"},
+        { "name": "Playback Bandwidth", "details": "32Mbps (4CH simultaneously)"}
+      ]
+    },
+    { "name": "Hard Disk",
+      "members": [
+       { "name": "Built-in", "details": "1ea "},
+        { "name": "Internal HDD", "details": "2ea (Fixed)"},
+        { "name": "capacity", "details": "Internal max. 8TB"}
+      ]
+    },
+    { "name": "External Interface",
+      "members": [
+        { "name": "Network Interface", "details": "2ea (100Mbps) + PoE 4ea (10/100Mbps)"},
+        { "name": "Sensor I/O", "details": "4 / 3 (NO/NC selectable)"},
+        { "name": "USB", "details": "2ea"},
+        { "name": "Alarm", "details": "In 4ea (Terminal block) / Out 3ea (Terminal block)"}
+      ]
+    },
+    { "name": "Software",
+      "members": [
+        { "name": "Web Browser", "details": "[Internet Explorer] : ver.8 ~ 11, [Firefox] : ver.19.x or above <br>[Chrome] : ver.26.x or above, [Safari] : ver.6.0.3 or above (OSX 10.6 or above)"},
+        { "name": "Viewer Software", "details": "SSM, Webviewer, SmartViewer"},
+        { "name": "Mobile OS", "details": "Android, iOS"},
+        { "name": "Mobile Control", "details": "Live 4 / Playback 1"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "kce-cdtit6530d",
+  "images": [
+    "/img/products/kce-cdtit6530d.png"
+  ],
+  "docs": [
+      {"desc": "KCE-SDTIT6530D_Product_Specification.pdf", "size": 430, "filetype": "pdf", "src":"/docs/spec.pdf"}
+  ],
+  "name": "KCE-CDTIT6530D",
+  "brand": "KCE",
+  "description": ["1/3” 2.1Megapixel Sony Exmor TVI Technology",
+                  "High-End Motorized Zoom/ Auto Focus",
+                  "FULL HD 1080P (1920x1080) video quality",
+                  "2.8~12mm  x4 Zoom Motorized Varifocal Lens (ICR)",
+                  "3DNR (DIGITAL NOISE REDUCTION)",
+                  "UTC control via Turbo DigiGuard DVR",
+                  "Built-in 30pcs IR LEDs for Day & Night",
+                  "Gimbal Plastic Dome Suitable for indoor use",
+                  "Made in Korea"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "KCE-CDTIT6530D"},
+        { "name": "Brand", "details": "KCE"},
+        { "name": "Weather Proof", "details": "IP68"},
+        { "name": "Working Temperature", "details": "-10ºC~ +50ºC/-20ºC~ +60ºC"},
+        { "name": "Working Humidity", "details": "MAX 90% RH"},
+        { "name": "Storage Temperature", "details": "-20ºC~ +0ºC/-20ºC~ +60ºC"},
+        { "name": "Storage Humidity", "details": "MAX 90% RH"}
+      ]
+    },
+    { "name": "Camera",
+      "members": [
+        { "name": "Image Sensor", "details": "1/2.9” 2.1Megapixel Sony Exmor CMOS"},
+        { "name": "Effective Pixels", "details": "1920 (H) × 1080 (V) = 2.07M"},
+        { "name": "Signal System", "details": "Progressive"},
+        { "name": "Horizontal Resolution", "details": "Full HD 1080P"},
+        { "name": "Video Output", "details": "TVI, CVBS : 1.0Vp-p, 75Ω composite"},
+        { "name": "S / N Ratio", "details": "More than 52dB"},
+        { "name": "Min. Illumination", "details": "0.02Lux(Sens-UP X32)"},
+        { "name": "IRIS Adjustment", "details": "ALC /  ELC"},
+        { "name": "Lens", "details": "2.8~12mm Motorized Varifocal Lens (ICR TYPE)"},
+        { "name": "Electronic Shutter", "details": "NTSC: AUTO/(1/25~1/60,000)/FLK <br> PAL: MANUAL   "},
+        { "name": "OSD Menu", "details": "Yes"},
+        { "name": "OSD Language", "details": "ENG/CHN/CHN[S]/JPN/KOR"},
+        { "name": "Blacklight Compensation", "details": "OFF /HLC/BLC/WDR "},
+        { "name": "Day & Night", "details": "COLOR/BW/EXTERN/AUTO"},
+        { "name": "D-WDR", "details": "OFF/LOW/MIDDLE/HIGH"},
+        { "name": "Auto Gain Control", "details": "LEVEL(0~20)Adjustment"},
+        { "name": "White Balance", "details": "AUTO/AUTODEXT/PRESET/MANUAL"},
+        { "name": "Privacy Mask", "details": "On / Off (Programmable 16 zones)"},
+        { "name": "DNR", "details": "OFF/LOW/MIDDLE/HIGH"},
+        { "name": "Smart IR", "details": "ANTI-SET (0~20)Adjustment"},
+        { "name": "LSC", "details": "OFF/ON"},
+        { "name": "Gamma", "details": "0.45/0.5/0.55/0.6/0.65"},
+        { "name": "DEFOG", "details": "OFF/LOW/MIDDLE/HIGH"},
+        { "name": "DigitalL Zoom", "details": "OFF/ON (x1 ~ x8.0)"},
+        { "name": "Daead Pixel Compensation", "details": "LIVE DPC/ DPC SET"},
+        { "name": "SENS-UP", "details": "0FF/ X2~X32"},
+        { "name": "Motion Detection", "details": "4 AREA"},
+        { "name": "Digial Effect", "details": "OFF / V-FLIP / MIRROR / ROTATE"},
+        { "name": "Communication", "details": "UTC / RS485 (OPTION)"},
+        { "name": "IR LEDs", "details": "30pcs"},
+        { "name": "Iuput Voltage", "details": "DC 12V(±10%)"},
+        { "name": "Power Consumption", "details": "DC IR OFF : 180mA(±10%) / IR ON : 500mA(MAX)"}
+      ]
+    }
+  ]
+}

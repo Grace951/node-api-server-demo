@@ -1,7 +1,7 @@
 require('../database/database');
 var Products = require('../models/product');
 
-var CAT = require('../public/json/CCTV.json');
+var CAT = require('../backup/KIT.json');
 
 console.log("=================================", CAT.length);
 for (let i = 0; i < CAT.length; i++){

@@ -1,0 +1,87 @@
+{
+  "id": "sco-2080rp",
+  "images": [
+    "/img/products/sco-2080rp-1.png",
+    "/img/products/sco-2080rp-2.png",
+    "/img/products/sco-2080rp-3.png"
+  ],
+  "docs": [
+      {"desc": "SCO-2080R_Specifications.pdf", "size": 216, "filetype": "pdf", "src":"/docs/spec.pdf"},
+      {"desc": "SCO-2080R-UserManual.pdf", "size": 6061, "filetype": "pdf", "src":"/docs/spec.pdf"}
+  ],
+  "name": "SCO-2080RP",
+  "brand": "Samsung",
+  "description": ["High resolution of 600TV lines (Color), 700TV lines (B/W)",
+                  "Min. illumination 0.15Lux@ F1.2 (Color), 0.001Lux (B/W)",
+                  "Built-in V/F lens (2.8 ~ 10mm)",
+                  "True Day / Night (ICR), MD, SSNRIII",
+                  "IP66, Coax : Pelco-C (Coaxitron), RS-485",
+                  "Dual power, 24V AC & 12V DC"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SCO-2080RP"},
+        { "name": "Brand", "details": "Samsung"},
+        { "name": "Color / Material", "details": "Dark gray / ALDC"},
+        { "name": "Dimensions(WxH) ", "details": "86.0 x 86.3 x 314.8mm (3.39” x 3.40” x 12.39”) "},
+        { "name": "Weight", "details": "1Kg (2.2 lb) "},
+        { "name": "Working Temperature", "details": "-10°C ~ +50°C (+14°F ~ +122°F) "},
+        { "name": "Working Humidity", "details": "Less than 90% RH"},
+        { "name": "Ingress Protection", "details": "IP66 Grade"}
+      ]
+    },
+    { "name": "Video",
+      "members": [
+        { "name": "imaging device", "details": "1/3”  Super HAD CCD  II"},
+        { "name": "Total Pixels", "details": "795(H) x 596(V)"},
+        { "name": "Effective Pixels", "details": "752(H) x 582(V)"},
+        { "name": "Scanning System", "details": "2 : 1 Interlace"},
+        { "name": "Synchronization", "details": "Internal / Line lock"},
+        { "name": "Frequency", "details": "H : 15.625KHz / V : 50Hz"},
+        { "name": "Horizontal Resolution", "details": "Color : 600TV lines, B/W : 700TV lines "},
+        { "name": "Min. Illumination", "details": "Color : 0.15Lux@F1.2 (50IRE), 0.0003Lux (Sens-up, 512x)<br>B/W : 0Lux (IR LED 0n)"},
+        { "name": "S / N Ratio", "details": " 52dB (AGC off, Weight on)"},
+        { "name": "Video Output", "details": "CVBS : 1.0 Vpp / 75Ω composite"}
+      ]
+    },
+    { "name": "Lens",
+      "members": [
+        { "name": "Focal Length (Zoom Ratio) ", "details": "2.8 ~ 10mm (3.6x) varifocal"},
+        { "name": "Max. Aperture Ratio", "details": "1 : 1.2(Wide) ~ 2.8(Tele)"},
+        { "name": "Min. object Distance", "details": "0.2m (0.66ft)"},
+        { "name": "Angular Field of View", "details": "H : 94.4°(Wide) ~ 28°(Tele) / V : 69.2°(Wide) ~ 21°(Tele)"},
+        { "name": "Focus Control", "details": "Manual"},
+        { "name": "Lens Type", "details": "DC auto iris "}
+      ]
+    },
+    { "name": "Operational",
+      "members": [
+        { "name": "On Screen Display", "details": "English, French, German, Spanish, Italian, Chinese, Russian, Polish, Czech, Romanian, Serbian, Swedish, Danish, Turkish, Portuguese"},
+        { "name": "Camera Title", "details": "Off / On (Displayed 15 characters) "},
+        { "name": "Day & Night", "details": "Auto (ICR) / Color / B/W"},
+        { "name": "Backlight Compensation", "details": "Off / BLC / HLC"},
+        { "name": "Contrast Enhancement ", "details": "SSDR (Off / On)"},
+        { "name": "Digital Noise Reduction ", "details": "SSNR III  (Off / On)"},
+        { "name": "Digital Image Stabilization", "details": "Off / On"},
+        { "name": "Motion Detection", "details": "Off / On (8 programmable zones)"},
+        { "name": "Privacy Mask", "details": "Off / On (12 programmable zones)"},
+        { "name": "Sens-up (Frame integration)", "details": "2x ~ 512x"},
+        { "name": "Gain Control", "details": "Off / Low / High"},
+        { "name": "White Balance", "details": "ATW / Outdoor / Indoor / Manual / AWC (1,700°K ~ 11,000°K)"},
+        { "name": "Electronic Shutter Speed", "details": "1/50 ~ 1/120,000sec"},
+        { "name": "Digial Zoom", "details": "Off / On (1x ~ 16x) "},
+        { "name": "Reverse", "details": "H-Rev / V-Rev "},
+        { "name": "Communication", "details": "Coaxial control (SPC-300 compatible), RS-485"},
+        { "name": "Protocol", "details": "Coax : CCVC <br>RS-485 : Samsung-T/E, Pelco-D/P, Panasonic, Bosch, Honeywell, Vicon "},
+        { "name": "IR Distance", "details": "50m (164.04ft) (850nm IR LED : 32ea)"}
+      ]
+    },
+    { "name": "Electrical",
+      "members": [
+        { "name": "Input Voltage / Current", "details": "Dual (24V AC & 12V DC ±10%)"},
+        { "name": "Power Consumption", "details": "Max. 6.8W / 6.5W (IR LED on)"}
+      ]
+    }
+  ]
+}

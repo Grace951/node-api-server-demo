@@ -66,16 +66,16 @@ module.exports = function(app){
             id: req.params.id
         },{
             _id: false,
-            channel: false,
-            remote: false,
-            backup: false,
-            HDD: false,
-            videoout: false,
-            compression: false,
-            sensor: false,
-            resolution: false,
-            lens: false,
-            feature: false,           
+            // channel: false,
+            // remote: false,
+            // backup: false,
+            // HDD: false,
+            // videoout: false,
+            // compression: false,
+            // sensor: false,
+            // resolution: false,
+            // lens: false,
+            // feature: false,           
         })
         .exec()
         .then(function(product){

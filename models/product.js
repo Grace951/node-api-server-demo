@@ -74,6 +74,7 @@ function getBriefObject (id){
             member: false,
             optional: false,
         })
+        .sort({brand: 'asc'})        
         // .populate('cat', 'categoryName -_id')
         // .lean()
         .exec();

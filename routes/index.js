@@ -11,56 +11,42 @@ module.exports = function(app){
     var Products = require('../models/product');
     var Categories = require('../models/category');
 
-    app.post('/api/details/:id', function (req,res){
-        var product = new Products.ProductModel();
-        product.id = req.params.id;
-        product.cat = req.body.cat;
-        product.name = req.body.name;
-        product.brand = req.body.brand;
-        product.type = req.body.type;
-        product.channel = req.body.channel;
-        product.remote = req.body.remote;
-        product.backup = req.body.backup;
-        product.HDD = req.body.HDD;
-        product.videoout = req.body.videoout;
-        product.compression = req.body.compression;
-        product.sensor = req.body.sensor;
-        product.resolution = req.body.resolution;
-        product.lens = req.body.lens;
-        product.feature = req.body.feature;
-        product.desc = req.body.desc;
-        product.PoEport = req.body.PoEport;
-        product.ir = req.body.ir;
-        product.io = req.body.io;
-
-        product.save(function(err,product){
-            res.json(product);
-        })
-
-    });
-
-    
-    app.get('/api/categories', function (req, res){
-        // console.log(req.params.id);
-         Categories.find({},{})
+    app.delete('/api/details/:id', function (req,res){
+        Products.ProductModel.findOneAndRemove( {id: req.params.id})
         .exec()
-        .then(function(categories){
-            if(!categories){
-                throw new HttpErr(404, 'Not Found');               
-            }
-            return categories;
+        .then(function(product){
+            return res.send({name: product.name})
         })
-        .then( function(categories){
-                res.json(categories);
+        .catch(function(err){
+            console.log(err)
+            return res.status(500).json(err);
+        });
+    })
+
+    .post('/api/details/:id', function (req,res){
+        Products.ProductModel.findOneAndUpdate(
+            {id: req.params.id},
+            req.body
+            , { multi: true , upsert: true, setDefaultsOnInsert: true,  returnNewDocument : true }
+        )
+        .exec()
+        .then(function(details){
+            if(!details){
+                return res.send({mode: "insert", data: details})        
+            }
+            return details;
+        })        
+        .then(function(details){
+            return res.send({mode: "update", data: details})
         })
         .catch(function(err){
             return res.status(err.code).json({
-                    err:err.message()
+                    err:err.message
             });
         });
-    });
+    })
 
-    app.get('/api/details/:id', function (req, res){
+    .get('/api/details/:id', function (req, res){
         // console.log(req.params.id);
         Products.ProductModel.findOne({
             id: req.params.id
@@ -93,10 +79,33 @@ module.exports = function(app){
             });
         });
 
-    });
+    })
+    
+    .get('/api/categories', function (req, res){
+        // console.log(req.params.id);
+         Categories.find({},{})
+        .sort({_id: 1}) 
+        .exec()
+        .then(function(categories){
+            if(!categories){
+                throw new HttpErr(404, 'Not Found');               
+            }
+            return categories;
+        })
+        .then( function(categories){
+                res.json(categories);
+        })
+        .catch(function(err){
+            return res.status(err.code).json({
+                    err:err.message()
+            });
+        });
+    })
 
-    app.get('/api/category/:id', function (req, res){
-         Categories.find({categoryName: req.params.id},{_id: true}).exec()
+
+    .get('/api/category/:id', function (req, res){
+         Categories.find({categoryName: req.params.id},{_id: true})
+        .exec()
         .then(function(category){
             if(!category){
                 throw new HttpErr(404, 'Not Found');               
@@ -113,16 +122,16 @@ module.exports = function(app){
             return products;
         })
         .then( function(products){
-                res.json(products);
+            res.json(products);
         })
         .catch(function(err){
             return res.status(err.code).json({
                     err:err.message()
             });
         });;
-    });
+    })
 
-    app.get('*',function(req,res){
+    .get('*',function(req,res){
         res.send('page not found');
     });
 

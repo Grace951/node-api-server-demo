@@ -1,10 +1,10 @@
 {
-  "id": "kce-cvdtit6636v",
+  "_id": "kce-cvdtit6636v",
   "images": [
-    "/img/products/kce-cvdtit6636v.png"
+    "/api/img/products/kce-cvdtit6636v.png"
   ],
   "docs": [
-      {"desc": "CVDTIT6636V.pdf", "size": 169, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "CVDTIT6636V.pdf", "size": 169, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "KCE-CVDTIT6636V",
   "brand": "KCE",

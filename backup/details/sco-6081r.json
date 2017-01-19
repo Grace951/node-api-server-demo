@@ -1,11 +1,11 @@
 {
-  "id": "sco-6081r",
+  "_id": "sco-6081r",
   "images": [
-    "/img/products/sco-6081r.png"
+    "/api/img/products/sco-6081r.png"
   ],
   "docs": [
-      {"desc": "SCO-6081R_Specifications.pdf", "size": 209, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "SCO-6081R_UserManual.pdf", "size": 5271, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SCO-6081R_Specifications.pdf", "size": 209, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "SCO-6081R_UserManual.pdf", "size": 5271, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SCO-6081R",
   "brand": "Samsung",

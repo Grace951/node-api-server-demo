@@ -1,13 +1,13 @@
 {
-  "id": "srd-476d",
+  "_id": "srd-476d",
   "images": [
-    "/img/products/srd-476d-1.png",
-    "/img/products/srd-476d-2.jpg",
-    "/img/products/srd-476d-3.png"
+    "/api/img/products/srd-476d-1.png",
+    "/api/img/products/srd-476d-2.jpg",
+    "/api/img/products/srd-476d-3.png"
   ],
   "docs": [
-      {"desc": "SRD-476D_Datasheet.pdf", "size": 349, "filetype": "pdf", "src":"/docs/spec.pdf"},
-     {"desc": "SRD-476D-User_Manual.pdf", "size": 4881, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SRD-476D_Datasheet.pdf", "size": 349, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+     {"desc": "SRD-476D-User_Manual.pdf", "size": 4881, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
 
   ],
   "name": "SRD-476D  (4ch)",

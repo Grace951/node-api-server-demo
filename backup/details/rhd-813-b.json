@@ -1,18 +1,16 @@
 {
-  "id": "rhd-813-b",
+  "_id": "rhd-813-b",
   "images": [
-    "/img/products/rhd-813-b-1.png",
-    "/img/products/rhd-813-b-2.png",
-    "/img/products/rhd-813-b-3.png"
+    "/api/img/products/rhd-813-b-1.png",
+    "/api/img/products/rhd-813-b-2.png",
+    "/api/img/products/rhd-813-b-3.png"
   ],
   "docs": [
-          {"desc": "RHD-813B.pdf", "size": 259, "filetype": "pdf", "src":"/docs/spec.pdf"}
-          {"desc": "iCMS_Manual_0716.pdf", "size": 1443, "filetype": "pdf", "src":"/docs/spec.pdf"}.
+          {"desc": "RHD-813B.pdf", "size": 259, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+          {"desc": "iCMS_Manual_0716.pdf", "size": 1443, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "RHD-813-B (8ch 2RU size)",
   "brand": "iCatch",
-
-
   "description": ["HD-SDI 1,080p video input ",
                   "8-channel HD-SDI DVR with H.264 codec",
                   "Maximum 120 fps recording with 1,080p ",

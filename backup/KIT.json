@@ -1,7 +1,7 @@
 [
     {
         "cat": 5,
-        "id": "4ch-ir-ball-dome-kit",
+        "_id": "4ch-ir-ball-dome-kit",
         "imageUrl": "/img/products/4ch-ir-ball-dome-kit-1.png",
         "name": "4ch IR Ball Dome Kit",
         "brand": "Honeywell",
@@ -14,7 +14,7 @@
     },
     {
         "cat": 5,
-        "id": "4ch-ir-bullet-kit",
+        "_id": "4ch-ir-bullet-kit",
         "imageUrl": "/img/products/4ch-ir-bullet-kit-1.png",
         "name": "4ch IR Bullet Kit",
         "brand": "Honeywell",

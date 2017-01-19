@@ -1,14 +1,14 @@
 {
-  "id": "srd-876d",
+  "_id": "srd-876d",
   "images": [
-    "/img/products/SRD-876D-1.jpg",
-    "/img/products/srd-876d-2.png",
-    "/img/products/srd-876d-3.png",
-    "/img/products/srd-876d-4.png"
+    "/api/img/products/SRD-876D-1.jpg",
+    "/api/img/products/srd-876d-2.png",
+    "/api/img/products/srd-876d-3.png",
+    "/api/img/products/srd-876d-4.png"
   ],
   "docs": [
-      {"desc": "SRD-876D_Specification.pdf", "size": 372, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "User_Manual-SRD-1676D_SRD-876D_SRD-1656D.pdf", "size": 8246, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SRD-876D_Specification.pdf", "size": 372, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "User_Manual-SRD-1676D_SRD-876D_SRD-1656D.pdf", "size": 8246, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SRD-876D (8ch)",
   "brand": "Samsung",

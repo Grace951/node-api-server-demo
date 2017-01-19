@@ -1,13 +1,13 @@
 {
-  "id": "srn-472s",
+  "_id": "srn-472s",
   "images": [
-    "/img/products/srn-472s-1.png",
-    "/img/products/srn-472s-2.png",
-    "/img/products/srn-472s-3.png"
+    "/api/img/products/srn-472s-1.png",
+    "/api/img/products/srn-472s-2.png",
+    "/api/img/products/srn-472s-3.png"
   ],
   "docs": [
-      {"desc": "SRN-472S.pdf", "size": 737, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "SRN-472S_Usermanual.pdf", "size": 33170, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SRN-472S.pdf", "size": 737, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "SRN-472S_Usermanual.pdf", "size": 33170, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SRN-472S (4ch)",
   "brand": "Samsung",

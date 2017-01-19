@@ -1,5 +1,5 @@
 {
-  "id": "sno-6084r",
+  "_id": "sno-6084r",
   "images": [
     "/img/products/sno-6084r.png"
   ],
@@ -7,7 +7,7 @@
       {"desc": "SNO-6011R_Specifications.pdf", "size": 182, "filetype": "pdf", "src":"/docs/spec.pdf"},
       {"desc": "SNO-6011R_UserManual.pdf", "size": 19068, "filetype": "pdf", "src":"/docs/spec.pdf"}
   ],
-  "name": "SNV-6084R",
+  "name": "SNO-6084R",
   "brand": "Samsung",
   "description": ["Max 2M (1920 x 1080), Full HD(1080p) resolution",
                   "60fps @ 1920 x 1080",
@@ -23,7 +23,7 @@
   "spec": [
     { "name": "General",
       "members": [
-        { "name": "Model", "details": "SNV-6084R"},
+        { "name": "Model", "details": "SNO-6084R"},
         { "name": "Brand", "details": "Samsung"},
         { "name": "Color / Material", "details": "Dark gray / Aluminum"},
         { "name": "Dimensions(WxHxD) ", "details": "82.4 x 82.4 x 312.6mm (3.24” x 3.24” x 12.31”) (Without sunshield)"},

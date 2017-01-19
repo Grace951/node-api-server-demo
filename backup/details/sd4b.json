@@ -1,12 +1,12 @@
 {
-  "id": "sd4b",
+  "_id": "sd4b",
   "images": [
-    "/img/products/sd4b.jpg",
-    "/img/products/sd4b-1.jpg"
+    "/api/img/products/sd4b.jpg",
+    "/api/img/products/sd4b-1.jpg"
   ],
   "docs": [
-    {"desc": "Futuro-SD4B_SD4_CP4_CZ4_manual.pdf", "size": 712, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "Futuro-SD4B_SD4_CP4_CZ4.pdf", "size": 766, "filetype": "pdf", "src":"/docs/spec.pdf"}
+    {"desc": "Futuro-SD4B_SD4_CP4_CZ4_manual.pdf", "size": 712, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "Futuro-SD4B_SD4_CP4_CZ4.pdf", "size": 766, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "Futuro - SD4B",
   "brand": "Futuro",

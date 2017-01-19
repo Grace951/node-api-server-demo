@@ -1,10 +1,10 @@
 {
-  "id": "kce-gdti6537d2",
+  "_id": "kce-gdti6537d2",
   "images": [
-    "/img/products/kce-gdti6537d2.png"
+    "/api/img/products/kce-gdti6537d2.png"
   ],
   "docs": [
-      {"desc": "KCE-GDTI6537D2_Specification.pdf", "size": 3044, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "KCE-GDTI6537D2_Specification.pdf", "size": 3044, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "KCE-GDTI6537D2",
   "brand": "KCE",

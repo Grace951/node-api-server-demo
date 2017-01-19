@@ -1,11 +1,11 @@
 {
-  "id": "snd-l6083r",
+  "_id": "snd-l6083r",
   "images": [
-    "/img/products/snd-l6083r.png",
-    "/img/products/snd-l6083r-1.png"
+    "/api/img/products/snd-l6083r.png",
+    "/api/img/products/snd-l6083r-1.png"
   ],
   "docs": [
-      {"desc": "SND-L6083R_Specifications.pdf", "size": 259, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SND-L6083R_Specifications.pdf", "size": 259, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SND-L6083R",
   "brand": "Samsung",

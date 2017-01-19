@@ -1,11 +1,11 @@
 {
-  "id": "ip-ds-2cd3132-i-28",
+  "_id": "ip-ds-2cd3132-i-28",
   "images": [
-    "/img/products/ip-ds-2cd3132-i-28.png"
+    "/api/img/products/ip-ds-2cd3132-i-28.png"
   ],
   "docs": [
-      {"desc": "DS-2CD3132-I(3MP)_IR_fixed_Dome_IP.pdf", "size": 4155, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "User_Manual_IP_Cameras.pdf", "size": 3403, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "DS-2CD3132-I(3MP)_IR_fixed_Dome_IP.pdf", "size": 4155, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "User_Manual_IP_Cameras.pdf", "size": 3403, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "IP-DS-2CD3132-I-28",
   "brand": "Hikvision",

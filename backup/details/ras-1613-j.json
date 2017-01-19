@@ -1,12 +1,12 @@
 {
-  "id": "ras-1613-j",
+  "_id": "ras-1613-j",
   "images": [
-    "/img/products/ras-1613-j-1.png",
-    "/img/products/ras-1613-j-2.png",
-    "/img/products/ras-1613-j-3.png"
+    "/api/img/products/ras-1613-j-1.png",
+    "/api/img/products/ras-1613-j-2.png",
+    "/api/img/products/ras-1613-j-3.png"
   ],
   "docs": [
-      {"desc": "RAS-1613(A)-J+N.pdf", "size": 1625, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "RAS-1613(A)-J+N.pdf", "size": 1625, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "RAS-1613-J (16ch)",
   "brand": "iCATCH",

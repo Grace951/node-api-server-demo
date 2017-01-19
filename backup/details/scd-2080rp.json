@@ -1,11 +1,11 @@
 {
-  "id": "scd-2080rp",
+  "_id": "scd-2080rp",
   "images": [
-    "/img/products/scd-2080rp.png",
-    "/img/products/scd-2080rp-1.png"
+    "/api/img/products/scd-2080rp.png",
+    "/api/img/products/scd-2080rp-1.png"
   ],
   "docs": [
-      {"desc": "SCD-2080RP_Specifications.pdf", "size": 189, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SCD-2080RP_Specifications.pdf", "size": 189, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SCD-2080RP",
   "brand": "Samsung",

@@ -1,10 +1,10 @@
 {
-  "id": "seirbhdv60m",
+  "_id": "seirbhdv60m",
   "images": [
-    "/img/products/seirbhdv60m.jpg"
+    "/api/img/products/seirbhdv60m.jpg"
   ],
   "docs": [
-      {"desc": "SEIRBHDV60M.pdf", "size": 265, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SEIRBHDV60M.pdf", "size": 265, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SEIRBHDV60M",
   "brand": "Secuzone",

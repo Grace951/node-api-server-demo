@@ -1,10 +1,10 @@
 {
-  "id": "kce-cdtit6530d",
+  "_id": "kce-cdtit6530d",
   "images": [
-    "/img/products/kce-cdtit6530d.png"
+    "/api/img/products/kce-cdtit6530d.png"
   ],
   "docs": [
-      {"desc": "KCE-SDTIT6530D_Product_Specification.pdf", "size": 430, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "KCE-SDTIT6530D_Product_Specification.pdf", "size": 430, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "KCE-CDTIT6530D",
   "brand": "KCE",

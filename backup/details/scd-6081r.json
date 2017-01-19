@@ -1,11 +1,11 @@
 {
-  "id": "scd-6081r",
+  "_id": "scd-6081r",
   "images": [
-    "/img/products/scd-6081r.png"
+    "/api/img/products/scd-6081r.png"
   ],
   "docs": [
-      {"desc": "SCD-6081R_Specifications.pdf", "size": 268, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "SCD-6081R_UserManual.pdf", "size": 40135, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SCD-6081R_Specifications.pdf", "size": 268, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "SCD-6081R_UserManual.pdf", "size": 40135, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SCD-6081R",
   "brand": "Samsung",

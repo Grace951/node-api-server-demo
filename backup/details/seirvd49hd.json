@@ -1,10 +1,10 @@
 {
-  "id": "seirvd49hd",
+  "_id": "seirvd49hd",
   "images": [
-    "/img/products/seirvd49hd.jpg"
+    "/api/img/products/seirvd49hd.jpg"
   ],
   "docs": [
-      {"desc": "SEIRVD49HD.pdf", "size": 274, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SEIRVD49HD.pdf", "size": 274, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SEIRVD49HD",
   "brand": "Secuzone",

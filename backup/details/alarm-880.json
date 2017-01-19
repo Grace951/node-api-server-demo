@@ -1,22 +1,22 @@
 {
-  "id": "alarm-880",
+  "_id": "alarm-880",
   "images": [
-    "/img/products/alarm_880-1.png",
-    "/img/products/alarm_880-2.png",
-    "/img/products/alarm_880-3.png"
+    "/api/img/products/alarm_880-1.png",
+    "/api/img/products/alarm_880-2.png",
+    "/api/img/products/alarm_880-3.png"
   ],
   "docs": [
-    {"desc": "ICP_CC488_Data_sheet.pdf", "size": 380, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ICP_CC488_Operation_Manual.pdf", "size": 612, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ICP_CC488_Installation_Manual.pdf", "size": 2309, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ICP_CC488_Quick_Installation_Guide.pdf", "size": 1111, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ICP_CC488_Commercial_Brochure.pdf", "size": 3419, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ICP_CP508LW_Data_sheet.pdf", "size": 248, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ICP_CP508LW_Operation_Manual.pdf", "size": 237, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ISC_BPR2_Data_sheet.pdf", "size": 625, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ISC_BPR2_Installation_Manual.pdf", "size": 1378, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ISC_BPR2_Quick_Selection_Guide.pdf", "size": 2566, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ISC_BPR2_Commercial_Brochure.pdf", "size": 826, "filetype": "pdf", "src":"/docs/spec.pdf"}
+    {"desc": "ICP_CC488_Data_sheet.pdf", "size": 380, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ICP_CC488_Operation_Manual.pdf", "size": 612, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ICP_CC488_Installation_Manual.pdf", "size": 2309, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ICP_CC488_Quick_Installation_Guide.pdf", "size": 1111, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ICP_CC488_Commercial_Brochure.pdf", "size": 3419, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ICP_CP508LW_Data_sheet.pdf", "size": 248, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ICP_CP508LW_Operation_Manual.pdf", "size": 237, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ISC_BPR2_Data_sheet.pdf", "size": 625, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ISC_BPR2_Installation_Manual.pdf", "size": 1378, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ISC_BPR2_Quick_Selection_Guide.pdf", "size": 2566, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ISC_BPR2_Commercial_Brochure.pdf", "size": 826, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "member": [
     {"desc": "ICP-CC488 Panel Dialler", "qty": 1},

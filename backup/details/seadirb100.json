@@ -1,10 +1,10 @@
 {
-  "id": "seadirb100",
+  "_id": "seadirb100",
   "images": [
-    "/img/products/seadirb100.jpg"
+    "/api/img/products/seadirb100.jpg"
   ],
   "docs": [
-      {"desc": "SEIRVD49HD.pdf", "size": 274, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SEIRVD49HD.pdf", "size": 274, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SEADIRB100",
   "brand": "Secuzone",

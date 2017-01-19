@@ -1,10 +1,10 @@
 {
-  "id": "scv-6081r",
+  "_id": "scv-6081r",
   "images": [
-    "/img/products/scv-6081r.png"
+    "/api/img/products/scv-6081r.png"
   ],
   "docs": [
-      {"desc": "SCV-6081R_Specifications.pdf", "size": 296, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SCV-6081R_Specifications.pdf", "size": 296, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SCV-6081R",
   "brand": "Samsung",

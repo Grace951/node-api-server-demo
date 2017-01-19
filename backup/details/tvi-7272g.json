@@ -1,12 +1,12 @@
 {
-  "id": "tvi-7272g",
+  "_id": "tvi-7272g",
   "images": [
-    "/img/products/tvi-7272g-1.png",
-    "/img/products/tvi-7272g-2.png",
-    "/img/products/tvi-7272g-3.png"
+    "/api/img/products/tvi-7272g-1.png",
+    "/api/img/products/tvi-7272g-2.png",
+    "/api/img/products/tvi-7272g-3.png"
   ],
   "docs": [
-    {"desc": "C-TVI-7272G_User_Manual.pdf", "size": 285, "filetype": "pdf", "src":"/docs/spec.pdf"}
+    {"desc": "C-TVI-7272G_User_Manual.pdf", "size": 285, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "TVI-7272G",
   "brand": "DigiGuard",

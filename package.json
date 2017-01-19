@@ -30,7 +30,8 @@
     "mongoose": "^4.7.6",
     "morgan": "^1.7.0",
     "object-assign": "^4.1.0",
-    "open": "0.0.5"
+    "open": "0.0.5",
+    "require-dir": "^0.3.1"
   },
   "homepage": "https://github.com/Grace951/node-api-server-demo#readme",
   "devDependencies": {

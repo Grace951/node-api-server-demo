@@ -1,14 +1,14 @@
 {
-  "id": "hik-7708-p8",
+  "_id": "hik-7708-p8",
   "images": [
-    "/img/products/hik-7708-p8-1.png",
-    "/img/products/hik-7708-p8-2.png",
-    "/img/products/hik-7708-p8-3.png"
+    "/api/img/products/hik-7708-p8-1.png",
+    "/api/img/products/hik-7708-p8-2.png",
+    "/api/img/products/hik-7708-p8-3.png"
   ],
   "docs": [
-       {"desc": "D-HIK7704-P4_D-HIK7708-P8_HIK-7716-P16.pdf", "size": 5056, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "User_Manual_of_Network_Video_Recorder.pdf", "size": 9932, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "Quick_Start_Guide_of_NVR_Series.pdf", "size": 1841, "filetype": "pdf", "src":"/docs/spec.pdf"}
+       {"desc": "D-HIK7704-P4_D-HIK7708-P8_HIK-7716-P16.pdf", "size": 5056, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "User_Manual_of_Network_Video_Recorder.pdf", "size": 9932, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "Quick_Start_Guide_of_NVR_Series.pdf", "size": 1841, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "HIK-7708-P8 (8ch PoE)",
   "brand": "DigiGuard",

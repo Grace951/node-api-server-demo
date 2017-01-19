@@ -1,10 +1,10 @@
 {
-  "id": "seirvdcm800",
+  "_id": "seirvdcm800",
   "images": [
-    "/img/products/seirvdcm800.jpg"
+    "/api/img/products/seirvdcm800.jpg"
   ],
   "docs": [
-      {"desc": "SEIRVD49HD.pdf", "size": 274, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SEIRVD49HD.pdf", "size": 274, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SEIRVDCM800",
   "brand": "Secuzone",

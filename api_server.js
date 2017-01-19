@@ -34,7 +34,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-// app.use( express.static(path.resolve(__dirname, './public/')));
+app.use( express.static(path.resolve(__dirname, './public/')));
 route(app);
 
 app.listen(apiPort, (err) => {

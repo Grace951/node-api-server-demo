@@ -1,15 +1,15 @@
 {
-  "id": "mh3-08u",
+  "_id": "mh3-08u",
   "images": [
-    "/img/products/mh3-08u-1.png",
-    "/img/products/snm-vms.png",
-    "/img/products/snm-rms.png",
-    "/img/products/snm-mac-viewer.png",
-    "/img/products/snm-phone-viewer.png",
-    "/img/products/smn-backup-player.png"
+    "/api/img/products/mh3-08u-1.png",
+    "/api/img/products/snm-vms.png",
+    "/api/img/products/snm-rms.png",
+    "/api/img/products/snm-mac-viewer.png",
+    "/api/img/products/snm-phone-viewer.png",
+    "/api/img/products/smn-backup-player.png"
   ],
   "docs": [
-      {"desc": "SNM_HD-SDI_8ch_Premium_MH3-08U.pdf", "size": 617, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SNM_HD-SDI_8ch_Premium_MH3-08U.pdf", "size": 617, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "MH3-08U (8ch Premium Universal)",
   "brand": "SNM",

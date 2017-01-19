@@ -23,7 +23,7 @@ var SpecSchema = new Schema({
 });
 
 var ProductSchema = new Schema({
-    id: {
+    _id: {
         type: String,
         unique: true,
         lowercase: true
@@ -70,7 +70,7 @@ function getBriefObject (id){
             docs: false,
             description: false,
             spec: false,
-            _id: false,
+            // _id: false,
             member: false,
             optional: false,
         })

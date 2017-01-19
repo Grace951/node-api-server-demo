@@ -1,12 +1,12 @@
 {
-  "id": "snp-3120vh",
+  "_id": "snp-3120vh",
   "images": [
-    "/img/products/snp-3120vh.png"
+    "/api/img/products/snp-3120vh.png"
   ],
   "docs": [
-      {"desc": "SNP-3120VH_3120_Specifications.pdf", "size": 298, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "SNP-3120_datasheet.pdf", "size": 647, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "SNP-3120VH_UserManual.pdf", "size": 4045, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SNP-3120VH_3120_Specifications.pdf", "size": 298, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "SNP-3120_datasheet.pdf", "size": 647, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "SNP-3120VH_UserManual.pdf", "size": 4045, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SNP-3120VH",
   "brand": "Samsung",

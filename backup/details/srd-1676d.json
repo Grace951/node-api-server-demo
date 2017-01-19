@@ -1,14 +1,14 @@
 {
-  "id": "srd-1676d",
+  "_id": "srd-1676d",
   "images": [
-    "/img/products/srd-1676d-1.png",
-    "/img/products/srd-1676d-2.png",
-    "/img/products/srd-1676d-3.png",
-    "/img/products/srd-1676d-4.png"
+    "/api/img/products/srd-1676d-1.png",
+    "/api/img/products/srd-1676d-2.png",
+    "/api/img/products/srd-1676d-3.png",
+    "/api/img/products/srd-1676d-4.png"
   ],
   "docs": [
-      {"desc": "SRD-1676D-Specifications.pdf", "size": 364, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "User_Manual-SRD-1676D_SRD-876D_SRD-1656D.pdf", "size": 8246, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SRD-1676D-Specifications.pdf", "size": 364, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "User_Manual-SRD-1676D_SRD-876D_SRD-1656D.pdf", "size": 8246, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SRD-1676D (16ch)",
   "brand": "Samsung",

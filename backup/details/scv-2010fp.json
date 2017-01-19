@@ -1,12 +1,12 @@
 {
-  "id": "scv-2010fp",
+  "_id": "scv-2010fp",
   "images": [
-    "/img/products/scv-2010fp-1.jpg",
-    "/img/products/scv-2010fp-2.jpg"
+    "/api/img/products/scv-2010fp-1.jpg",
+    "/api/img/products/scv-2010fp-2.jpg"
   ],
   "docs": [
-      {"desc": "SCV-2010F.pdf", "size": 302, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "SCV-2010F-ENG-UserManual.pdf", "size": 1680, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SCV-2010F.pdf", "size": 302, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "SCV-2010F-ENG-UserManual.pdf", "size": 1680, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SCV-2010FP",
   "brand": "Samsung",

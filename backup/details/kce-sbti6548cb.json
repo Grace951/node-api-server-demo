@@ -1,10 +1,10 @@
 {
-  "id": "kce-sbti6548cb",
+  "_id": "kce-sbti6548cb",
   "images": [
-    "/img/products/kce-sbti6548cb.png"
+    "/api/img/products/kce-sbti6548cb.png"
   ],
   "docs": [
-      {"desc": "SBTI6548CB_Specification.pdf", "size": 740, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SBTI6548CB_Specification.pdf", "size": 740, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "KCE-SBTI6548CB",
   "brand": "KCE",

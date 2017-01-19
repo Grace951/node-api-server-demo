@@ -1,14 +1,14 @@
 {
-  "id": "rhe-1625u-b",
+  "_id": "rhe-1625u-b",
   "images": [
-    "/img/products/rhe-1625u-b-1.png"
+    "/api/img/products/rhe-1625u-b-1.png"
   ],
   "docs": [
-    {"desc": "RHE-1625U-B_Specification.pdf", "size": 859, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "iCMS_Manual_0716.pdf", "size": 1443, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "RHE-1625U-B_Quick_Start_ Manual.pdf", "size": 969, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "RHE-1625U-B_RemoteAccessManual.pdf", "size": 1077, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "RHE-1625U-B_UserManual.pdf", "size": 6920, "filetype": "pdf", "src":"/docs/spec.pdf"}
+    {"desc": "RHE-1625U-B_Specification.pdf", "size": 859, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "iCMS_Manual_0716.pdf", "size": 1443, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "RHE-1625U-B_Quick_Start_ Manual.pdf", "size": 969, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "RHE-1625U-B_RemoteAccessManual.pdf", "size": 1077, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "RHE-1625U-B_UserManual.pdf", "size": 6920, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "RHE-1625U-B (16ch Universal)",
   "brand": "iCatch",

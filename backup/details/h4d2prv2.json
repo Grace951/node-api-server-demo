@@ -1,10 +1,10 @@
 {
-  "id": "h4d2prv2",
+  "_id": "h4d2prv2",
   "images": [
-    "/img/products/h4d2prv2.png"
+    "/api/img/products/h4d2prv2.png"
   ],
   "docs": [
-      {"desc": "H4D2PRV2_X_VD_IR_Dome_vari.pdf", "size": 182, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "H4D2PRV2_X_VD_IR_Dome_vari.pdf", "size": 182, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "H4D2PRV2",
   "brand": "Honeywell",

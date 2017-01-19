@@ -1,11 +1,11 @@
 {
-  "id": "d-rhe-828-j",
+  "_id": "d-rhe-828-j",
   "images": [
-    "/img/products/rhe-828-j.png"
+    "/api/img/products/rhe-828-j.png"
   ],
   "docs": [
-      {"desc": "RHE-828-J.pdf", "size": 962, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "iCMS_Manual_0716.pdf", "size": 1443, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "RHE-828-J.pdf", "size": 962, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "iCMS_Manual_0716.pdf", "size": 1443, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
 
   ],
   "name": "RHE-828-J (8ch Compact)",

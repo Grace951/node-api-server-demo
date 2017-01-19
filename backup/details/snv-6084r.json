@@ -1,11 +1,11 @@
 {
-  "id": "snv-6084r",
+  "_id": "snv-6084r",
   "images": [
-    "/img/products/snv-6084r.png"
+    "/api/img/products/snv-6084r.png"
   ],
   "docs": [
-      {"desc": "SNV-6084R_Specifications.pdf", "size": 290, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "SNV-6084R_UserManual.pdf", "size": 27408, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SNV-6084R_Specifications.pdf", "size": 290, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "SNV-6084R_UserManual.pdf", "size": 27408, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SNV-6084R",
   "brand": "Samsung",

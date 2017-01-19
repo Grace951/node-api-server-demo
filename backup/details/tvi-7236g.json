@@ -1,10 +1,10 @@
 {
-  "id": "tvi-7236g",
+  "_id": "tvi-7236g",
   "images": [
-    "/img/products/tvi-7236g.png"
+    "/api/img/products/tvi-7236g.png"
   ],
   "docs": [
-    {"desc": "C-TVI-7236-G_User_Manual.pdf", "size": 285, "filetype": "pdf", "src":"/docs/spec.pdf"}
+    {"desc": "C-TVI-7236-G_User_Manual.pdf", "size": 285, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "TVI-7236G",
   "brand": "DigiGuard",

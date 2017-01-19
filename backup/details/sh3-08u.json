@@ -1,16 +1,16 @@
 {
-  "id": "sh3-08u",
+  "_id": "sh3-08u",
   "images": [
-    "/img/products/sh3-08u-1.png",
-    "/img/products/snm-vms.png",
-    "/img/products/snm-rms.png",
-    "/img/products/snm-mac-viewer.png",
-    "/img/products/snm-phone-viewer.png",
-    "/img/products/smn-backup-player.png"
+    "/api/img/products/sh3-08u-1.png",
+    "/api/img/products/snm-vms.png",
+    "/api/img/products/snm-rms.png",
+    "/api/img/products/snm-mac-viewer.png",
+    "/api/img/products/snm-phone-viewer.png",
+    "/api/img/products/smn-backup-player.png"
   ],
   "docs": [
-      {"desc": "SNM_HD-SDI_8ch_Lite_SH3-08U.pdf", "size": 601, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "SNM_HD-SDI_Universal_DVR_SH3_Series_4_8_16ch.PDF", "size": 2799, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SNM_HD-SDI_8ch_Lite_SH3-08U.pdf", "size": 601, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "SNM_HD-SDI_Universal_DVR_SH3_Series_4_8_16ch.PDF", "size": 2799, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SH3-08U (8ch )",
   "brand": "SNM",

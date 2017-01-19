@@ -1,12 +1,12 @@
 {
-  "id": "alarm-880-wireless",
+  "_id": "alarm_16_plus-1",
   "images": [
-    "/img/products/alarm_16_plus-1.png"
+    "/api/img/products/alarm_16_plus-1.png"
   ],
   "docs": [
-    {"desc": "ISC_BPR2_Data_sheet.pdf", "size": 625, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ISC_BPR2_Installation_Manual.pdf", "size": 1378, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ISC_BPR2_Quick_Selection_Guide.pdf", "size": 2566, "filetype": "pdf", "src":"/docs/spec.pdf"},
+    {"desc": "ISC_BPR2_Data_sheet.pdf", "size": 625, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ISC_BPR2_Installation_Manual.pdf", "size": 1378, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ISC_BPR2_Quick_Selection_Guide.pdf", "size": 2566, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
     {"desc": "ISC_BPR2_Commercial_Brochure.pdf", "size": 826, "filetype": "pdf", "src":"/products/docsspec.pdf"}
   ],
   "member": [

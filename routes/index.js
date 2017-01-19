@@ -12,7 +12,7 @@ module.exports = function(app){
     var Categories = require('../models/category');
 
     app.delete('/api/details/:id', function (req,res){
-        Products.ProductModel.findOneAndRemove( {id: req.params.id})
+        Products.ProductModel.findOneAndRemove( {_id: req.params.id})
         .exec()
         .then(function(product){
             return res.send({name: product.name})
@@ -25,7 +25,7 @@ module.exports = function(app){
 
     .post('/api/details/:id', function (req,res){
         Products.ProductModel.findOneAndUpdate(
-            {id: req.params.id},
+            {_id: req.params.id},
             req.body
             , { multi: true , upsert: true, setDefaultsOnInsert: true,  returnNewDocument : true }
         )
@@ -49,9 +49,9 @@ module.exports = function(app){
     .get('/api/details/:id', function (req, res){
         // console.log(req.params.id);
         Products.ProductModel.findOne({
-            id: req.params.id
+            _id: req.params.id
         },{
-            _id: false,
+            // _id: false,
             // channel: false,
             // remote: false,
             // backup: false,

@@ -1,13 +1,13 @@
 {
-  "id": "snv-6084r",
+  "_id": "sn0-6011r",
   "images": [
-    "/img/products/snv-6084r.png"
+    "/api/img/products/sn0-6011r.png"
   ],
   "docs": [
-      {"desc": "SNO-6011R_Specifications.pdf", "size": 270, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "SNO-6011R_UserManual.pdf", "size": 25439, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SNO-6011R_Specifications.pdf", "size": 270, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "SNO-6011R_UserManual.pdf", "size": 25439, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
-  "name": "SNV-6084R",
+  "name": "SNO-6011R",
   "brand": "Samsung",
   "description": ["Max 2M (1920 x 1080), Full HD(1080p) resolution",
                   "30fps @ 1920 x 1080",
@@ -23,7 +23,7 @@
   "spec": [
     { "name": "General",
       "members": [
-        { "name": "Model", "details": "SNV-6084R"},
+        { "name": "Model", "details": "SNO-6011R"},
         { "name": "Brand", "details": "Samsung"},
         { "name": "Color / Material", "details": "Dark gray / Plastic"},
         { "name": "Dimensions(WxHxD) ", "details": "77.1 x 83.0 x 302.4mm (3.04” x 3.27” x 11.91”)"},

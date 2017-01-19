@@ -1,14 +1,14 @@
 {
-  "id": "hik-8832-p16",
+  "_id": "hik-8832-p16",
   "images": [
-    "/img/products/hik-8832-p16-1.png",
-    "/img/products/hik-8832-p16-2.png",
-    "/img/products/hik-8832-p16-3.png"
+    "/api/img/products/hik-8832-p16-1.png",
+    "/api/img/products/hik-8832-p16-2.png",
+    "/api/img/products/hik-8832-p16-3.png"
   ],
   "docs": [
-      {"desc": "D-HIK8832-P16.pdf", "size": 3288, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "User_Manual_of_Network_Video_Recorder.pdf", "size": 9932, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "Quick_Start_Guide_of_NVR_Series.pdf", "size": 1841, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "D-HIK8832-P16.pdf", "size": 3288, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "User_Manual_of_Network_Video_Recorder.pdf", "size": 9932, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "Quick_Start_Guide_of_NVR_Series.pdf", "size": 1841, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
 
   ],
   "name": "HIK-8832-P16 (16ch PoE)",

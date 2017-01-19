@@ -1,13 +1,13 @@
 {
-  "id": "ras-413-j",
+  "_id": "ras-413-j",
   "images": [
-    "/img/products/ras-413-j-1.png",
-    "/img/products/ras-413-j-2.png",
-    "/img/products/ras-413-j-3.png",
-    "/img/products/ras-413-j-4.png"
+    "/api/img/products/ras-413-j-1.png",
+    "/api/img/products/ras-413-j-2.png",
+    "/api/img/products/ras-413-j-3.png",
+    "/api/img/products/ras-413-j-4.png"
   ],
   "docs": [
-      {"desc": "RAS-413-J.pdf", "size": 815, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "RAS-413-J.pdf", "size": 815, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "RAS-413-J (4ch)",
   "brand": "iCATCH",

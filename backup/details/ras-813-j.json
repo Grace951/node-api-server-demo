@@ -1,12 +1,12 @@
 {
-  "id": "ras-813-j",
+  "_id": "ras-813-j",
   "images": [
-    "/img/products/ras-813-j-1.png",
-    "/img/products/ras-813-j-2.png",
-    "/img/products/ras-813-j-3.png"
+    "/api/img/products/ras-813-j-1.png",
+    "/api/img/products/ras-813-j-2.png",
+    "/api/img/products/ras-813-j-3.png"
   ],
   "docs": [
-      {"desc": "RAS-813-C+J+N.pdf", "size": 2097, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "RAS-813-C+J+N.pdf", "size": 2097, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "RAS-813-J (8ch)",
   "brand": "iCATCH",

@@ -1,12 +1,12 @@
 {
-  "id": "srd-482",
+  "_id": "srd-482",
   "images": [
-    "/img/products/srd-482-2.jpg",
-    "/img/products/srd-482-1.jpg"
+    "/api/img/products/srd-482-2.jpg",
+    "/api/img/products/srd-482-1.jpg"
   ],
   "docs": [
-      {"desc": "SRD-482_140822.pdf", "size": 249, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "User_Manual-SRD-482-Eng-0820.pdf", "size": 36420, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SRD-482_140822.pdf", "size": 249, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "User_Manual-SRD-482-Eng-0820.pdf", "size": 36420, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SRD-482 (4ch)",
   "brand": "Samsung",

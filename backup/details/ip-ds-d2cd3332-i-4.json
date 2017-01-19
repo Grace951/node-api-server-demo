@@ -1,11 +1,11 @@
 {
-  "id": "ip-ds-d2cd3332-i-4",
+  "_id": "ip-ds-d2cd3332-i-4",
   "images": [
-    "/img/products/ip-ds-d2cd3332-i-4.png"
+    "/api/img/products/ip-ds-d2cd3332-i-4.png"
   ],
   "docs": [
-      {"desc": "DS-2CD3332-I_Turret_Network_Camera.pdf", "size": 3882, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "User_Manual_IP_Cameras.pdf", "size": 3403, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "DS-2CD3332-I_Turret_Network_Camera.pdf", "size": 3882, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "User_Manual_IP_Cameras.pdf", "size": 3403, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "IP-DS-D2CD3332-I-4",
   "brand": "Hikvision",

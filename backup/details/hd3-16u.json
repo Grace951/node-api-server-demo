@@ -1,15 +1,15 @@
 {
-  "id": "hd3-16u",
+  "_id": "hd3-16u",
   "images": [
-    "/img/products/hd3-16u-1.png",
-    "/img/products/snm-vms.png",
-    "/img/products/snm-rms.png",
-    "/img/products/snm-mac-viewer.png",
-    "/img/products/snm-phone-viewer.png",
-    "/img/products/smn-backup-player.png"
+    "/api/img/products/hd3-16u-1.png",
+    "/api/img/products/snm-vms.png",
+    "/api/img/products/snm-rms.png",
+    "/api/img/products/snm-mac-viewer.png",
+    "/api/img/products/snm-phone-viewer.png",
+    "/api/img/products/smn-backup-player.png"
   ],
   "docs": [
-      {"desc": "SNM_HD-SDI_16ch_Premium_HD3-16U.pdf", "size": 619, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SNM_HD-SDI_16ch_Premium_HD3-16U.pdf", "size": 619, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "HD3-16U (16ch Premium Hybrid)",
   "brand": "SNM",

@@ -1,13 +1,13 @@
 {
-  "id": "sco-2080rp",
+  "_id": "sco-2080rp",
   "images": [
-    "/img/products/sco-2080rp-1.png",
-    "/img/products/sco-2080rp-2.png",
-    "/img/products/sco-2080rp-3.png"
+    "/api/img/products/sco-2080rp-1.png",
+    "/api/img/products/sco-2080rp-2.png",
+    "/api/img/products/sco-2080rp-3.png"
   ],
   "docs": [
-      {"desc": "SCO-2080R_Specifications.pdf", "size": 216, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "SCO-2080R-UserManual.pdf", "size": 6061, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SCO-2080R_Specifications.pdf", "size": 216, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "SCO-2080R-UserManual.pdf", "size": 6061, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SCO-2080RP",
   "brand": "Samsung",

@@ -1,12 +1,12 @@
 {
-  "id": "sno-l6013r",
+  "_id": "sno-l6013r",
   "images": [
-    "/img/products/sno-l6013r.png",
-    "/img/products/sno-l6013r-1.png"
+    "/api/img/products/sno-l6013r.png",
+    "/api/img/products/sno-l6013r-1.png"
   ],
   "docs": [
-      {"desc": "SNO-6011R_Specifications.pdf", "size": 182, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "SNO-6011R_UserManual.pdf", "size": 19068, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SNO-6011R_Specifications.pdf", "size": 182, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "SNO-6011R_UserManual.pdf", "size": 19068, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SND-L6083R",
   "brand": "Samsung",

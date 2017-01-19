@@ -1,21 +1,21 @@
 {
-  "id": "alarm-844",
+  "_id": "alarm-844",
   "images": [
-    "/img/products/alarm_844-1.png",
-    "/img/products/alarm_844-2.png",
-    "/img/products/alarm_844-3.png",
-    "/img/products/alarm_844-4.png"
+    "/api/img/products/alarm_844-1.png",
+    "/api/img/products/alarm_844-2.png",
+    "/api/img/products/alarm_844-3.png",
+    "/api/img/products/alarm_844-4.png"
   ],
   "docs": [
-    {"desc": "ICP_CC404P_Data_sheet.pdf", "size": 246, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ICP_CC404_Operation_Manual.pdf", "size": 543, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ICP_CC404_Installation_Manual.pdf", "size": 1577, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ICP_CC404_Quick_Installation_Guide.pdf", "size": 852, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ICP_CP508LW_Data_sheet.pdf", "size": 248, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ICP_CP508LW_Operation_Manual.pdf", "size": 237, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ISC_BPR2_Data_sheet.pdf", "size": 625, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ISC_BPR2_Installation_Manual.pdf", "size": 1378, "filetype": "pdf", "src":"/docs/spec.pdf"},
-    {"desc": "ISC_BPR2_Quick_Selection_Guide.pdf", "size": 1378, "filetype": "pdf", "src":"/docs/spec.pdf"}
+    {"desc": "ICP_CC404P_Data_sheet.pdf", "size": 246, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ICP_CC404_Operation_Manual.pdf", "size": 543, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ICP_CC404_Installation_Manual.pdf", "size": 1577, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ICP_CC404_Quick_Installation_Guide.pdf", "size": 852, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ICP_CP508LW_Data_sheet.pdf", "size": 248, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ICP_CP508LW_Operation_Manual.pdf", "size": 237, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ISC_BPR2_Data_sheet.pdf", "size": 625, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ISC_BPR2_Installation_Manual.pdf", "size": 1378, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+    {"desc": "ISC_BPR2_Quick_Selection_Guide.pdf", "size": 1378, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "member": [
     {"desc": "ICP-CC404P Panel Dialler", "qty": 1},

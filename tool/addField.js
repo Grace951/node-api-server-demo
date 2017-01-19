@@ -1,13 +1,13 @@
 require('../database/database');
 var Products = require('../models/product');
 
-var CAT = require('../backup/KIT.json');
+var CAT = require('../backup/NVR.json');
 
 console.log("=================================", CAT.length);
 for (let i = 0; i < CAT.length; i++){
 	//console.log("--------------------------------------", CAT[i].id);
 	Products.ProductModel.update(
-		{id: CAT[i].id},
+		{_id: CAT[i]._id},
 		CAT[i]
 		, { multi: true }
 		, function(err, numberAffected) {

@@ -1,11 +1,11 @@
 {
-  "id": "snd-6083",
+  "_id": "snd-6083",
   "images": [
-    "/img/products/snd-6083.png"
+    "/api/img/products/snd-6083.png"
   ],
   "docs": [
-      {"desc": "SND-6083_Specifications.pdf", "size": 270, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "SND-6083_UserManual.pdf", "size": 25439, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SND-6083_Specifications.pdf", "size": 270, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "SND-6083_UserManual.pdf", "size": 25439, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SND-6083",
   "brand": "Samsung",

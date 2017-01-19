@@ -1,12 +1,12 @@
 {
-  "id": "sco-2020rp",
+  "_id": "sco-2020rp",
   "images": [
-    "/img/products/sco-2020rp-1.png",
-    "/img/products/sco-2020rp-2.png"
+    "/api/img/products/sco-2020rp-1.png",
+    "/api/img/products/sco-2020rp-2.png"
   ],
   "docs": [
-      {"desc": "SCD-2020R_Specifications.pdf", "size": 186, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "SCD-2020R_UserManual.pdf", "size": 3896, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "SCD-2020R_Specifications.pdf", "size": 186, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "SCD-2020R_UserManual.pdf", "size": 3896, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "SCO-2020RP",
   "brand": "Samsung",
@@ -24,7 +24,7 @@
         { "name": "Dimensions(WxH) ", "details": "Ø107.6 x 83.7mm (Ø4.24” x 3.3”) "},
         { "name": "Weight", "details": "280g (0.62 lb)"},
         { "name": "Working Temperature", "details": "-10°C ~ +55°C (+14°F ~ +131°F)"},
-        { "name": "Working Humidity", "details": "Less than 90% RH"},
+        { "name": "Working Humidity", "details": "Less than 90% RH"}
       ]
     },
     { "name": "Video",

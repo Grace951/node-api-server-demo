@@ -1,12 +1,12 @@
 {
-  "id": "h4d2prv2",
+  "_id": "h2d2prv2",
   "images": [
-    "/img/products/h4d2prv2.png"
+    "/api/img/products/h2d2prv2.png"
   ],
   "docs": [
-      {"desc": "H4D2PRV2_X_VD_IR_Dome_vari.pdf", "size": 182, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "H4D2PRV2_X_VD_IR_Dome_vari.pdf", "size": 182, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
-  "name": "H4D2PRV2",
+  "name": "H2D2PRV2",
   "brand": "Honeywell",
   "description": ["1080P high definition ",
                   "H.264 / MJPEG video compression ",
@@ -22,7 +22,7 @@
   "spec": [
     { "name": "General",
       "members": [
-        { "name": "Model", "details": "H4D2PRV2"},
+        { "name": "Model", "details": "H2D2PRV2"},
         { "name": "Brand", "details": "Honeywell"},
         { "name": "Dimensions(WxH) ", "details": "Ø122mm×89mm"},
         { "name": "Weight", "details": "0.5 kg "},

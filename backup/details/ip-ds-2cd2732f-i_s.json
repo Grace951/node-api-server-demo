@@ -1,11 +1,11 @@
 {
-  "id": "ip-ds-2cd2732f-i_s",
+  "_id": "ip-ds-2cd2732f-i_s",
   "images": [
-    "/img/products/ip-ds-2cd2732f-i_s.png"
+    "/api/img/products/ip-ds-2cd2732f-i_s.png"
   ],
   "docs": [
-      {"desc": "DS-2CD2732F-I(S).pdf", "size": 992, "filetype": "pdf", "src":"/docs/spec.pdf"},
-      {"desc": "User_Manual_IP_Cameras.pdf", "size": 3403, "filetype": "pdf", "src":"/docs/spec.pdf"}
+      {"desc": "DS-2CD2732F-I(S).pdf", "size": 992, "filetype": "pdf", "src":"/api/docs/spec.pdf"},
+      {"desc": "User_Manual_IP_Cameras.pdf", "size": 3403, "filetype": "pdf", "src":"/api/docs/spec.pdf"}
   ],
   "name": "IP-DS-2CD2732F-I(S)",
   "brand": "Hikvision",

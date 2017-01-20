@@ -1,3 +1,6 @@
+var formidable = require('formidable');
+var path  = require( 'path');
+
 function HttpErr(code, message) {
   this.code = code || 500;
   this.message = message || 'Internal Server Error';
@@ -6,6 +9,18 @@ function HttpErr(code, message) {
 HttpErr.prototype = Object.create(Error.prototype);
 HttpErr.prototype.constructor = HttpErr;
 
+// var multer  = require( 'multer');
+// var storage =   multer.diskStorage({
+//     destination: function (req, file, callback) {
+//         callback(null, path.join(__dirname, "../public/img/products"));
+//     },
+//     filename: function (req, file, callback) {
+//         console.log(file);
+//         callback(null, file.originalname);
+//     }
+// });
+
+// var upload = multer({ storage : storage }).array('uploadImages', 12);
 
 module.exports = function(app){
     var Products = require('../models/product');
@@ -20,6 +35,48 @@ module.exports = function(app){
         .catch(function(err){
             console.log(err)
             return res.status(500).json(err);
+        });
+    })
+
+    .post('/api/file/images/:id', function (req,res){      
+        Products.ProductModel.find(
+            {_id: req.params.id}           
+        )
+        .exec()
+        .then(function(details){
+            if(!details){
+               throw new HttpErr(404, 'Product Not Found');   
+            }
+            return details;
+        })        
+        .then(function(details){
+            // upload(req,res,function(err) {
+            //     console.log("req.body=========", req.body);
+            //     console.log("req.body.files=========", req.body.files);
+            //     console.log("req.files========", req.files);
+            //     console.log("req.file=========", req.file);
+
+            //     if(err) {
+            //         console.log(err);
+            //         return res.end("Error uploading file.");
+            //     }
+            //     res.end("File is uploaded");
+            // });
+
+            var form = new formidable.IncomingForm();
+            // form.multiples = true;
+
+            form.parse(req, function(err, fields, files) {
+                console.log('handling form upload - fields', fields);                
+                console.log('handling form upload - files', files);
+
+               return res.send('Success!!');
+            });
+        })
+        .catch(function(err){
+            return res.status(err.code).json({
+                    err:err.message
+            });
         });
     })
 
@@ -45,6 +102,7 @@ module.exports = function(app){
             });
         });
     })
+
 
     .get('/api/details/:id', function (req, res){
         // console.log(req.params.id);

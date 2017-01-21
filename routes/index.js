@@ -1,4 +1,6 @@
 var path  = require( 'path');
+var mime = require('mime');
+var crypto = require('crypto');
 
 function HttpErr(code, message) {
   this.code = code || 500;
@@ -9,17 +11,28 @@ HttpErr.prototype = Object.create(Error.prototype);
 HttpErr.prototype.constructor = HttpErr;
 
 var multer  = require( 'multer');
-var storage =   multer.diskStorage({
+var imageStorage =   multer.diskStorage({
     destination: function (req, file, callback) {
         callback(null, path.join(__dirname, "../public/img/products"));
     },
     filename: function (req, file, callback) {
-        console.log(file);
-        callback(null, file.originalname);
+        crypto.pseudoRandomBytes(8, function (err, raw) {
+            callback(null, (req.body.id || '') + '-' + raw.toString('hex') + Date.now() + '.' + mime.extension(file.mimetype));
+        });
     }
 });
-
-var upload = multer({ storage : storage }).array('uploadImages', 12);
+var docsStorage =   multer.diskStorage({
+    destination: function (req, file, callback) {
+        let size = file.size;
+        callback(null, path.join(__dirname, "../public/docs"));
+    },
+    filename: function (req, file, callback) {
+        crypto.pseudoRandomBytes(8, function (err, raw) {
+            callback(null, (req.body.id || '') + '-' + raw.toString('hex') + Date.now() + '.' + mime.extension(file.mimetype));
+        });
+    }
+});
+// var upload = multer({ storage : storage }).array('uploadImages', 12);
 
 module.exports = function(app){
     var Products = require('../models/product');
@@ -37,9 +50,10 @@ module.exports = function(app){
         });
     })
 
-    .post('/api/file/images/:id', function (req,res){      
-        Products.ProductModel.find(
-            {_id: req.params.id}           
+    .post('/api/file/images/:id', function (req,res){    
+        let  id =   req.params.id
+        Products.ProductModel.findOne(
+            {_id: id}           
         )
         .exec()
         .then(function(details){
@@ -49,13 +63,74 @@ module.exports = function(app){
             return details;
         })        
         .then(function(details){
-            upload(req,res,function(err) {
-                if(err) {
-                    console.log(err);
-                    return res.end("Error uploading file.");
-                }
-                res.end("File is uploaded");
+            return new Promise((resolve, reject) => {
+                multer({ storage : imageStorage }).array('uploadImages', 12)(req,res,function(err) {
+                    if (err){ 
+                        console.log(err);
+                        reject(new Error(err));
+                    }
+                    let filenames = req.files.map((item)=>{ return '/api/img/products/'+item.filename;})                    
+                    resolve({filenames, details});
+                });
             });
+        })
+        // .then (function(ret){
+        //     let {filenames, details} = ret;
+        //     details.images.push({images : filenames});
+        //     details.save(done);
+        //     console.log(' details.save(done);');
+        // })
+        .then( function(ret ){  
+            let {filenames, details} = ret;
+            return Products.ProductModel.update(
+                {_id: id}, 
+                { $pushAll: { images: filenames } }
+            );             
+        })
+        .then(function(details){
+            res.end("File is uploaded");
+            console.log('File is uploaded');
+        })
+        .catch(function(err){
+            return res.status(err.code).json({
+                    err:err.message
+            });
+        });
+    })
+
+    .post('/api/file/docs/:id', function (req,res){      
+        Products.ProductModel.find(
+            {_id: req.params.id}           
+        )
+        .exec()
+        .then(function(details){
+            if(!details){
+               throw new HttpErr(404, 'Product Not Found');   
+            }
+            return details;
+        })
+        .then(function(details){
+            return new Promise((resolve, reject) => {
+                multer({ storage : imageStorage }).array('uploadDocs', 12)(req,res,function(err) {
+                    if (err){ 
+                        console.log(err);
+                        reject(new Error(err));
+                    }
+                    let docs = req.files.map((item)=>{ return '/api/docs/'+item.filename;})                    
+                    resolve({docs, details});
+                });
+            });
+        })        
+        .then( function(ret ){  
+            let {filenames, details} = ret;
+            return Products.ProductModel.update(
+                {_id: id}, 
+                { $pushAll: { docs: filenames } }
+            );             
+        })
+        .then(function(details){
+            res.end("File is uploaded");
+            console.log('File is uploaded');
         })
         .catch(function(err){
             return res.status(err.code).json({

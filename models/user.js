@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.Promise = Promise; 
+mongoose.Promise = global.Promise
 //#1 create schema
 var Schema = mongoose.Schema;
 

@@ -3,13 +3,13 @@ let mime = require('mime');
 let crypto = require('crypto');
 let fs = require('fs');
 
-function HttpErr(code, message) {
-  this.code = code || 500;
-  this.message = message || 'Internal Server Error';
-//   this.stack = (new Error()).stack;
-}
-HttpErr.prototype = Object.create(Error.prototype);
-HttpErr.prototype.constructor = HttpErr;
+// function HttpErr(code, message) {
+//   this.code = code || 500;
+//   this.message = message || 'Internal Server Error';
+// //   this.stack = (new Error()).stack;
+// }
+// HttpErr.prototype = Object.create(Error.prototype);
+// HttpErr.prototype.constructor = HttpErr;
 
 let multer  = require( 'multer');
 
@@ -47,101 +47,63 @@ module.exports = function(app){
         })
         .catch(function(err){
             console.log(err)
-            return res.status(500).json(err);
+            return res.status(500).json({ errMsg: "Invalid Form Data"});
         });
     })
 
-    .post('/api/file/images/:id', function (req,res){    
-        let  id =   req.params.id
-        Products.ProductModel.findOne(
-            {_id: id}           
+    .post('/api/file/images/:id', multer({ storage : imageStorage }).array('upload_images', 12), function(req,res,next) {
+        if (!req.files){
+            return res.status(500).json({ errMsg: "Invalid Form Data"});
+        }
+        let images = req.files.map((item)=>{ return '/api/img/products/'+item.filename;});        
+        let delfiles = JSON.parse(req.body.del_images || "[]") || [];
+        if( delfiles && delfiles.length){
+            delfiles.forEach( (file) => fs.unlink(`./public/${file.trim().replace(/^\/api\//,'')}`, (err) => { err&&console.log(err);}));
+        }
+        Products.ProductModel.findOneAndUpdate(
+            {_id: req.params.id},
+            {$pushAll: { images}}
+            , { multi: true , upsert: false, setDefaultsOnInsert: true,  returnNewDocument : false, runValidators: true }
         )
         .exec()
-        .then(function(details){
-            if(!details){
-               throw new HttpErr(404, 'Product Not Found');   
-            }
-            return details;
-        })
-        .then(function(details){
-             console.log(req.body);
-            return new Promise((resolve, reject) => {
-                multer({ storage : imageStorage }).array('upload_images', 12)(req,res,function(err) {
-                    if (err){ 
-                        console.log(err);
-                        reject(new Error(err));
-                    }
-                    let delimages = JSON.parse(req.body.del_images || "[]") || [];
-                    if( delimages && delimages.length){
-                        delimages.forEach( (file) => fs.unlink(`./public/${file.trim().replace(/^\/api\//,'')}`, (err) => { err&&console.log(err);}));
-                    }
-                   
-                    let filenames = req.files.map((item)=>{ return '/api/img/products/'+item.filename;});
-                    
-                    for (let file of filenames){
-                        details.images.push(file);
-                    }
-                   
-                    details.save((done)=>{console.log(done)});
-                    resolve(details);
-                });
-            });
-        })
-        // .then( function(ret ){  
-        //     let {filenames, details} = ret;
-        //     return Products.ProductModel.update(
-        //         {_id: id}, 
-        //         { $pushAll: { images: filenames } }
-        //     );             
-        // })
-        .then(function(details){
-            res.end("File is uploaded");
-            console.log('File is uploaded');
-        })
+        .then( (images)=> { return res.json(images);})
         .catch(function(err){
-            return res.status(err.code).json({
-                    err:err.message
+            console.log(err);
+            return res.status(500).json({
+                    errMsg:"Invalid Data"
             });
         });
     })
 
-    .post('/api/file/docs/:id', function (req,res){      
-        Products.ProductModel.find(
-            {_id: req.params.id}           
+
+    .post('/api/file/docs/:id', multer({ storage : docsStorage }).array('upload_docs', 12), function(req,res,next) {
+        if (!req.files){            
+            return res.status(500).json({ errMsg: "Invalid Form Data"});
+        }
+        let docs = [];
+        for (let file of req.files){
+            docs.push({ 
+                desc: file.filename,
+                size: Math.ceil(file.size/1024),
+                filetype: mime.extension(file.mimetype),
+                src: '/api/docs/'+file.filename  
+            });
+        }
+        let delDocs = JSON.parse(req.body.del_docs || "[]") || [];
+        if( delDocs && delDocs.length){
+            delDocs.forEach( (file) => fs.unlink(`./public/${file.src.trim().replace(/^\/api\//,'')}`, (err) => { err&&console.log(err);}));
+        }        
+        Products.ProductModel.findOneAndUpdate(
+            {_id: req.params.id},
+            { $pushAll:{docs}}
+            , { multi: true , upsert: false, setDefaultsOnInsert: true,  returnNewDocument : false, runValidators: true }
         )
         .exec()
-        .then(function(details){
-            if(!details){
-               throw new HttpErr(404, 'Product Not Found');   
-            }
-            return details;
-        })
-        .then(function(details){
-            return new Promise((resolve, reject) => {
-                multer({ storage : imageStorage }).array('upload_docs', 12)(req,res,function(err) {
-                    if (err){ 
-                        console.log(err);
-                        reject(new Error(err));
-                    }
-                    let docs = req.files.map((item)=>{ return '/api/docs/'+item.filename;})                    
-                    resolve({docs, details});
-                });
-            });
-        })        
-        .then( function(ret ){  
-            let {filenames, details} = ret;
-            return Products.ProductModel.update(
-                {_id: id}, 
-                { $pushAll: { docs: filenames } }
-            );             
-        })
-        .then(function(details){
-            res.end("File is uploaded");
-            console.log('File is uploaded');
-        })
+        .then( (docs)=> { return res.json(docs);})
         .catch(function(err){
-            return res.status(err.code).json({
-                    err:err.message
+            console.log(err);
+            return res.status(500).json({
+                    errMsg:"Invalid Data"
             });
         });
     })
@@ -150,7 +112,7 @@ module.exports = function(app){
         Products.ProductModel.findOneAndUpdate(
             {_id: req.params.id},
             req.body
-            , { multi: true , upsert: true, setDefaultsOnInsert: true,  returnNewDocument : true }
+            , { multi: true , upsert: true, setDefaultsOnInsert: true,  returnNewDocument : true, runValidators: true  }
         )
         .exec()
         .then(function(details){
@@ -164,7 +126,7 @@ module.exports = function(app){
         })
         .catch(function(err){
             return res.status(err.code).json({
-                    err:err.message
+                     errMsg:"Invalid Data"
             });
         });
     })
@@ -190,7 +152,7 @@ module.exports = function(app){
         .exec()
         .then(function(product){
             if(!product){
-                throw new HttpErr(404, 'Not Found');               
+                return res.status(404).json({ errMsg: "Not Found"});
             }
             return product;
         })
@@ -198,9 +160,7 @@ module.exports = function(app){
                 res.json(product);
         })
         .catch(function(err){
-            return res.status(err.code).json({
-                    err:err.message
-            });
+            return res.status(500).json({ errMsg: "Internal Server Error"});
         });
 
     })
@@ -212,7 +172,7 @@ module.exports = function(app){
         .exec()
         .then(function(categories){
             if(!categories){
-                throw new HttpErr(404, 'Not Found');               
+                return res.status(404).json({ errMsg: "Not Found"});           
             }
             return categories;
         })
@@ -220,9 +180,7 @@ module.exports = function(app){
                 res.json(categories);
         })
         .catch(function(err){
-            return res.status(err.code).json({
-                    err:err.message()
-            });
+            returnres.status(500).json({ errMsg: "Internal Server Error"});
         });
     })
 
@@ -232,7 +190,7 @@ module.exports = function(app){
         .exec()
         .then(function(category){
             if(!category){
-                throw new HttpErr(404, 'Not Found');               
+                return res.status(404).json({ errMsg: "Not Found"});          
             }
             return category;
         })
@@ -241,7 +199,7 @@ module.exports = function(app){
         })
         .then(function(products){
             if(!products){
-                throw new HttpErr(404, 'Not Found');                
+                return res.status(404).json({ errMsg: "Not Found"});         
             }
             return products;
         })
@@ -249,9 +207,7 @@ module.exports = function(app){
             res.json(products);
         })
         .catch(function(err){
-            return res.status(err.code).json({
-                    err:err.message()
-            });
+            return res.status(500).json({ errMsg: "Internal Server Error"});
         });;
     })
 

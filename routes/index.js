@@ -12,7 +12,6 @@ HttpErr.prototype = Object.create(Error.prototype);
 HttpErr.prototype.constructor = HttpErr;
 
 let multer  = require( 'multer');
-let upload = multer({ dest: '../public' })
 
 let imageStorage =   multer.diskStorage({
     destination: function (req, file, callback) {

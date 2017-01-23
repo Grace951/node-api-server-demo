@@ -1,6 +1,7 @@
-var path  = require( 'path');
-var mime = require('mime');
-var crypto = require('crypto');
+let path  = require( 'path');
+let mime = require('mime');
+let crypto = require('crypto');
+let fs = require('fs');
 
 function HttpErr(code, message) {
   this.code = code || 500;
@@ -10,8 +11,10 @@ function HttpErr(code, message) {
 HttpErr.prototype = Object.create(Error.prototype);
 HttpErr.prototype.constructor = HttpErr;
 
-var multer  = require( 'multer');
-var imageStorage =   multer.diskStorage({
+let multer  = require( 'multer');
+let upload = multer({ dest: '../public' })
+
+let imageStorage =   multer.diskStorage({
     destination: function (req, file, callback) {
         callback(null, path.join(__dirname, "../public/img/products"));
     },
@@ -21,7 +24,7 @@ var imageStorage =   multer.diskStorage({
         });
     }
 });
-var docsStorage =   multer.diskStorage({
+let docsStorage =   multer.diskStorage({
     destination: function (req, file, callback) {
         let size = file.size;
         callback(null, path.join(__dirname, "../public/docs"));
@@ -32,11 +35,10 @@ var docsStorage =   multer.diskStorage({
         });
     }
 });
-// var upload = multer({ storage : storage }).array('uploadImages', 12);
-
+// let upload = multer({ storage : storage }).array('uploadImages', 12);
 module.exports = function(app){
-    var Products = require('../models/product');
-    var Categories = require('../models/category');
+    let Products = require('../models/product');
+    let Categories = require('../models/category');
 
     app.delete('/api/details/:id', function (req,res){
         Products.ProductModel.findOneAndRemove( {_id: req.params.id})
@@ -61,32 +63,38 @@ module.exports = function(app){
                throw new HttpErr(404, 'Product Not Found');   
             }
             return details;
-        })        
+        })
         .then(function(details){
+             console.log(req.body);
             return new Promise((resolve, reject) => {
-                multer({ storage : imageStorage }).array('uploadImages', 12)(req,res,function(err) {
+                multer({ storage : imageStorage }).array('upload_images', 12)(req,res,function(err) {
                     if (err){ 
                         console.log(err);
                         reject(new Error(err));
                     }
-                    let filenames = req.files.map((item)=>{ return '/api/img/products/'+item.filename;})                    
-                    resolve({filenames, details});
+                    let delimages = JSON.parse(req.body.del_images || "[]") || [];
+                    if( delimages && delimages.length){
+                        delimages.forEach( (file) => fs.unlink(`./public/${file.trim().replace(/^\/api\//,'')}`, (err) => { err&&console.log(err);}));
+                    }
+                   
+                    let filenames = req.files.map((item)=>{ return '/api/img/products/'+item.filename;});
+                    
+                    for (let file of filenames){
+                        details.images.push(file);
+                    }
+                   
+                    details.save((done)=>{console.log(done)});
+                    resolve(details);
                 });
             });
         })
-        // .then (function(ret){
+        // .then( function(ret ){  
         //     let {filenames, details} = ret;
-        //     details.images.push({images : filenames});
-        //     details.save(done);
-        //     console.log(' details.save(done);');
+        //     return Products.ProductModel.update(
+        //         {_id: id}, 
+        //         { $pushAll: { images: filenames } }
+        //     );             
         // })
-        .then( function(ret ){  
-            let {filenames, details} = ret;
-            return Products.ProductModel.update(
-                {_id: id}, 
-                { $pushAll: { images: filenames } }
-            );             
-        })
         .then(function(details){
             res.end("File is uploaded");
             console.log('File is uploaded');
@@ -111,7 +119,7 @@ module.exports = function(app){
         })
         .then(function(details){
             return new Promise((resolve, reject) => {
-                multer({ storage : imageStorage }).array('uploadDocs', 12)(req,res,function(err) {
+                multer({ storage : imageStorage }).array('upload_docs', 12)(req,res,function(err) {
                     if (err){ 
                         console.log(err);
                         reject(new Error(err));

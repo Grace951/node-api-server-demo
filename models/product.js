@@ -1,28 +1,36 @@
-var mongoose = require('mongoose');
+let mongoose = require('mongoose');
 mongoose.Promise = global.Promise
 
-var Schema = mongoose.Schema;
+let Schema = mongoose.Schema;
 
-var DocSchema = new Schema({ 
+let DocSchema = new Schema({ 
     desc: String,
     size: Number,
     filetype: String,
     src: String    
 });
 
+let AlarmMember = new Schema ({
+    "desc": String,
+    "qty": String
+});
 
-var SpecMembersSchema = new Schema({ 
+let AlarmOptMember = new Schema ({
+    "desc": String
+});
+
+let SpecMembersSchema = new Schema({ 
     name: String,
     details: String
 });
 
 
-var SpecSchema = new Schema({ 
+let SpecSchema = new Schema({ 
     name: String,
     members: [SpecMembersSchema]   
 });
 
-var ProductSchema = new Schema({
+let ProductSchema = new Schema({
     _id: {
         type: String,
         unique: true,
@@ -32,6 +40,8 @@ var ProductSchema = new Schema({
         type: Number,
         ref:'Category'
     },
+    member: [AlarmMember],
+    optional: [AlarmOptMember],
     images: [String],
     name: String,
     snippet: String,
@@ -58,10 +68,10 @@ var ProductSchema = new Schema({
     spec: [SpecSchema]
 });
 
-var ProductModel = mongoose.model('Products', ProductSchema, 'products');
+let ProductModel = mongoose.model('Products', ProductSchema, 'products');
 
 function getBriefObject (id){    
-    var category = {"cat": id};
+    let category = {"cat": id};
     if (category.cat === 'All')
         delete category.cat;
     

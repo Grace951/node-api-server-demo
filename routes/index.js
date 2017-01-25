@@ -5,6 +5,8 @@ const passpoerService = require ('../services/passport');
 const passport = require ('passport');
 
 const requireAuth = passport.authenticate('jwt', {session: false});
+const requireSignin = passport.authenticate('local', {session: false});
+//by default passport use cookies base session
 
 let multer  = require( 'multer');
 
@@ -18,11 +20,11 @@ let multer  = require( 'multer');
 
 
 module.exports = function(app){
+    app.get('/test',requireAuth, function(req,res){
+        res.send('auth OK');
+    });
 
-
-    let Products = require('../models/product');
-    let Categories = require('../models/category');
-
+    app.post ('/api/signin', requireSignin, auth_api.signin)
     app.post ('/api/signup', auth_api.signup)
 
     .delete('/api/details/:id', product_api.delete)

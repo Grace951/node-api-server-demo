@@ -64,5 +64,12 @@ userSchema.pre('save', function(next){
     });
 });
 
+userSchema.methods.comparePassword = function(passwordToTest, callback){
+    bcrypt.compare(passwordToTest, this.password, function (err, isMatch){
+        if (err) {  return  callback(err) }
+        return callback(null, isMatch);
+    });
+}
+
 //#2 create model
 module.exports=mongoose.model('User',userSchema, 'users');

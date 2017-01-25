@@ -1,10 +1,11 @@
 let User = require('../models/user');
 let config = require('../config');
-const jwt = require('jwt-simple');
+const jwt = require('jsonwebtoken'); 
 
 function tokenForUser(user){
 	const timestamp = new Date().getTime();
-	return jwt.encode({sub: user.id, iat: timestamp}, config.secret);
+	// return jwt.encode({sub: user.id, iat: timestamp}, config.secret);
+	return jwt.sign({sub: user.id, iat: timestamp}, config.secret, { expiresIn: '1h' });
 }
 
 exports.signup = function (req,res, next){
@@ -30,4 +31,9 @@ exports.signup = function (req,res, next){
 			return res.json({token: tokenForUser(newUser)});
 		});
 	});
+}
+exports.signin = function (req,res, next){
+	//user already had their email anf password auth'd
+	return res.json({token: tokenForUser(req.user)});
+	//req.user: pss by passpart by done()
 }

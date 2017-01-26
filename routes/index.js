@@ -1,4 +1,5 @@
 const auth_api = require ('../controllers/auth');
+const user_api = require ('../controllers/user');
 const file_api = require ('../controllers/file');
 const product_api = require ('../controllers/product');
 const passpoerService = require ('../services/passport');
@@ -20,21 +21,22 @@ let multer  = require( 'multer');
 
 
 module.exports = function(app){
-    app.get('/test',requireAuth, function(req,res){
-        res.send('auth OK');
-    });
+    app.get('/api/checkAuth',requireAuth, auth_api.check_auth)
 
-    app.post ('/api/signin', requireSignin, auth_api.signin)
-    app.post ('/api/signup', auth_api.signup)
+    .get('/api/account',requireAuth, user_api.get_detail)
+    .post('/api/account',requireAuth, user_api.post_detail)
+    
+    .post ('/api/signin', requireSignin, auth_api.signin)
+    .post ('/api/signup', auth_api.signup)
 
     .delete('/api/details/:id', product_api.delete)
 
-    .post('/api/file/images/:id', multer({ storage : file_api.imageStorage }).array('upload_images', 12), file_api.add_images)
+    .post('/api/file/images/:id', requireAuth, multer({ storage : file_api.imageStorage }).array('upload_images', 12), file_api.add_images)
 
 
-    .post('/api/file/docs/:id', multer({ storage : file_api.docsStorage }).array('upload_docs', 12), file_api.add_docs)
+    .post('/api/file/docs/:id', requireAuth, multer({ storage : file_api.docsStorage }).array('upload_docs', 12), file_api.add_docs)
 
-    .post('/api/details/:id',  product_api.post_detail )
+    .post('/api/details/:id',  requireAuth, product_api.post_detail )
 
 
     .get('/api/details/:id',  product_api.get_detail )

@@ -12,7 +12,6 @@ var userSchema = Schema({
         lowercase: true //因為 Mongoose 有分大小寫
     },
     password : String,
-    token: String,
     facebook: String,
     //基本資料
     profile: {

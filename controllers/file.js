@@ -30,7 +30,23 @@ exports.docsStorage =   multer.diskStorage({
     }
 });
 
+exports.picStorage =   multer.diskStorage({
+    destination: function (req, file, callback) {
+        let size = file.size;
+        callback(null, path.join(__dirname, "../public/img/users"));
+    },
+    filename: function (req, file, callback) {
+        crypto.pseudoRandomBytes(8, function (err, raw) {
+            //callback(null, (req.body.id || '') + '-' + raw.toString('hex') + Date.now() + '.' + mime.extension(file.mimetype));
+			callback(null, file.originalname );
+        });
+    }
+});
+
 exports.add_images = function(req,res,next) {
+	if (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8){
+		return res.status(401).json({ errMsg: "Unauthorized"});
+	}	
 	if (!req.files){
 		return res.status(500).json({ errMsg: "Invalid Form Data"});
 	}
@@ -55,6 +71,9 @@ exports.add_images = function(req,res,next) {
 }
 
  exports.add_docs = function(req,res,next) {
+	if (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8){
+		return res.status(401).json({ errMsg: "Unauthorized"});
+	}	 
 	if (!req.files){            
 		return res.status(500).json({ errMsg: "Invalid Form Data"});
 	}

@@ -17,16 +17,22 @@ exports.delete = function (req,res, next){
 
 exports.post_detail = function (req,res){
 	let nUser = req.user;
+	if (req.body.accessRight !== undefined && (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8)){
+		return res.status(401).json({ errMsg: "Unauthorized"});
+	}
+	nUser.profile.picture = '/api/img/users/'+ req.file.filename;
+	req.body.accessRight && (nUser.accessRight = req.body.accessRight);
 	req.body.email && (nUser.email = req.body.email);
+	req.body.password && (nUser.password = req.body.password);	
 	req.body.profile && (nUser.profile = req.body.profile);
 	req.body.data && (nUser.data = req.body.data);
 	nUser.save()
 	.then( function (user){
 		let retUser = {};
-		retUser.detials = Object.assign({}, user._doc);
-		delete retUser.detials._id;
-		delete retUser.detials.__v;
-		delete retUser.detials.password;	
+		retUser.details = Object.assign({}, user._doc);
+		delete retUser.details._id;
+		delete retUser.details.__v;
+		delete retUser.details.password;	
 		retUser.token = tokenForUser(user);
 
 		return res.json(retUser);

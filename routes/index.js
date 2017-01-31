@@ -24,16 +24,15 @@ module.exports = function(app){
     app.get('/api/checkAuth',requireAuth, auth_api.check_auth)
 
     .get('/api/account',requireAuth, user_api.get_detail)
-    .post('/api/account',requireAuth, user_api.post_detail)
+    .post('/api/account',requireAuth, multer({ storage : file_api.picStorage }).single('upload_picture'), user_api.post_detail)
     
     .post ('/api/signin', requireSignin, auth_api.signin)
     .post ('/api/signup', auth_api.signup)
+    .post ('/api/add_user', requireAuth, auth_api.add_user)
 
     .delete('/api/details/:id', product_api.delete)
 
     .post('/api/file/images/:id', requireAuth, multer({ storage : file_api.imageStorage }).array('upload_images', 12), file_api.add_images)
-
-
     .post('/api/file/docs/:id', requireAuth, multer({ storage : file_api.docsStorage }).array('upload_docs', 12), file_api.add_docs)
 
     .post('/api/details/:id',  requireAuth, product_api.post_detail )

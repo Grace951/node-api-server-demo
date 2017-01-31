@@ -2,6 +2,9 @@ let Products = require('../models/product');
 let Categories = require('../models/category');
 
 exports.delete = function (req,res, next){
+	if (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8){
+		return res.status(401).json({ errMsg: "Unauthorized"});
+	}
 	Products.ProductModel.findOneAndRemove( {_id: req.params.id})
 		.exec()
 		.then(function(product){
@@ -14,6 +17,9 @@ exports.delete = function (req,res, next){
 }
 
 exports.post_detail = function (req,res){
+	if (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8){
+		return res.status(401).json({ errMsg: "Unauthorized"});
+	}	
 	Products.ProductModel.findOneAndUpdate(
 		{_id: req.params.id},
 		req.body

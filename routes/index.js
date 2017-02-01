@@ -28,9 +28,9 @@ module.exports = function(app){
     
     .post ('/api/signin', requireSignin, auth_api.signin)
     .post ('/api/signup', auth_api.signup)
-    .post ('/api/add_user', requireAuth, auth_api.add_user)
+    .post ('/api/add_user', requireAuth, multer({ storage : file_api.picStorage }).single('upload_picture'), auth_api.add_user)
 
-    .delete('/api/details/:id', product_api.delete)
+    .delete('/api/details/:id', requireAuth, product_api.delete)
 
     .post('/api/file/images/:id', requireAuth, multer({ storage : file_api.imageStorage }).array('upload_images', 12), file_api.add_images)
     .post('/api/file/docs/:id', requireAuth, multer({ storage : file_api.docsStorage }).array('upload_docs', 12), file_api.add_docs)

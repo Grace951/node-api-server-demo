@@ -44,9 +44,14 @@ exports.add_user = function (req,res, next){
 		return res.status(401).json({ errMsg: "Unauthorized"});
 	}
 
+	let picture = "";
+	if( req.file && req.file.filename){		
+		picture = '/api/img/users/'+ req.file.filename;
+	}
 	const email = req.body.email;
 	const password = req.body.password;
-	const accessRight = req.body.accessRight;
+	const accessRight = parseInt(req.body.accessRight) || 0;
+	const username = req.body.username || "";
 	if(!email || !password){
 		return res.status(422).send({errMsg: "Please Provide email or password!!"})
 	}
@@ -58,7 +63,7 @@ exports.add_user = function (req,res, next){
 			return res.status(422).send({errMsg: "Email is in use!!"})
 		}
 
-		const newUser = User({email, password, accessRight});
+		const newUser = User({email, password, accessRight, profile: {username,picture}});
 		newUser.save( function (err){
 			if(err)	return next(err);
 			let nUser = Object.assign({}, newUser._doc);

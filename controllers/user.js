@@ -1,4 +1,5 @@
 let User = require('../models/user');
+let fs = require('fs');
 const tokenForUser =  require('./util').tokenForUser;
 
 exports.delete = function (req,res, next){
@@ -20,7 +21,10 @@ exports.post_detail = function (req,res){
 	if (req.body.accessRight !== undefined && (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8)){
 		return res.status(401).json({ errMsg: "Unauthorized"});
 	}
-	req.file && req.file.filename && (nUser.profile.picture = '/api/img/users/'+ req.file.filename);
+	if( req.file && req.file.filename){
+		fs.unlink(`./public/${nUser.profile.picture.trim().replace(/^\/api\//,'')}`, (err) => { err&&console.log(err);});
+		nUser.profile.picture = '/api/img/users/'+ req.file.filename;
+	}
 	req.body.accessRight && (nUser.accessRight = req.body.accessRight);
 	req.body.email && (nUser.email = req.body.email);
 	req.body.password && (nUser.password = req.body.password);	
@@ -39,7 +43,7 @@ exports.post_detail = function (req,res){
 	})
 	.catch(function(err){
 		return res.status(500).json({
-					errMsg:"Invalid Data"
+			errMsg:"Invalid Data"
 		});
 	});
 }		

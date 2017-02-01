@@ -20,11 +20,11 @@ exports.post_detail = function (req,res){
 	if (req.body.accessRight !== undefined && (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8)){
 		return res.status(401).json({ errMsg: "Unauthorized"});
 	}
-	nUser.profile.picture = '/api/img/users/'+ req.file.filename;
+	req.file && req.file.filename && (nUser.profile.picture = '/api/img/users/'+ req.file.filename);
 	req.body.accessRight && (nUser.accessRight = req.body.accessRight);
 	req.body.email && (nUser.email = req.body.email);
 	req.body.password && (nUser.password = req.body.password);	
-	req.body.profile && (nUser.profile = req.body.profile);
+	req.body.username && (nUser.profile.username = req.body.username);
 	req.body.data && (nUser.data = req.body.data);
 	nUser.save()
 	.then( function (user){

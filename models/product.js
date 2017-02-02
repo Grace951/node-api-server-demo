@@ -30,6 +30,17 @@ let SpecSchema = new Schema({
     members: [SpecMembersSchema]   
 });
 
+let StarSchema = new Schema({ 
+    avgRate: {
+        type: Number ,
+        default: 0
+    },
+    voteCount: {
+        type: Number ,
+        default: 0
+    }
+});
+
 let ProductSchema = new Schema({
     _id: {
         type: String,
@@ -46,6 +57,7 @@ let ProductSchema = new Schema({
     name: String,
     snippet: String,
     brand: String,
+    stars: StarSchema,
     type: {
         type: String,        
     },

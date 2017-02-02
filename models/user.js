@@ -1,11 +1,36 @@
-var mongoose = require('mongoose');
+let mongoose = require('mongoose');
 mongoose.Promise = global.Promise
 //#1 create schema
-var Schema = mongoose.Schema;
-var bcrypt = require('bcrypt-nodejs');
+let Schema = mongoose.Schema;
+let bcrypt = require('bcrypt-nodejs');
 const saltRounds = 10;
 
-var userSchema = Schema({
+let RateSchema = new Schema({ 
+    productId: {
+        type: mongoose.Schema.Types.String,
+        ref: 'Product'
+    },
+    rate: Number
+});
+let CartSchema = new Schema({ 
+    productId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Product'
+    },
+    quantity: {
+        type: Number,
+        default: 1,
+        min: 1
+    },
+    subtotal: {
+        type: Number,
+        default: 0,
+        min: 0
+    }
+});
+
+
+let userSchema = Schema({
     email: {
         type: String,
         unique: true,
@@ -30,28 +55,14 @@ var userSchema = Schema({
     },
     //傳輸資料
     data: {
+        rate:[RateSchema],
         totalValue: {
             type: Number,
             default: 0
         },
         //購物車array 每個element包含產品 數量
         //reference到product id
-        cart: [{
-            product: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'Product'
-            },
-            quantity: {
-                type: Number,
-                default: 1,
-                min: 1
-            },
-            subtotal: {
-                type: Number,
-                default: 0,
-                min: 0
-            }
-        }]
+        cart: [CartSchema]
     }
 
 });

@@ -25,6 +25,7 @@ module.exports = function(app){
 
     .get('/api/account',requireAuth, user_api.get_detail)
     .post('/api/account',requireAuth, multer({ storage : file_api.picStorage }).single('upload_picture'), user_api.post_detail)
+    .post('/api/account/rate/:id',requireAuth, user_api.post_rate)
     
     .post ('/api/signin', requireSignin, auth_api.signin)
     .post ('/api/signup', auth_api.signup)

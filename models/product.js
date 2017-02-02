@@ -31,7 +31,7 @@ let SpecSchema = new Schema({
 });
 
 let StarSchema = new Schema({ 
-    avgRate: {
+    totalStars: {
         type: Number ,
         default: 0
     },

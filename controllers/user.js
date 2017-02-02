@@ -1,3 +1,4 @@
+let Products = require('../models/product');
 let User = require('../models/user');
 let fs = require('fs');
 const tokenForUser =  require('./util').tokenForUser;
@@ -44,6 +45,71 @@ exports.post_detail = function (req,res){
 	.catch(function(err){
 		return res.status(500).json({
 			errMsg:"Invalid Data"
+		});
+	});
+}
+
+exports.post_rate = function (req,res){
+	if (!req.body.rate){
+		return res.status(500).json({ errMsg: "Plase Provide Rating Number"});
+	}
+	if (!req.params.id){
+		return res.status(500).json({ errMsg: "Plase Provide Product ID"});
+	}
+	let id = req.params.id, nUser = req.user, addVoteCount = 0, oldProductStar = 0, nRate = {};
+	
+	if (!nUser.rate){
+		nUser.rate = [];
+	}
+	nRate = nUser.data.rate.filter(function (rate) {
+		return rate.productId === id;
+	})[0];
+
+	if (!nRate){
+		nRate = {};
+		nRate.productId = id;
+		nRate.rate = req.body.rate;
+		addVoteCount++;
+		nUser.data.rate.push(nRate);
+	}else{
+		nRate.rate && (oldProductStar = nRate.rate);
+		nRate.rate = req.body.rate;
+	}
+
+	let ret = {user:{}, details:{}};
+
+	User.findByIdAndUpdate(nUser._id, {data: nUser.data}, {new: true})
+	.exec()
+	.then( function (user){	
+		let retUser = Object.assign({}, user._doc);
+		delete retUser._id;
+		delete retUser.__v;
+		delete retUser.password;
+
+		ret.token = tokenForUser(user);			
+		ret.user = retUser;
+		return Products.ProductModel.findOne(
+			{_id: req.params.id}			
+		);
+	})
+	.then( function (details){
+		if(!details.stars) details.stars = {totalStars:0, voteCount:0};
+		if(!details.stars.totalStars) details.stars.totalStars = 0;
+		if(!details.stars.voteCount)  details.stars.voteCount = 0;
+
+		details.stars.totalStars += (nRate.rate - oldProductStar);
+		details.stars.voteCount += addVoteCount;
+
+		return details.save();
+	})
+	.then( function (details){			
+		ret.details = details;
+		return res.json(ret);
+	})
+	.catch(function(err){
+		console.log(err);
+		return res.status(500).json({
+			errMsg:err.toString()
 		});
 	});
 }		

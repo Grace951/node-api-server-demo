@@ -10,7 +10,8 @@ let RateSchema = new Schema({
         type: mongoose.Schema.Types.String,
         ref: 'Product'
     },
-    rate: Number
+    rate: Number,
+    cat: Number
 });
 let CartSchema = new Schema({ 
     productId: {

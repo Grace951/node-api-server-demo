@@ -56,7 +56,7 @@ exports.post_rate = function (req,res){
 	if (!req.params.id){
 		return res.status(500).json({ errMsg: "Plase Provide Product ID"});
 	}
-	let id = req.params.id, nUser = req.user, addVoteCount = 0, oldProductStar = 0, nRate = {};
+	let id = req.params.id, rate= req.body.rate, nUser = req.user, addVoteCount = 0, oldProductStar = 0, nRate = {};
 	
 	if (!nUser.rate){
 		nUser.rate = [];
@@ -67,43 +67,39 @@ exports.post_rate = function (req,res){
 
 	if (!nRate){
 		nRate = {};
-		nRate.productId = id;
-		nRate.rate = req.body.rate;
+		nRate.productId = id;		
 		addVoteCount++;
 		nUser.data.rate.push(nRate);
-	}else{
-		nRate.rate && (oldProductStar = nRate.rate);
-		nRate.rate = req.body.rate;
 	}
+	oldProductStar = nRate.rate || 0;
 
-	let ret = {user:{}, details:{}};
+	let ret = {user_data:{}, product_stars:{}};
 
-	User.findByIdAndUpdate(nUser._id, {data: nUser.data}, {new: true})
+	Products.ProductModel.findOne({_id: req.params.id})
 	.exec()
-	.then( function (user){	
-		let retUser = Object.assign({}, user._doc);
-		delete retUser._id;
-		delete retUser.__v;
-		delete retUser.password;
-
-		ret.token = tokenForUser(user);			
-		ret.user = retUser;
-		return Products.ProductModel.findOne(
-			{_id: req.params.id}			
-		);
-	})
 	.then( function (details){
 		if(!details.stars) details.stars = {totalStars:0, voteCount:0};
 		if(!details.stars.totalStars) details.stars.totalStars = 0;
 		if(!details.stars.voteCount)  details.stars.voteCount = 0;
 
-		details.stars.totalStars += (nRate.rate - oldProductStar);
+		details.stars.totalStars += (rate - oldProductStar);
 		details.stars.voteCount += addVoteCount;
 
 		return details.save();
 	})
 	.then( function (details){			
-		ret.details = details;
+		ret.product_stars = details.stars;
+		nRate = nUser.data.rate.filter(function (rate) {
+			return rate.productId === id;
+		})[0];
+		nRate.cat = details.cat;
+		nRate.rate = rate;
+		
+		return User.findByIdAndUpdate(nUser._id, {data: nUser.data}, {new: true});
+	})
+	.then( function (user){	
+		ret.token = tokenForUser(user);			
+		ret.user_data = user._doc.data;
 		return res.json(ret);
 	})
 	.catch(function(err){

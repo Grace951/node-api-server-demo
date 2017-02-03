@@ -56,17 +56,18 @@ exports.post_rate = function (req,res){
 	if (req.params.id === undefined ){
 		return res.status(500).json({ errMsg: "Plase Provide Product ID"});
 	}
-	let id = req.params.id, rate= req.body.rate, nUser = req.user, addVoteCount = 0, oldUserStar = 0, nRate = {};
+	let id = req.params.id, rate= req.body.rate, nUser = req.user, addVoteCount = 0, oldUserStar = 0, nRate = undefined;
 	nUser.rate = nUser.rate || [];
-	nRate = nUser.data.rate.filter(function (rate) {
-		return rate.productId === id;
-	})[0];
-	oldUserStar = nRate.rate || 0;
+	nUser.data.rate.forEach(function (rate) {
+		(rate.productId === id) && (nRate = rate);
+	});
+	oldUserStar = (nRate && nRate.rate) || 0;
 
 	if (!nRate){
 		nRate = {productId : id};
 		addVoteCount++;
 		nUser.data.rate.push(nRate);
+		nRate = undefined;
 	}
 
 	let ret = {user_data:{}, product_stars:{}};
@@ -85,6 +86,7 @@ exports.post_rate = function (req,res){
 	})
 	.then( function (details){			
 		ret.product_stars = details.stars;
+		nRate = nRate || nUser.data.rate[nUser.data.rate.length - 1];
 		nRate.cat = details.cat;
 		nRate.rate = rate;
 		
@@ -112,9 +114,9 @@ exports.post_favorite = function (req,res){
 	if (req.params.id === undefined ){
 		return res.status(500).json({ errMsg: "Plase Provide Product ID"});
 	}
-	let id = req.params.id, fav = req.body.love, nUser = req.user, oldUserfav = false, nFav = {};
+	let id = req.params.id, fav = req.body.love, nUser = req.user, oldUserfav = false, nFav = undefined;
 	nUser.favorite = nUser.favorite || [];
-	if (!fav) {   //remove from fav
+	if (!fav) {   //remove from fav		
 		nUser.data.favorite = nUser.data.favorite.filter(function (favorite) {
 			!oldUserfav && (oldUserfav = favorite.productId === id);
 			return favorite.productId !== id;
@@ -122,13 +124,14 @@ exports.post_favorite = function (req,res){
 	}
 	else
 	{
-		nFav = nUser.data.favorite.filter(function (favorite) {
-			return favorite.productId === id;
-		})[0];
+		nUser.data.favorite.forEach(function (fav) {
+			(fav.productId === id) && (nFav = fav);
+		});
 		oldUserfav = !!nFav;
 		if (!nFav){
 			nFav = { productId: id};
 			nUser.data.favorite.push(nFav);
+			nFav = undefined;
 		}
 	}
 
@@ -143,8 +146,11 @@ exports.post_favorite = function (req,res){
 	})
 	.then( function (details){			
 		ret.product_favorite = details.favorite;
-		nFav && (nFav.cat = details.cat);
-		
+		if (fav){	
+			nFav = nFav || nUser.data.favorite[nUser.data.favorite.length - 1];
+			nFav.cat = fav && details.cat;
+		}
+
 		return User.findByIdAndUpdate(nUser._id, {data: nUser.data}, {new: true});
 	})
 	.then( function (user){	

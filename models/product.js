@@ -58,6 +58,7 @@ let ProductSchema = new Schema({
     snippet: String,
     brand: String,
     stars: StarSchema,
+    favorite: Number,
     type: {
         type: String,        
     },

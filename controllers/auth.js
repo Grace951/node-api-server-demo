@@ -81,6 +81,6 @@ exports.check_auth = function (req,res, next){
 	delete nUser.password;
 	delete nUser._id;
 	delete nUser.__v;
-	return res.json({details: nUser});
+	return res.json({token: tokenForUser(req.user), details: nUser});
 	//req.user: pass by passpart by done()
 }

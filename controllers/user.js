@@ -50,50 +50,100 @@ exports.post_detail = function (req,res){
 }
 
 exports.post_rate = function (req,res){
-	if (!req.body.rate){
+	if (req.body.rate === undefined ){
 		return res.status(500).json({ errMsg: "Plase Provide Rating Number"});
 	}
-	if (!req.params.id){
+	if (req.params.id === undefined ){
 		return res.status(500).json({ errMsg: "Plase Provide Product ID"});
 	}
-	let id = req.params.id, rate= req.body.rate, nUser = req.user, addVoteCount = 0, oldProductStar = 0, nRate = {};
-	
-	if (!nUser.rate){
-		nUser.rate = [];
-	}
+	let id = req.params.id, rate= req.body.rate, nUser = req.user, addVoteCount = 0, oldUserStar = 0, nRate = {};
+	nUser.rate = nUser.rate || [];
 	nRate = nUser.data.rate.filter(function (rate) {
 		return rate.productId === id;
 	})[0];
+	oldUserStar = nRate.rate || 0;
 
 	if (!nRate){
-		nRate = {};
-		nRate.productId = id;		
+		nRate = {productId : id};
 		addVoteCount++;
 		nUser.data.rate.push(nRate);
 	}
-	oldProductStar = nRate.rate || 0;
 
 	let ret = {user_data:{}, product_stars:{}};
 
 	Products.ProductModel.findOne({_id: req.params.id})
 	.exec()
 	.then( function (details){
-		if(!details.stars) details.stars = {totalStars:0, voteCount:0};
-		if(!details.stars.totalStars) details.stars.totalStars = 0;
-		if(!details.stars.voteCount)  details.stars.voteCount = 0;
+		details.stars = details.stars || {totalStars:0, voteCount:0};
+		details.stars.totalStars = details.stars.totalStars || 0;
+		details.stars.voteCount = details.stars.voteCount || 0;
 
-		details.stars.totalStars += (rate - oldProductStar);
+		details.stars.totalStars += (rate - oldUserStar);
 		details.stars.voteCount += addVoteCount;
 
 		return details.save();
 	})
 	.then( function (details){			
 		ret.product_stars = details.stars;
-		nRate = nUser.data.rate.filter(function (rate) {
-			return rate.productId === id;
-		})[0];
 		nRate.cat = details.cat;
 		nRate.rate = rate;
+		
+		return User.findByIdAndUpdate(nUser._id, {data: nUser.data}, {new: true});
+	})
+	.then( function (user){	
+		ret.token = tokenForUser(user);			
+		ret.user_data = user._doc.data;
+		return res.json(ret);
+	})
+	.catch(function(err){
+		console.log(err);
+		return res.status(500).json({
+			errMsg:err.toString()
+		});
+	});
+}		
+
+
+
+exports.post_favorite = function (req,res){
+	if (req.body.love === undefined ){
+		return res.status(500).json({ errMsg: "Plase Provide Favorite Status"});
+	}	
+	if (req.params.id === undefined ){
+		return res.status(500).json({ errMsg: "Plase Provide Product ID"});
+	}
+	let id = req.params.id, fav = req.body.love, nUser = req.user, oldUserfav = false, nFav = {};
+	nUser.favorite = nUser.favorite || [];
+	if (!fav) {   //remove from fav
+		nUser.data.favorite = nUser.data.favorite.filter(function (favorite) {
+			!oldUserfav && (oldUserfav = favorite.productId === id);
+			return favorite.productId !== id;
+		});
+	}
+	else
+	{
+		nFav = nUser.data.favorite.filter(function (favorite) {
+			return favorite.productId === id;
+		})[0];
+		oldUserfav = !!nFav;
+		if (!nFav){
+			nFav = { productId: id};
+			nUser.data.favorite.push(nFav);
+		}
+	}
+
+	let ret = {user_data:{}, product_favorite:{}};
+	Products.ProductModel.findOne({_id: req.params.id})
+	.exec()
+	.then( function (details){
+		details.favorite = details.favorite || 0;
+		if (oldUserfav != fav)	details.favorite += (fav?1:-1);
+		details.favorite = ((details.favorite < 0 ) && 0) || details.favorite;
+		return details.save();
+	})
+	.then( function (details){			
+		ret.product_favorite = details.favorite;
+		nFav && (nFav.cat = details.cat);
 		
 		return User.findByIdAndUpdate(nUser._id, {data: nUser.data}, {new: true});
 	})

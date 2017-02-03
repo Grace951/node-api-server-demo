@@ -13,6 +13,13 @@ let RateSchema = new Schema({
     rate: Number,
     cat: Number
 });
+let FavSchema = new Schema({ 
+    productId: {
+        type: mongoose.Schema.Types.String,
+        ref: 'Product'
+    },
+    cat: Number
+});
 let CartSchema = new Schema({ 
     productId: {
         type: mongoose.Schema.Types.ObjectId,
@@ -57,6 +64,7 @@ let userSchema = Schema({
     //傳輸資料
     data: {
         rate:[RateSchema],
+        favorite: [FavSchema],
         totalValue: {
             type: Number,
             default: 0

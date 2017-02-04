@@ -9,6 +9,9 @@ const requireAuth = passport.authenticate('jwt', {session: false});
 const requireSignin = passport.authenticate('local', {session: false});
 //by default passport use cookies base session
 
+const fb_auth = passport.authenticate("facebook", { session: false, scope : 'email' });
+const google_auth = passport.authenticate("google", { session: false, scope : ['profile', 'email'] });
+
 let multer  = require( 'multer');
 
 // function HttpErr(code, message) {
@@ -21,13 +24,19 @@ let multer  = require( 'multer');
 
 
 module.exports = function(app){
+    app.use(passport.initialize());
     app.get('/api/checkAuth',requireAuth, auth_api.check_auth)
 
     .get('/api/account',requireAuth, user_api.get_detail)
     .post('/api/account',requireAuth, multer({ storage : file_api.picStorage }).single('upload_picture'), user_api.post_detail)
     .post('/api/account/rate/:id',requireAuth, user_api.post_rate)
     .post('/api/account/favorite/:id',requireAuth, user_api.post_favorite)
-    
+
+    .get('/auth/facebook',fb_auth)
+    .get('/auth/facebook/callback', passport.authenticate('facebook',  { session: false}), auth_api.signin)
+    .get('/auth/google',google_auth)
+    .get('/auth/google/callback', passport.authenticate('google',  { session: false}), auth_api.signin)
+        
     .post ('/api/signin', requireSignin, auth_api.signin)
     .post ('/api/signup', auth_api.signup)
     .post ('/api/add_user', requireAuth, multer({ storage : file_api.picStorage }).single('upload_picture'), auth_api.add_user)

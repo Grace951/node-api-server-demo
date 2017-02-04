@@ -42,10 +42,16 @@ let userSchema = Schema({
     email: {
         type: String,
         unique: true,
+        trim: true,
         lowercase: true //因為 Mongoose 有分大小寫
     },
     password : String,
-    facebook: String,
+    socials: {
+        fbId: String,
+        googleId: String,
+        githubId: String,
+    },
+    googleId: String,
     accessRight:  {
         type: Number,
         default: 0

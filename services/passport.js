@@ -81,14 +81,14 @@ const fbLogin = new FacebookStrategy({
 					return done(null, user);
 				}
 				else{
-					if (!profile.emails || profile.emails.length <= 0 || !profile.emails[0].value){
-						return done("Need to Provide Email", false);
-					}
+					// if (!profile.emails || profile.emails.length <= 0 || !profile.emails[0].value){
+					// 	return done("Need to Provide Email", false);
+					// }
 					let newUser = new User();
 
 					// set all of the facebook information in our user model
 					newUser.socials.fbId = profile.id || ""; // set the users facebook id                   
-					newUser.email = (profile.emails && profile.emails.length > 0 && profile.emails[0].value) || ""; // facebook can return multiple emails so we'll take the first
+					(profile.emails && profile.emails.length > 0 && profile.emails[0].value) && (newUser.email = profile.emails[0].value); // facebook can return multiple emails so we'll take the first
 					newUser.profile.username  = profile.displayName || ""; // look at the passport user profile to see how names are returned
 					newUser.profile.picture = 'https://graph.facebook.com/' + profile.id + '/picture?width=10';
 
@@ -126,11 +126,10 @@ const googleLogin = new GoogleStrategy({
 						return done("Need to Provide Email", false);
 					}
 					let newUser = new User();
-
-					// set all of the facebook information in our user model
-					newUser.socials.googleId    = profile.id; // set the users facebook id                   
-					newUser.email = (profile.emails && profile.emails.length > 0 && profile.emails[0].value) || ""; // facebook can return multiple emails so we'll take the first
-					newUser.profile.username  = profile.displayName; // look at the passport user profile to see how names are returned
+					
+					newUser.socials.googleId    = profile.id;                
+					(profile.emails && profile.emails.length > 0 && profile.emails[0].value) && (newUser.email = profile.emails[0].value);
+					newUser.profile.username  = profile.displayName; 
 					newUser.profile.picture = profile.photos && profile.photos[0] && profile.photos[0].value;
 
 					// save our user to the database

@@ -33,7 +33,7 @@ module.exports = function(app){
     .post('/api/account/favorite/:id',requireAuth, user_api.post_favorite)
 
     .get('/auth/facebook',fb_auth)
-    .get('/auth/facebook/callback', passport.authenticate('facebook',  { session: false}), auth_api.signin)
+    .get('/auth/fb/callback', passport.authenticate('facebook',  { session: false}), auth_api.signin)
     .get('/auth/google',google_auth)
     .get('/auth/google/callback', passport.authenticate('google',  { session: false}), auth_api.signin)
         

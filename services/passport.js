@@ -34,7 +34,6 @@ const localLogin = new LocalStrategy(localOptions, function(email, password, don
 				return done(err, false);    
 			}
 			if(!isMatch){	
-				console.log(isMatch);
 				return done(null, false);	
 			}
 			return done(null, user);
@@ -55,8 +54,6 @@ const jwtLogin = new JwtStrategy(jwtOptions, function(payload, done){
 		if(err)  return done(err, false);
 
 		if(user){
-			user.authType = payload.authType;
-			user.save();
 			return done(null, user);
 		}
 		else{
@@ -75,7 +72,7 @@ const fbLogin = new FacebookStrategy({
   },
   function(accessToken, refreshToken, profile, done) {
 	  process.nextTick(function () {
-			User.findOne({ "socials.fbId": profile.id }, function (err, user) {
+			User.findOne({ "socials.facebook_id": profile.id }, function (err, user) {
 				if(err)  return done(err, false);
 				if(user){
 					return done(null, user);
@@ -116,7 +113,7 @@ const googleLogin = new GoogleStrategy({
     function(accessToken, refreshToken, profile, done) {
 	  process.nextTick(function () {
 		  console.log(profile);
-			User.findOne({ "socials.googleId": profile.id }, function (err, user) {
+			User.findOne({ "socials.google_id": profile.id }, function (err, user) {
 				if(err)  return done(err, false);
 				if(user){
 					return done(null, user);

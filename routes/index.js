@@ -36,7 +36,10 @@ module.exports = function(app){
     .get('/auth/fb/callback', passport.authenticate('facebook',  { session: false}), auth_api.signin)
     .get('/auth/google',google_auth)
     .get('/auth/google/callback', passport.authenticate('google',  { session: false}), auth_api.signin)
-        
+
+    .post('/api/socialLogin/google', auth_api.client_signin)
+    .post('/api/socialLogin/facebook', auth_api.client_signin)
+
     .post ('/api/signin', requireSignin, auth_api.signin)
     .post ('/api/signup', auth_api.signup)
     .post ('/api/add_user', requireAuth, multer({ storage : file_api.picStorage }).single('upload_picture'), auth_api.add_user)

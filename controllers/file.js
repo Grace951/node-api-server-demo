@@ -1,10 +1,10 @@
-let path  = require( 'path');
-let mime = require('mime');
-let crypto = require('crypto');
-let fs = require('fs');
+const path  = require( 'path');
+const mime = require('mime');
+const crypto = require('crypto');
+const fs = require('fs');
+const ResError =  require('./util').ResError;
 
-
-let multer  = require( 'multer');
+const multer  = require( 'multer');
 
 exports.imageStorage =   multer.diskStorage({
     destination: function (req, file, callback) {
@@ -64,6 +64,7 @@ exports.add_images = function(req,res,next) {
 	.then( (images)=> { return res.json(images);})
 	.catch(function(err){
 		console.log(err);
+		if (err.status)   { return res.status(err.status).send({errMsg: err.errMsg});}
 		return res.status(500).json({
 				errMsg:"Invalid Data"
 		});
@@ -99,6 +100,7 @@ exports.add_images = function(req,res,next) {
 	.then( (docs)=> { return res.json(docs);})
 	.catch(function(err){
 		console.log(err);
+		if (err.status)   { return res.status(err.status).send({errMsg: err.errMsg});}
 		return res.status(500).json({
 				errMsg:"Invalid Data"
 		});

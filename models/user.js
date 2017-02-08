@@ -43,13 +43,14 @@ let userSchema = Schema({
         type: String,
         unique: true,
         trim: true,
+        sparse: true,
         lowercase: true //因為 Mongoose 有分大小寫
     },
     password : String,
     socials: {
-        fbId: String,
-        googleId: String,
-        githubId: String,
+        facebook_id: String,
+        google_id: String,
+        github_id: String,
     },
     googleId: String,
     accessRight:  {
@@ -94,7 +95,6 @@ userSchema.pre('save', function(next){
 });
 
 userSchema.methods.comparePassword = function(passwordToTest, callback){
-    console.log(passwordToTest, this.password);
     bcrypt.compare(passwordToTest, this.password, function (err, isMatch){
         if (err) {  return  callback(err) }
         return callback(null, isMatch);

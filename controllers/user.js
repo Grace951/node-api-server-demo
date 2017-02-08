@@ -43,6 +43,7 @@ exports.post_detail = function (req,res){
 		return res.json(retUser);
 	})
 	.catch(function(err){
+		if (err.status)   { return res.status(err.status).send({errMsg: err.errMsg});}
 		return res.status(500).json({
 			errMsg:"Invalid Data"
 		});
@@ -99,6 +100,7 @@ exports.post_rate = function (req,res){
 	})
 	.catch(function(err){
 		console.log(err);
+		if (err.status)   { return res.status(err.status).send({errMsg: err.errMsg});}
 		return res.status(500).json({
 			errMsg:err.toString()
 		});
@@ -160,6 +162,7 @@ exports.post_favorite = function (req,res){
 	})
 	.catch(function(err){
 		console.log(err);
+		if (err.status)   { return res.status(err.status).send({errMsg: err.errMsg});}
 		return res.status(500).json({
 			errMsg:err.toString()
 		});

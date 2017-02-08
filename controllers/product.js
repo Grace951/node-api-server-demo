@@ -1,5 +1,6 @@
-let Products = require('../models/product');
-let Categories = require('../models/category');
+const Products = require('../models/product');
+const Categories = require('../models/category');
+const ResError =  require('./util').ResError;
 
 exports.delete = function (req,res, next){
 	if (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8){
@@ -11,7 +12,8 @@ exports.delete = function (req,res, next){
 			return res.send({name: product.name})
 		})
 		.catch(function(err){
-			console.log(err)
+			console.log(err);
+			if (err.status)   { return res.status(err.status).send({errMsg: err.errMsg});}
 			return res.status(500).json({ errMsg: "Invalid Form Data"});
 		});
 }
@@ -36,9 +38,8 @@ exports.post_detail = function (req,res){
 		return res.send({mode: "update", data: details})
 	})
 	.catch(function(err){
-		return res.status(err.code).json({
-					errMsg:"Invalid Data"
-		});
+		if (err.status)   { return res.status(err.status).send({errMsg: err.errMsg});}
+		return res.status(err.code).json({	errMsg:"Invalid Data"});
 	});
 }		
 
@@ -63,7 +64,7 @@ exports.get_detail = function (req, res){
 	.exec()
 	.then(function(product){
 		if(!product){
-			return res.status(404).json({ errMsg: "Not Found"});
+			throw new ResError({status: 404, errMsg: "Not Found"});
 		}
 		return product;
 	})
@@ -71,6 +72,7 @@ exports.get_detail = function (req, res){
 			res.json(product);
 	})
 	.catch(function(err){
+		if (err.status)   { return res.status(err.status).send({errMsg: err.errMsg});}
 		return res.status(500).json({ errMsg: "Internal Server Error"});
 	});
 
@@ -84,7 +86,7 @@ exports.get_categories = function (req, res){
 	.exec()
 	.then(function(categories){
 		if(!categories){
-			return res.status(404).json({ errMsg: "Not Found"});           
+			throw new ResError({status: 404, errMsg: "Not Found"});        
 		}
 		return categories;
 	})
@@ -92,6 +94,7 @@ exports.get_categories = function (req, res){
 			res.json(categories);
 	})
 	.catch(function(err){
+		if (err.status)   { return res.status(err.status).send({errMsg: err.errMsg});}
 		returnres.status(500).json({ errMsg: "Internal Server Error"});
 	});
 }
@@ -102,7 +105,7 @@ exports.get_category = function (req, res){
 	.exec()
 	.then(function(category){
 		if(!category){
-			return res.status(404).json({ errMsg: "Not Found"});          
+			throw new ResError({status: 404, errMsg: "Not Found"});     
 		}
 		return category;
 	})
@@ -111,7 +114,7 @@ exports.get_category = function (req, res){
 	})
 	.then(function(products){
 		if(!products){
-			return res.status(404).json({ errMsg: "Not Found"});         
+			throw new ResError({status: 404, errMsg: "Not Found"});    
 		}
 		return products;
 	})
@@ -119,6 +122,7 @@ exports.get_category = function (req, res){
 		res.json(products);
 	})
 	.catch(function(err){
+		if (err.status)   { return res.status(err.status).send({errMsg: err.errMsg});}
 		return res.status(500).json({ errMsg: "Internal Server Error"});
 	});;
 }

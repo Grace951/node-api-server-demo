@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=6.0 <8",
+    "npm": ">=3.0 <5"
+  },  
   "scripts": {
     "start": "node api_server.js",
     "dev": "nodemon api_server.js"

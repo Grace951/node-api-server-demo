@@ -1,6 +1,29 @@
-let User = require('../models/user');
+const User = require('../models/user');
 const tokenForUser =  require('./util').tokenForUser;
+const ResError =  require('./util').ResError;
+const validateWithProvider =  require('./util').validateWithProvider;
+const config = require('../config');
 
+const client_auth_callback = {
+	facebook:fb_client_auth_cb,
+	google:google_client_auth_cb,
+}
+
+function fb_client_auth_cb(user){
+	let user_info = {};
+	(user.emails && user.emails.length > 0 && user.emails[0].value) && (user_info.email = user.emails[0].value); 
+	user_info.username  = user.name || "";
+	user_info.picture = 'https://graph.facebook.com/' + user.id + '/picture?width=200';
+	user_info.id = user.id;
+	return user_info; 
+}
+function google_client_auth_cb(user){
+	let user_info = {};
+	(user.email ) && (user_info.email = user.email); 
+	user_info.username  = user.name || "";
+	user_info.picture = user.picture;
+	return user_info;
+}
 exports.signup = function (req,res, next){
 	// res.send({success: true});
 
@@ -37,6 +60,59 @@ exports.signin = function (req,res, next){
 	delete nUser.__v;
 	return res.json({token: tokenForUser(req.user), details: nUser});
 	//req.user: pass by passpart by done()
+}
+
+exports.client_signin = function (req,res, next){
+	if (!req.body.type || !req.body.token || !req.body.id){
+		return res.status(422).send({errMsg: "Invalid User Data"});
+	}
+    let network = req.body.type;
+    let socialToken = req.body.token;	
+    let Id = req.body.id;
+	let email = undefined, username = "", picture ="";
+	if (!config.ids[network]){
+		return res.status(422).send({errMsg: "Invalid Network Type"});
+	}
+	let ids = config.ids[network];
+
+	validateWithProvider(socialToken, ids.validateClientURL, ids.APP_QUERYSTR_NAME)
+	.then( (response) => {
+		let info = client_auth_callback[network](response.data);
+		(info.email) && (email = info.email); 
+		username  = info.username || ""; 
+		picture  = info.picture || ""; 
+		if (info.id && info.id != Id)  {throw new ResError({status: 422, errMsg: "Invalid Social ID"});}
+		if (info.email) 	{return User.findOne({email}, {password: false});}
+		return undefined;
+	})
+	.then((user)=>{
+		if(user)	{throw new ResError({status: 422, errMsg: "Email is in Used"});	}
+		return;
+	})
+	.then(()=>{
+		return User.findOne({ [`socials.${network}_id`]: Id });
+	})
+	.then((user)=>{
+		if(user){ 	return (user);	}
+		let newUser = new User();
+		newUser.profile.picture = picture;
+		if (email !== undefined) {newUser.email = email};
+		newUser.profile.username = username;
+		newUser.socials[`${network}_id`] = Id;
+		return newUser.save();
+	})
+	.then(	(user) => {
+		let nUser = Object.assign({}, user._doc);
+		delete nUser.password;
+		delete nUser._id;
+		delete nUser.__v;
+		return res.json({token: tokenForUser(user), details: nUser});
+	})
+	.catch( (err) => {
+		if (err.status)   { return res.status(err.status).send({errMsg: err.errMsg});}
+		return res.status(500).send({errMsg: err.toString()})
+	});
+	
 }
 exports.add_user = function (req,res, next){
 	// res.send({success: true});

@@ -11,7 +11,7 @@ The api server is from a real world website project, integrate with MongoDB, Pas
 ## Live Demo 
 Live demo: [`https://react-redux-demo-chingching.herokuapp.com/`](https://react-redux-demo-chingching.herokuapp.com/)
 
-![demo gif](https://github.com/Grace951/node-api-server-demo/node-api-server-demo/raw/master/screenshot.png)
+![demo gif](https://github.com/Grace951/node-api-server-demo/raw/master/screenshot.png)
 
 
 # Notes

@@ -4,7 +4,6 @@ The api server is from a real world website project, integrate with MongoDB, Pas
 * The Frontend git repo is here: [`https://github.com/Grace951/ReactAU.git`](https://github.com/Grace951/ReactAU.git)
 * RESTful API server with Auth 
 * User Login (both Local and Social Logins Strategy)
-* Webpack2 with Hot Reload
 * Node.js + MongoDB 
 * Have Deployed to heroku for Demo
 

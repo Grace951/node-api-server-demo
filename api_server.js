@@ -4,6 +4,7 @@ var path = require('path');
 var morgan = require('morgan');
 var route = require('./routes/index');;
 var bodyParser = require('body-parser');
+var expressValidator = require('express-validator');
 const cors = require('cors');
 
 require('./database/database');
@@ -15,6 +16,7 @@ var app = express();
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+app.use(expressValidator());
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(cors());

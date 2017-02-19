@@ -37,6 +37,66 @@ let CartSchema = new Schema({
     }
 });
 
+let LoginsSchema = new Schema({
+    identityKey: {
+        type: String,
+        required: true,
+        index: {
+            unique: true
+        }
+    },
+    failedAttempts: {
+        type: Number,
+        required: true,
+        default: 0
+    },
+    timeout: {
+        type: Date,
+        required: true,
+        default: new Date()
+    },
+    inProgress: {
+        type: Boolean,
+        default: false
+    }
+});
+// LoginsSchema.static("inProgress", async function(key) {
+//     const login = await this.findOne({identityKey: key});
+//     const query = {identityKey: key};
+//     const update = {inProgress: true};
+//     const options = {setDefaultsOnInsert: true, upsert: true};
+//     await this.findOneAndUpdate(query, update, options).exec();
+//     return (login && login.inProgress);
+// });
+
+// LoginsSchema.static("canAuthenticate", async function (key) {
+//     const login = await this.findOne({identityKey: key});
+
+//     if (!login || login.failedAttempts < 5 ){
+//         return true;
+//     }
+
+//     const timeout = (new Date() - new Date(login.timeout).addMinutes(1));
+//     if (timeout >= 0) {
+//         await login.remove();
+//         return true;
+//     }
+//     return false;
+// });
+
+// LoginsSchema.static("failedLoginAttempt", async function (key) {
+//     const query = {identityKey: key};
+//     const update = {$inc: {failedAttempts: 1}, timeout: new Date(), inProgress: false};
+//     const options = {setDefaultsOnInsert: true, upsert: true};
+//     return  await this.findOneAndUpdate(query, update, options).exec();
+// });
+
+// LoginsSchema.static("successfulLoginAttempt", async function (key) {
+//     const login = await this.findOne({identityKey: key});
+//     if (login) {
+//         return await login.remove();
+//     }
+// });
 
 let userSchema = Schema({
     email: {
@@ -44,9 +104,13 @@ let userSchema = Schema({
         unique: true,
         trim: true,
         sparse: true,
-        lowercase: true //因為 Mongoose 有分大小寫
+        match: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
     },
-    password : String,
+    password : {
+        type: String,
+        require: true,
+        match: /(?=.*[a-zA-Z])(?=.*[0-9]+)(?=.*[!@#$%^&*()_+]+).*/        
+    },
     socials: {
         facebook_id: String,
         google_id: String,

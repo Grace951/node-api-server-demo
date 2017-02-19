@@ -1,9 +1,11 @@
+const util = require('util');
+
 const User = require('../models/user');
 const tokenForUser =  require('./util').tokenForUser;
 const ResError =  require('./util').ResError;
 const validateWithProvider =  require('./util').validateWithProvider;
 const config = require('../config');
-
+const registrationSchema = require('../validation/validation_schemas.js')
 const client_auth_callback = {
 	facebook:fb_client_auth_cb,
 	google:google_client_auth_cb,
@@ -29,17 +31,18 @@ exports.signup = function (req,res, next){
 
 	const email = req.body.email;
 	const password = req.body.password;
-	if(!email || !password){
-		return res.status(422).send({errMsg: "Please Provide email or password!!"})
+	req.checkBody(registrationSchema);
+	req.getValidationResult().then(function(result) {
+		if (!result.isEmpty()) {
+			throw new ResError({status: 400, errMsg: result.array().reduce((prev, next) => prev + `. ${next.msg}`, "")
+			});
 	}
-
-	User.findOne({email}, {password: false}, function(err, user){
-		if(err)	return next(err);
-
+		return User.findOne({email}, {password: false});
+	})
+	.then((user)=>{
 		if(user){
-			return res.status(422).send({errMsg: "Email is in use!!"})
+			throw new ResError({status: 422, errMsg: "Email is in use!!"});
 		}
-
 		const newUser = User({email, password});
 		newUser.save( function (err){
 			if(err)	return next(err);
@@ -50,10 +53,14 @@ exports.signup = function (req,res, next){
 
 			return res.json({token: tokenForUser(newUser), details: nUser});
 		});
+	})
+	.catch( (err) => {
+		if (err.status)   { return res.status(err.status).send({errMsg: err.errMsg});}
+		return res.status(500).send({errMsg: err.toString()})
 	});
 }
 exports.signin = function (req,res, next){
-	//user already had their email anf password auth'd
+	//user already had their email and password auth'd
 	let nUser = Object.assign({}, req.user._doc);
 	delete nUser.password;
 	delete nUser._id;
@@ -69,7 +76,7 @@ exports.client_signin = function (req,res, next){
     let network = req.body.type;
     let socialToken = req.body.token;	
     let Id = req.body.id;
-	let email = undefined, username = "", picture ="";
+	let email = null, username = "", picture ="";
 	if (!config.ids[network]){
 		return res.status(422).send({errMsg: "Invalid Network Type"});
 	}
@@ -95,8 +102,9 @@ exports.client_signin = function (req,res, next){
 	.then((user)=>{
 		if(user){ 	return (user);	}
 		let newUser = new User();
+		newUser.password = `${username}@${network}_id@${Id}`;
 		newUser.profile.picture = picture;
-		if (email !== undefined) {newUser.email = email};
+		if (email !== null) {newUser.email = email};
 		newUser.profile.username = username;
 		newUser.socials[`${network}_id`] = Id;
 		return newUser.save();

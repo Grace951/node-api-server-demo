@@ -5,6 +5,7 @@ var morgan = require('morgan');
 var route = require('./routes/index');;
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
+var helmet = require('helmet');
 const cors = require('cors');
 
 require('./database/database');
@@ -12,7 +13,7 @@ require('./database/database');
 var apiPort = process.env.PORT || 3003;
 var app = express();
 
-
+app.use(helmet());
 app.use(bodyParser.urlencoded({
     extended: true
 }));

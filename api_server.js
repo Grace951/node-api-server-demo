@@ -26,7 +26,7 @@ app.use(helmet.contentSecurityPolicy({
 		reportUri: "/cspviolation"
 	},
 }));
-app.use(helmet.referrerPolicy({ policy: 'same-origin' }));
+app.use(helmet.referrerPolicy({ policy: 'no-referrer' }));
 app.use(expressValidator());
 app.use(bodyParser.urlencoded({
     extended: true

@@ -1,4 +1,5 @@
 const util = require('util');
+const xss = require('xss');
 
 const User = require('../models/user');
 const tokenForUser =  require('./util').tokenForUser;
@@ -28,7 +29,8 @@ function google_client_auth_cb(user){
 }
 exports.signup = function (req,res, next){
 	// res.send({success: true});
-
+	req.body.email && (req.body.email = xss(req.body.email));		
+	req.body.password && (req.body.password = xss(req.body.password));		
 	const email = req.body.email;
 	const password = req.body.password;
 	req.checkBody(registrationSchema);
@@ -70,6 +72,8 @@ exports.signin = function (req,res, next){
 }
 
 exports.client_signin = function (req,res, next){
+	req.body.type && (req.body.type = xss(req.body.type));		
+	req.body.id && (req.body.id = xss(req.body.id));	
 	if (!req.body.type || !req.body.token || !req.body.id){
 		return res.status(422).send({errMsg: "Invalid User Data"});
 	}
@@ -124,6 +128,11 @@ exports.client_signin = function (req,res, next){
 }
 exports.add_user = function (req,res, next){
 	// res.send({success: true});
+	req.body.accessRight && (req.body.accessRight = xss(req.body.accessRight));		
+	req.body.email && (req.body.email = xss(req.body.email));		
+	req.body.password && (req.body.password = xss(req.body.password));		
+	req.body.username && (req.body.username = xss(req.body.username));	
+	req.file && req.file.filename && (req.file.filename = xss(req.file.filename));	
 	if (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8){
 		return res.status(401).json({ errMsg: "Unauthorized"});
 	}

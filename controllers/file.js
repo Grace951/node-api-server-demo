@@ -1,3 +1,4 @@
+const xss = require('xss');
 const path  = require( 'path');
 const mime = require('mime');
 const crypto = require('crypto');
@@ -46,7 +47,7 @@ exports.picStorage =   multer.diskStorage({
 exports.add_images = function(req,res,next) {
 	if (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8){
 		return res.status(401).json({ errMsg: "Unauthorized"});
-	}	
+	}
 	if (!req.files){
 		return res.status(500).json({ errMsg: "Invalid Form Data"});
 	}
@@ -72,6 +73,8 @@ exports.add_images = function(req,res,next) {
 }
 
  exports.add_docs = function(req,res,next) {
+	req.body && (req.body = xss(req.body));
+	req.files && (req.files = xss(req.files));	
 	if (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8){
 		return res.status(401).json({ errMsg: "Unauthorized"});
 	}	 

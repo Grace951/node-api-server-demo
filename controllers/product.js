@@ -1,8 +1,10 @@
 const Products = require('../models/product');
 const Categories = require('../models/category');
 const ResError =  require('./util').ResError;
+const xss = require('xss');
 
 exports.delete = function (req,res, next){
+	req.params.id && (req.params.id = xss(req.params.id));	
 	if (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8){
 		return res.status(401).json({ errMsg: "Unauthorized"});
 	}
@@ -19,6 +21,7 @@ exports.delete = function (req,res, next){
 }
 
 exports.post_detail = function (req,res){
+	req.params.id && (req.params.id = xss(req.params.id));				
 	if (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8){
 		return res.status(401).json({ errMsg: "Unauthorized"});
 	}	
@@ -45,6 +48,7 @@ exports.post_detail = function (req,res){
 
 
 exports.get_detail = function (req, res){
+	req.params.id && (req.params.id = xss(req.params.id));			
 	// console.log(req.params.id);
 	Products.ProductModel.findOne({
 		_id: req.params.id
@@ -101,6 +105,7 @@ exports.get_categories = function (req, res){
 
 
 exports.get_category = function (req, res){
+	req.params.id && (req.params.id = xss(req.params.id));		
 		Categories.find({categoryName: req.params.id},{_id: true})
 	.exec()
 	.then(function(category){

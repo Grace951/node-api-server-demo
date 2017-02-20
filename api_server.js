@@ -3,8 +3,8 @@ var express = require('express');
 var path = require('path');
 var morgan = require('morgan');
 var route = require('./routes/index');;
-var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
+var bodyParser = require('body-parser');
 var helmet = require('helmet');
 const cors = require('cors');
 
@@ -14,10 +14,23 @@ var apiPort = process.env.PORT || 3003;
 var app = express();
 
 app.use(helmet());
+app.use(helmet.contentSecurityPolicy({
+	directives: {
+		defaultSrc: ["'none'"],
+		scriptSrc: ["'self'", "'unsafe-inline'"],
+		styleSrc: ["'self'", "'unsafe-inline'"],
+		imgSrc: ["'self'", "data:"],
+		fontSrc: ["'self'"],
+		frameSrc: ["'self'", "https://accounts.google.com/","https://staticxx.facebook.com/"],
+		connectSrc: ["'self'", "https://react-redux-demo-chingching.herokuapp.com/"],
+		reportUri: "/cspviolation"
+	},
+}));
+app.use(helmet.referrerPolicy({ policy: 'same-origin' }));
+app.use(expressValidator());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(expressValidator());
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(cors());

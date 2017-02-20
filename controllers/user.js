@@ -1,9 +1,13 @@
 let Products = require('../models/product');
+const ResError =  require('./util').ResError;
 let User = require('../models/user');
 let fs = require('fs');
+const xss = require('xss');
 const tokenForUser =  require('./util').tokenForUser;
+const registrationSchema = require('../validation/validation_schemas.js')
 
 exports.delete = function (req,res, next){
+	req.body.email && (req.body.email = xss(req.body.email));
 	User.findOneAndRemove( {
 			email: req.body.email
 		})
@@ -18,6 +22,12 @@ exports.delete = function (req,res, next){
 }
 
 exports.post_detail = function (req,res){
+	req.body.accessRight && (req.body.accessRight = xss(req.body.accessRight));		
+	req.body.email && (req.body.email = xss(req.body.email));	
+	req.body.password && (req.body.password = xss(req.body.password));		
+	req.body.username && (req.body.username = xss(req.body.username));		
+	
+
 	let nUser = req.user;
 	if (req.body.accessRight !== undefined && (!req.user._doc || !req.user._doc.accessRight || req.user._doc.accessRight < 8)){
 		return res.status(401).json({ errMsg: "Unauthorized"});
@@ -31,7 +41,15 @@ exports.post_detail = function (req,res){
 	req.body.password && (nUser.password = req.body.password);	
 	req.body.username && (nUser.profile.username = req.body.username);
 	req.body.data && (nUser.data = req.body.data);
-	nUser.save()
+	req.checkBody(registrationSchema);
+
+	req.getValidationResult().then(function(result) {
+		if (!result.isEmpty()) {
+			throw new ResError({status: 400, errMsg: result.array().reduce((prev, next) => prev + `. ${next.msg}`, "")
+			});
+		}
+		return nUser.save();
+	})	
 	.then( function (user){
 		let retUser = {};
 		retUser.details = Object.assign({}, user._doc);
@@ -51,6 +69,9 @@ exports.post_detail = function (req,res){
 }
 
 exports.post_rate = function (req,res){
+	req.body.rate && (req.body.rate = xss(req.body.rate));		
+	req.params.id && (req.params.id = xss(req.params.id));		
+	
 	if (req.body.rate === undefined ){
 		return res.status(500).json({ errMsg: "Plase Provide Rating Number"});
 	}
@@ -110,6 +131,9 @@ exports.post_rate = function (req,res){
 
 
 exports.post_favorite = function (req,res){
+	req.body.love && (req.body.love = xss(req.body.love));		
+	req.params.id && (req.params.id = xss(req.params.id));		
+	
 	if (req.body.love === undefined ){
 		return res.status(500).json({ errMsg: "Plase Provide Favorite Status"});
 	}	
@@ -171,6 +195,7 @@ exports.post_favorite = function (req,res){
 
 
 exports.get_detail = function (req, res){
+
 	//user already had their email anf password auth'd
 	let nUser = Object.assign({}, req.user._doc);
 	delete nUser.password;

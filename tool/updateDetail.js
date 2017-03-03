@@ -2,7 +2,7 @@ require('../database/database');
 var Products = require('../models/product');
 
 var requireDir = require('require-dir');
-var details = requireDir('../backup/up');
+var details = requireDir('../backup/products/details');
 
 
 

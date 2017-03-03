@@ -1,0 +1,44 @@
+{
+  "_id": "seirvdcm800",
+  "images": [
+    "/api/img/products/seirvdcm800.jpg"
+  ],
+  "docs": [
+      {"desc": "SEIRVDCM800_Specification.pdf", "size": 208, "filetype": "pdf", "src":"/api/docs/SEIRVDCM800_Specification.pdf"}
+  ],
+  "name": "SEIRVDCM800",
+  "brand": "Secuzone",
+  "description": ["IR LED: 5X24PCS IR range: 20M",
+                  "Board Lens 3.6mm / F2.0",
+                  "800TVL , CMOS ",
+                  "Vandalproof",
+                  "DC12V"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SEIRVDCM800"},
+        { "name": "Brand", "details": "Secuzone"},
+        { "name": "Working Temperature", "details": "-10 degree - +50 degree"},
+        { "name": "Dimension (MM)", "details": "94 x 69(D) mm "},
+        { "name": "Weight (Kg)", "details": "400g"}
+      ]
+    },
+    { "name": "Camera",
+      "members": [
+        { "name": "Image Sensor", "details": "1/3”  HDIS"},
+        { "name": "TV Lines", "details": "800TVL, CMOS"},
+        { "name": "S / N Ratio", "details": "More than 48db (AGC Off)"},
+        { "name": "IR Distance", "details": "20 meters (5 x 42PCS IR LED)"},
+        { "name": "Sync System", "details": "Internal"},
+        { "name": "Lens", "details": "Board Lens 3.6mm Fixed"},
+        { "name": "Min.illumination", "details": "0.001 Lux / F2.0"},
+        { "name": "OSD", "details": "Built - In"},
+        { "name": "Electronic Shutter", "details": "Auto: PAL 1/50-1/100,000 sec "},
+        { "name": "Scanning System", "details": "PAL 625 Lines, 50 Field/Sec"},
+        { "name": "White Balance", "details": "AUTO"},
+        { "name": "Voltage / Current", "details": "DC12V 150mA"}
+      ]
+    }
+  ]
+}

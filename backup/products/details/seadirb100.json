@@ -1,0 +1,44 @@
+{
+  "_id": "seadirb100",
+  "images": [
+    "/api/img/products/seadirb100.jpg"
+  ],
+  "docs": [
+      {"desc": "SEADIRB100_Specification.pdf", "size": 309, "filetype": "pdf", "src":"/api/docs/SEADIRB100_Specification.pdf"}
+  ],
+  "name": "SEADIRB100",
+  "brand": "Secuzone",
+  "description": ["1.0MP, 720P, 1200TVL",
+                  "3.6mm Fixed Lens",
+                  "OSD, IR Cut Filter",
+                  "IR Up to 20 Meters",
+                  "Weatherproof"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SEADIRB100"},
+        { "name": "Brand", "details": "Secuzone"},
+        { "name": "Working Temperature", "details": "-10 degree - +50 degree"},
+        { "name": "Dimension (MM)", "details": "142 x 65 (H) x 63 (D) mm"},
+        { "name": "Weight (Kg)", "details": "500g"}
+      ]
+    },
+    { "name": "Camera",
+      "members": [
+        { "name": "Image Sensor", "details": "OV9712S"},
+        { "name": "TV Lines", "details": "720P / 960H (1.0MP. 1200TVL)"},
+        { "name": "S / N Ratio", "details": "More than 50dB "},
+        { "name": "IR Distance", "details": "5 x 24 PCS IR LED (up to 20 Meters)"},
+        { "name": "Sync System", "details": "Internal"},
+        { "name": "Lens", "details": "3.6mm ﬁxed lens "},
+        { "name": "Min.illumination", "details": "0.001 Lux / F2.0"},
+        { "name": "OSD", "details": "Built - In"},
+        { "name": "Electronic Shutter", "details": "Auto: PAL 1/25s-1/50,000 sec"},
+        { "name": "IR Cut Filter", "details": "Yes"},
+        { "name": "Auto IRIS", "details": "No"},
+        { "name": "Voltage / Current", "details": "DC12V 500mA"}
+      ]
+    }
+  ]
+}

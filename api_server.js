@@ -14,6 +14,7 @@ var apiPort = process.env.PORT || 3003;
 var app = express();
 
 app.use(helmet());
+app.use(helmet.noCache());
 app.use(helmet.contentSecurityPolicy({
 	directives: {
 		defaultSrc: ["'none'"],

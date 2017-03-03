@@ -1,0 +1,107 @@
+{
+  "_id": "sno-l6083r",
+  "images": [
+    "/api/img/products/sno-l6083r-1.png",
+    "/api/img/products/sno-l6083r-2.png",
+    "/api/img/products/sno-l6083r-3.png"
+  ],
+  "docs": [
+      {"desc": "SNO-L6013R_Specifications.pdf", "size": 182, "filetype": "pdf", "src":"/api/docs/SNO-L6013R_Specifications.pdf"}
+  ],
+  "name": "SNO-L6013R",
+  "brand": "Samsung",
+  "description": ["Max. 2M (1920 x 1080) resolution",
+                  "3.6mm fixed lens",
+                  "0.15Lux@F1.8 (Color), 0Lux@F1.8 (B/W : IR LED on)",
+                  "30fps@all resolutions (H.264)",
+                  "H.264, MJPEG dual codec, Multiple streaming",
+                  "Motion detection, Tampering",
+                  "Micro SD/SDHC memory slot, PoE",
+                  "IR viewable length 20m, IP66",
+                  "Hallway view support (Rotate 90˚/270˚)",
+                  "LDC support (Lens Distortion Correction)"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SNO-L6013R"},
+        { "name": "Brand", "details": "Samsung"},
+        { "name": "Color / Material", "details": "Dark gray / Plastic"},
+        { "name": "Dimensions(WxH) ", "details": "Ø58.6 x 165.2mm (Ø2.31” x 6.5”) (Without sunshield)"},
+        { "name": "Weight", "details": "250g (0.55 lb)"},
+        { "name": "Opearating Temperature", "details": "-30°C ~ +55°C (-22°F ~ +131°F)*Start up should be done at above -20°C (-4°F)"},
+        { "name": "Opearating Humidity", "details": "Less than 90% RH"},
+        { "name": "Storage Temperature", "details": "-30°C ~ +60°C (-22°F ~ +140°F)"},
+        { "name": "ingress Protection", "details": "IP66"}
+      ]
+    },
+    { "name": "Video",
+      "members": [
+        { "name": "imaging device", "details": "1/2.9” 2.19M CMOS (IMX136)"},
+        { "name": "Total Pixels", "details": "2,000(H) x 1,121(V)"},
+        { "name": "Effective Pixels", "details": "1,984(H) x 1,105(V)"},
+        { "name": "Scanning System", "details": "Progressive"},
+        { "name": "Min. Illumination", "details": "Color :  0.15Lux (1/30sec, F1.8), 0.003Lux (2sec, F1.8) <br>  B/W : 0Lux (IR LED on)"}
+      ]
+    },
+    { "name": "Lens",
+      "members": [
+        { "name": "Focal Length (Zoom Ratio)", "details": "3.8mm fixed "},
+        { "name": "Max. Aperture Ratio", "details": "F1.8"},
+        { "name": "Angular Field of View", "details": "H : 86.5˚ / V : 47.8˚ / D : 101.2˚ "},
+        { "name": "Min. Object Distance", "details": "0.5m (1.64ft)"},
+        { "name": "Lens / Mount Type", "details": "Fixed / Board-in type"}
+      ]
+    },
+    { "name": "Operational",
+      "members": [
+        { "name": "Viewable Length", "details": "20m (65.62ft)"},
+        { "name": "Camera Title", "details": "Off / On (Displayed up to 15 characters) "},
+        { "name": "Day & Night", "details": "True Day & Night"},
+        { "name": "Backlight Compensation", "details": "Off / BLC"},
+        { "name": "Contrast Enhancement", "details": "SSDR (Samsung Super Dynamic Range) (Off / On)"},
+        { "name": "Digital Noise Reduction", "details": "SSNR (Off / On) "},
+        { "name": "Motion Detection", "details": "Off / On (4ea rectangular zones)"},
+        { "name": "Privacy Mask", "details": "Off / On (6ea rectangular zones)"},
+        { "name": "Gain Control", "details": "Off / Low / Middle / High "},
+        { "name": "White Balance", "details": "ATW / AWC / Manual / Indoor / Outdoor"},
+        { "name": "LdC (Lens distortion Correction)", "details": "Off / On (5 levels with min / max)"},
+        { "name": "Electronic Shutter Speed", "details": "Minimum / Maximum / Anti flicker "},
+        { "name": "Flip / Mirror", "details":"Flip / Mirror / Hallway view"},
+        { "name": "Intelligent Video Analytics ", "details": "Motion detection with metadata, Tampering"},
+        { "name": "Alarm Triggers", "details": "Motion detection, Tampering detection, SD card error, NAS error"},
+        { "name": "Alarm Events", "details": "File upload via FTP and E-mail, Local storage recording at event, Notification via E-mail"}
+      ]
+    },
+    { "name": "Network",
+      "members": [
+        { "name": "Ethernet", "details": "RJ-45 (10/100BASE-T)"},
+        { "name": "Video Compression Format", "details": "H.264 (MPEG-4 part 10/AVC), MJPEG"},
+        { "name": "Resolution", "details": "1920 x 1080, 1280 x 960, 1280 x 720, 1024 x 768, 800 x 600, 720 x 576, 640 x 480, 320 x 240"},
+        { "name": "Max. Framerate", "details": "H.264: Max. 30fps at all resolutions<br>MJPEG:  Max. 1fps at 1920 x 1080, 1280 x 960, 1280 x 720, 1024 x 768,  Max. 15fps at other resolution"},
+        { "name": "Video Quality Adjustment", "details": "H.264  : Compression level, Target bitrate level control, MJPEG : Quality level control"},
+        { "name": "Bitrate Control Method", "details": "H.264 : CBR or VBR, MJPEG : VBR"},
+        { "name": "Streaming Capability", "details": "Multiple streaming (Up to 3 profiles)"},
+        { "name": "Audio I/O", "details":  "Line in"},
+        { "name": "Audio Compression Format", "details":  "G.711 u-law / G.726 selectable <br>G.726 (ADPCM) 8KHz, G.711 8KHz, G.726 : 16Kbps, 24Kbps, 32Kbps, 40Kbps"},
+        { "name": "Audio Communication", "details":  "Uni-directional audio"},
+        { "name": "IP", "details":  "IPv4, IPv6"},
+        { "name": "Protocol", "details":  "TCP/IP, UDP/IP, RTP(UDP), RTP(TCP), RTCP, RTSP, NTP, HTTP, HTTPS, SSL, DHCP, PPPoE, FTP, SMTP, ICMP, IGMP, SNMPv1/v2c/v3(MIB-2), ARP, DNS, DDNS, QoS, PIM-SM, UPnP, Bonjour "},
+        { "name": "Security", "details": "HTTPS(SSL) login authentication, Digest login authentication, IP address filtering, User access log, 802.1x authentication"},
+        { "name": "Streaming Method", "details":"Unicast / Multicast"},
+        { "name": "Max. User Access", "details": "6 users at unicast mode"},
+        { "name": "Edge Storage", "details": "micro SD/SDHC max. 32G, NAS <br> - Motion images recorded in the SD memory card can be downloaded <br> - Manual recording at local PC"},
+        { "name": "Application Programming Interface", "details": "ONVIF Profile S, G, SUNAPI (HTTP API)"},
+        { "name": "Webpage Language", "details": "English, French, German, Spanish, Italian, Chinese, Korean, Russian, Japanese, Swedish, Danish, Portuguese, Turkish, Polish, Czech, Rumanian, Serbian, Dutch, Croatian, Hungarian, Greek, Norwegian, Finnish"},
+        { "name": "Web Viewer", "details": "<b>Supported OS </b>: Windows XP / VISTA / 7 / 8 / 8.1, MAC OS X 10.7 ~ 10.10 <br><b> Supported Browser </b>:  <br>Microsoft Internet Explorer (Ver. 8 ~ 11), <br>Mozilla Firefox (Ver. 9 ~ 35),  <br> Google Chrome (Ver. 15 ~ 40), <br> Apple Safari (Ver. 8.0.2(Mac OS X 10.10), 7.0.6(Mac OS X 10.9), 6.0.2 (Mac OS X 10.8, 10.7 only), 5.1.7)  "},
+        { "name": "Central Management Software", "details": "SmartViewer"}
+      ]
+    },
+    { "name": "Electrical",
+      "members": [
+        { "name": "Input Voltage / Current", "details": "PoE (IEEE802.3af, Class2)"},
+        { "name": "Power Consumption", "details": "Max. 5.7W "}
+      ]
+    }
+  ]
+}

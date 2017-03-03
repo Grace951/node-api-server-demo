@@ -1,0 +1,6 @@
+{"_id":1,"categoryName":"DVR","props":[true,true,true,true,false,true,true,true,false,true,false,false,false,false,false,false,false,false,false]}
+{"_id":2,"categoryName":"ALARM","props":[true,true,true,true,false,true,true,false,false,true,true,false,false,false,false,false,false,false,false]}
+{"_id":3,"categoryName":"CCTV","props":[true,true,true,true,false,false,false,false,false,false,false,true,true,true,true,false,false,true,true]}
+{"_id":4,"categoryName":"INTERCOM","props":[true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false]}
+{"_id":5,"categoryName":"KIT","props":[true,true,true,true,true,true,true,true,false,true,false,false,false,false,false,false,true,false,false]}
+{"_id":6,"categoryName":"NVR","props":[true,true,true,true,true,true,true,true,false,true,false,false,false,false,false,false,true,false,false]}

@@ -1,0 +1,93 @@
+{
+  "_id": "srd-476d",
+  "images": [
+    "/api/img/products/srd-476d-1.png",
+    "/api/img/products/srd-476d-2.jpg",
+    "/api/img/products/srd-476d-3.png"
+  ],
+  "docs": [
+      {"desc": "SRD-476D_Datasheet.pdf", "size": 349, "filetype": "pdf", "src":"/api/docs/SRD-476D_Datasheet.pdf"},
+     {"desc": "SRD-476D-User_Manual.pdf", "size": 4881, "filetype": "pdf", "src":"/api/docs/SRD-476D-User_Manual.pdf"}
+
+  ],
+  "name": "SRD-476D  (4ch)",
+  "brand": "Samsung",
+  "description": ["4CH 1280H (950TVL) real-time DVR - Up to 120(N) / 100(P)fps recording rate",
+                  "Easy user interface, common across all Samsung DVRs - GUI / Search / Back up / Set-up",
+                  "Set independently for each channel - REC / Quality / Resolution",
+                  "Privacy mask support for each channel (4ea)",
+                  "Convenient with strong network monitoring - CMS (SSM, SmartViewer, Net-I), Web viewer, Smart phones (iPOLiS mobile)",
+                  "Accurate still image (De-Interlace support each channel)",
+                  "VGA / HDMI for Full-HD (1080p) resolution video out",
+                  "Max. 1 internal HDDs",
+                  "Video spot (Analog 1ea, Digital 1ea), USB (2ports) back up",
+                  "Up to 4CH audio inputs / 1CH audio output"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SRD-476D  (4ch)"},
+        { "name": "Brand", "details": "Samsung"},
+        { "name": "Consumption", "details": "Max. 25W (With 1x HDD)"},
+        { "name": "Working Temperature", "details": "+0°C ~ +40°C (+32°F ~ +104°F) "},
+        { "name": "Working Humidity", "details": "20% ~ 85% RH"},
+        { "name": "Chassis", "details": "1U Chassis"},
+        { "name": "Dimension mm(WxDxH)", "details": "215.0 x 351.6 x 88.0 "},
+        { "name": "Weight(without HDD)", "details": "Approx. 3.3Kg (7.32 lb)"}
+      ]
+    },
+    { "name": "Video",
+      "members": [
+        { "name": "Video Input", "details": "4 Composite video 0.5-1 Vpp, 75 ohm automatic termination"},
+        { "name": "IP Video Input", "details": "No"},
+        { "name": "Compression", "details": "H.264"}
+      ]
+    },
+    { "name": "Audio",
+      "members": [
+        { "name": "Audio Input", "details": "4CH line in"},
+        { "name": "Audio Output", "details": "1CH line out"}
+      ]
+    },
+    { "name": "Display",
+      "members": [
+        { "name": "VGA Output", "details": "1 VGA (1280 x 720, 1280 x 1024, 1920 x 1080)"},
+        { "name": "BNC Output", "details": "2CH (Digital spot 1CH / Analog spot 1CH) *Included OSD on screen, Multi mode support"},
+        { "name": "HDMI Output", "details": "1 HDMI (1280 x 720, 1280 x 1024, 1920 x 1080)"}
+      ]
+    },
+    { "name": "Recording",
+      "members": [
+        { "name": "Record Rate", "details": "NTSC : Up to 120fps@1280 x 480 / PAL : Up to 100fps@1280 x 576 *Play back 60/50fps <br>NTSC : Up to 120fps@704 x 480 / PAL : Up to 100fps@704 x 576<br>NTSC : Up to 120fps@704 x 240 / PAL : Up to 100fps@704 x 288<br>NTSC : Up to 120fps@352 x 240 / PAL : Up to 100fps@352 x 288"}
+      ]
+    },
+    { "name": "Playback",
+      "members": [
+        { "name": "Function", "details": "Fast forward / backward (2x, 4x, 8x, 16x, 32x, 64x) *Backward play with i-frame only<br>Slow forward / backward (1/2x, 1/4x, 1/8x) <br>Step forward / backward *Backward play with i-frame only"}
+      ]
+    },
+    { "name": "Streaming",
+      "members": [
+        { "name": "Stream", "details": "H.264 (4CIF / 2CIF / CIF selectable)"}
+      ]
+    },
+    { "name": "Hard Disk",
+      "members": [
+        { "name": "SATA Interface", "details": "Up to 1 SATA HDDs"}
+      ]
+    },
+    { "name": "External Interface",
+      "members": [
+        { "name": "Network Interface", "details": "1 RJ-45 10/100/1000 Base-T"},
+        { "name": "Serial Interface", "details": "RS-232/RS-485 (Half duplex) for PTZ, Samsung system keyboard"},
+        { "name": "USB", "details": "USB 2.0, 2 ports (Front / Rear)"}
+      ]
+    },
+    { "name": "Software",
+      "members": [
+        { "name": "PC", "details": "SmartViewer, Webviewer, SSM (CMS)"},
+        { "name": "Smart Phone", "details": "Android, iOS"}
+      ]
+    }
+  ]
+}

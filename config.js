@@ -1,5 +1,12 @@
 module.exports = {
-	secret: "ho845decgnbjk989i079t55$$@N>HJHH*",
+	secret: "ho.?decg2d5s+aea^k989i079t55$$@N>HJHH*",
+	mongodb: {
+		host: "ds019829.mlab.com",
+		port: "19829",
+		db: "react-redux-demo",
+		adminUser: "grace",
+		adminPW: "1qazXSW2"
+	},
 	ids : {
 		github: {
 			APP_ID: 'get_your_own',

@@ -1,0 +1,85 @@
+{
+  "_id": "hd3-16u",
+  "images": [
+    "/api/img/products/hd3-16u-1.png",
+    "/api/img/products/snm-vms.png",
+    "/api/img/products/snm-rms.png",
+    "/api/img/products/snm-mac-viewer.png",
+    "/api/img/products/snm-phone-viewer.png",
+    "/api/img/products/smn-backup-player.png"
+  ],
+  "docs": [
+      {"desc": "SNM_HD-SDI_16ch_Premium_HD3-16U.pdf", "size": 619, "filetype": "pdf", "src":"/api/docs/SNM_HD-SDI_16ch_Premium_HD3-16U.pdf"}
+  ],
+  "name": "HD3-16U (16ch Premium Hybrid)",
+  "brand": "SNM",
+  "description": ["6HDD Bay, DVD R/W, Digital Zoom",
+                  "Multi-Languages Supported",
+                  "Privacy Zone, Covert Channel, Two-way Audio",
+                  "Jog  Shuttle",
+                  "DDNS, DHCP, UPnP",
+                  "RAID1/5 (Optional) ",
+                  "End of Line Resistor Sensor, Dual 485 Port",
+                  "Coaxitron (960H only)",
+                  "Equalizer (960H only)",
+                  "Camera Tamper Alarm (960H only) ",
+                  "POS, iSCSI (Recording), 2x eSATA"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "MH3-08U"},
+        { "name": "Brand", "details": "SNM"},
+        { "name": "Dimension mm(WxDxH)", "details": "440x430x88"},
+        { "name": "Consumption", "details": "80Watts"},
+        { "name": "Working Temperature", "details": "5 ~ 40˚C"},
+        { "name": "Working Humidity", "details": "10 ~ 80%"},
+        { "name": "Weight(without HDD)", "details": "8 KG"}
+      ]
+    },
+    { "name": "Video",
+      "members": [
+        { "name": "Input", "details": "16 BNC"},
+        { "name": "Output", "details": "1 HDMI, 1 VGA, 1 BNC"}
+      ]
+    },
+    { "name": "Audio",
+      "members": [
+        { "name": "Audio Input", "details": "16x RCA"},
+        { "name": "Audio Output", "details": "1 HDMI, 1 RCA"}
+      ]
+    },
+    { "name": "Display",
+      "members": [
+        { "name": "HDMI Output", "details": "Full HD"},
+        { "name": "VGA Output", "details": "XGA"},
+        { "name": "BNC Output", "details": "SDTV (720x480/576)"}
+      ]
+    },
+    { "name": "Recording",
+      "members": [
+        { "name": "Resolution", "details": "1080p, 720p, 960H, D1, CIF"},
+        { "name": "Frame Rate", "details": "1920x1080p Realtime (max. 30fps/ch) "}
+      ]
+    },
+    { "name": "Storage",
+      "members": [
+        { "name": "Hard Disk", "details": "6 HDD, 2 eSATA, 1 DVD "}
+      ]
+    },
+    { "name": "External Interface",
+      "members": [
+        { "name": "Network Interface", "details": "Ethernet 10/100/1G"},
+        { "name": "PTZ / Keyboard", "details": "2 RS485 - Terminal Block"},
+        { "name": "ATM / POS", "details": "RS232C - Terminal Block / Ethernet POS"}
+      ]
+    },
+    { "name": "Software",
+      "members": [
+        { "name": "PC", "details": "VMS, RMS, Mac  Viewer "},
+        { "name": "Mobile App", "details": "SmartEyes_Pro (Android/iPhone)"},
+        { "name": "Tablet App", "details": "SmartEyesHD_Pro (iPad) "}
+      ]
+    }
+  ]
+}

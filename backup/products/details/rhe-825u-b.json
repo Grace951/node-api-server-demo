@@ -1,0 +1,82 @@
+{
+  "_id": "rhe-825u-b",
+  "images": [
+    "/api/img/products/rhe-825u-b.png",
+    "/api/img/products/rhe-825u-b-1.png"
+  ],
+  "docs": [
+    {"desc": "RHE-825U-B_Specification.pdf", "size": 858, "filetype": "pdf", "src":"/api/docs/RHE-825U-B_Specification.pdf"},
+    {"desc": "iCMS_Manual_0716.pdf", "size": 1443, "filetype": "pdf", "src":"/api/docs/iCMS_Manual_0716.pdf"},
+    {"desc": "RHE-825U-B_StartManual.pdf", "size": 972, "filetype": "pdf", "src":"/api/docs/RHE-825U-B_StartManual.pdf"},
+    {"desc": "RHE-825U-B_RemoteAccessManual.pdf", "size": 6920, "filetype": "pdf", "src":"/api/docs/RHE-825U-B_RemoteAccessManual.pdf"},
+    {"desc": "RHE-825U-B_UserManual.pdf", "size": 1077, "filetype": "pdf", "src":"/api/docs/RHE-825U-B_UserManual.pdf"}
+  ],
+  "name": "RHE-825U-B (8ch Universal)",
+  "brand": "iCatch",
+
+
+  "description": ["8CH HD-SDI video inputs, max 240/200 fps @ 1080p",
+                  "8CH HD-SDI sync realtime playback",
+                  "Supports video signals from 1080P, 720P, 960H & D1",
+                  "RS-485 serial interface",
+                  "Triple Streaming for Live Display, Playback, and Recording",
+                  "Support Mac System",
+                  "Max 7 SATA devices (6*SATA, 1*eSATA), 2 USB, RJ45 (10/100/1000)",
+                  "Support Touch-Panel LCD Monitor"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "RHE-825U-B"},
+        { "name": "Brand", "details": "iCatch"},
+        { "name": "Dimension mm(WxDxH)", "details": "442x438x92"}
+      ]
+    },
+    { "name": "Video",
+      "members": [
+        { "name": "Video Input", "details": "8CH HD-SDI Universal"}
+      ]
+    },
+    { "name": "Audio",
+      "members": [
+        { "name": "Audio Input", "details": "8 HD-SDI , 8 RCA"},
+        { "name": "Audio Output", "details": "2 RCA"}
+      ]
+    },
+    { "name": "Recording",
+      "members": [
+        { "name": "Main (Recording) Resolution", "details": "1920 x 1080, 1280 x 720, 944 x 480, 704 x 480, 944 x 240 (NTSC 960H) / 944 x 576, 704 x 576, 944 x 288 (PAL 960H)"},
+        { "name": "Sub (Network) Resolution", "details": "640 x 360 / 352 x 240, 176 x 120 ( NTSC) / 352 x 288, 176 x 144 (PAL)"},
+        { "name": "Record Rate", "details": "NTSC 1080p 240 fps / PAL 1080p 200 fps"}
+      ]
+    },
+    { "name": "Hard Disk",
+      "members": [
+        { "name": "SATA Interface", "details": "Supports Max. x 7 SATA Devices (HDDx6+eSATAx1, HDDx4+Optical Devicex1+eSATAx1)"},
+        { "name": "External HDD", "details": "YES ( eSATA )"}
+      ]
+    },
+    { "name": "External Interface",
+      "members": [
+        { "name": "Network Interface", "details": "10/100/1000 Ethernet"},
+        { "name": "Serial Interface", "details": "2 x RS-485"},
+        { "name": "USB", "details": "USB2.0 x 2"},
+        { "name": "Sensor In (NO,NC)", "details": "8"},
+        { "name": "Relay Out", "details": "4"}
+      ]
+    },
+    { "name": "Software",
+      "members": [
+        { "name": "PC", "details": "IE Browser, iWatch DVR, iCMS"},
+        { "name": "Mobile App", "details": "iWatch DVR2"},
+        { "name": "Tablet App", "details": "iWatch DVR2"}
+      ]
+    },
+    { "name": "Backup",
+      "members": [
+        { "name": "Interface", "details": "USB 2.0 or SATA"},
+        { "name": "Backup", "details": "Network, Ext. USB flash device , SATA optical DVD..etc"}
+      ]
+    }
+  ]
+}

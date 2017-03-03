@@ -1,12 +1,18 @@
 var mongoose = require('mongoose');
+var mongodb = require('../config').mongodb;
 
-var dbURI = "mongodb://grace:1qazXSW2@ds019829.mlab.com:19829/react-redux-demo";
+var dbAdminUser = mongodb.adminUser;
+var dbAdminPw = mongodb.adminPW;
+var dbHost = mongodb.host;
+var dbPort = mongodb.port;
+var dbName = mongodb.db;
+var dbURI = `mongodb://${dbAdminUser}:${dbAdminPw}@${dbHost}:${dbPort}/${dbName}`;
 
 mongoose.connect(dbURI);
 
 //monitor connect
 mongoose.connection.on('connected', function() {
-    console.log('Mongoose connected to ' + dbURI);
+    console.log('Mongoose connected to ' + `@${dbHost}:${dbPort}/${dbName}`);
 });
 
 //monitor connection error

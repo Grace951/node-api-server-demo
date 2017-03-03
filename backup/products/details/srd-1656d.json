@@ -1,0 +1,86 @@
+{
+  "_id": "srd-1656d",
+  "images": [
+    "/api/img/products/srd-1656d-1.png",
+    "/api/img/products/srd-1656d-2.png",
+    "/api/img/products/srd-1656d-3.png",
+    "/api/img/products/srd-1656d-4.png"
+  ],
+  "docs": [
+      {"desc": "SRD-1656D.pdf", "size": 374, "filetype": "pdf", "src":"/api/docs/SRD-1656D.pdf"},
+      {"desc": "User_Manual-SRD-1676D_SRD-876D_SRD-1656D.pdf", "size": 8246, "filetype": "pdf", "src":"/api/docs/User_Manual-SRD-1676D_SRD-876D_SRD-1656D.pdf"}
+  ],
+  "name": "SRD-1656D (16ch) (8ch HD-SDI)",
+  "brand": "Samsung",
+
+
+  "description": ["16CH 1280H (950TVL) non real-time DVR - Up to 120(N) / 100(P)fps recording rate",
+                  "Easy user interface, common across all Samsung DVRs - GUI / Search / Back up / Set-up",
+                  "Set independently for each channel - REC / Quality / Resolution",
+                  "Privacy mask support for each channel (4ea)",
+                  "Convenient with strong network monitoring - CMS (SSM, SmartViewer, Net-I), Web viewer, Smart phones (iPOLiS mobile)",
+                  "Accurate still image (De-Interlace support each channel)",
+                  "VGA / HDMI for Full-HD (1080p) resolution video out",
+                  "Max. 4 internal HDDs",
+                  "Digital video spot (2ea), USB (2ports) back up",
+                  "Up to 16CH audio inputs / 1CH audio output"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SRD-1656D"},
+        { "name": "Brand", "details": "Samsung"},
+        { "name": "Consumption", "details": "Max. 60W (With 1x HDD)"},
+        { "name": "Working Temperature", "details": "+0°C ~ +40°C (+32°F ~ +104°F)"},
+        { "name": "Working Humidity", "details": "20% ~ 85% RH"},
+        { "name": "Dimension mm (WxDxH)", "details": "440.0 x 384.8 x 88.0"},
+        { "name": "Weight (with HDD)", "details": "Approx. 6.6Kg (14.61 lb)"}
+      ]
+    },
+    { "name": "Video",
+      "members": [
+        { "name": "Video Input", "details": "16 Composite video 0.5-1 Vpp, 75 ohm automatic termination"},
+        { "name": "Compression", "details": "H.264"}
+      ]
+    },
+    { "name": "Audio",
+      "members": [
+        { "name": "Audio Input", "details": "16CH line in (Built-in 4CH, option : audio extension cable)"},
+        { "name": "Audio Output", "details": "1CH line out"}
+      ]
+    },
+    { "name": "Display",
+      "members": [
+        { "name": "VGA Output", "details": "1 VGA (1280 x 720, 1280 x 1024, 1920 x 1080)"},
+        { "name": "BNC Output", "details": "No"},
+        { "name": "HDMI Output", "details": "1 HDMI (1280 x 720, 1280 x 1024, 1920 x 1080)"}
+      ]
+    },
+    { "name": "Recording",
+      "members": [
+        { "name": "Record Rate", "details": "NTSC : Up to 120fps@1280 x 480 / PAL : Up to 100fps@1280 x 576 <br>NTSC : Up to 120fps@704 x 480 / PAL : Up to 100fps@704 x 576<br>NTSC : Up to 240fps@704 x 240 / PAL : Up to 200fps@704 x 288<br>NTSC : Up to 480fps@352 x 240 / PAL : Up to 400fps@352 x 288"}
+      ]
+    },
+    { "name": "Playback",
+      "members": [
+        { "name": "Fast forward / backward", "details": "(2x, 4x, 8x, 16x, 32x, 64x) *Backward play with i-frame only"},
+        { "name": "Slow forward / backward", "details": "(1/2x, 1/4x, 1/8x)"},
+        { "name": "Step forward / backward", "details": "( *Backward play with i-frame only"}
+      ]
+    },
+    { "name": "Hard Disk",
+      "members": [
+        { "name": "internal HDD", "details": "Up to 4 SATA HDDs"},
+        { "name": "external (e-SATA Interface)", "details": "2 External SATA ports  (*Expansion bay, Model : SVS-5R/5E)"}
+      ]
+    },
+    { "name": "External Interface",
+      "members": [
+        { "name": "Network Interface", "details": "1 RJ-45 10/100/1000 Base-T"},
+        { "name": "Serial Interface", "details": "RS-232/RS-485 (Full duplex) for PTZ, Samsung system keyboard"},
+        { "name": "USB", "details": "USB 2.0, 2 ports"},
+        { "name": "eSATA", "details": "2 External SATA ports"}
+      ]
+    }
+  ]
+}

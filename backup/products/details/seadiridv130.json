@@ -1,0 +1,43 @@
+{
+  "_id": "seadiridv130",
+  "images": [
+    "/api/img/products/seadiridv130.jpg"
+  ],
+  "docs": [
+      {"desc": "SEADIRIDV130.pdf", "size": 135, "filetype": "pdf", "src":"/api/docs/SEADIRIDV130.pdf"}
+  ],
+  "name": "SEADIRIDV130",
+  "brand": "Secuzone",
+  "description": ["1/3” SONY Sensor 1.4 MP / 720P / 960H with IR Cut ",
+                  "2.8-12mm Lens , IR up to 20 meters, Plastic Housing",
+                  "DWDR., 3D NR, Sense-up , OSD",
+                  "DC12V"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SEADIRIDV130"},
+        { "name": "Brand", "details": "Secuzone"},
+        { "name": "Working Temperature", "details": "-10 degree ‐ +50 degree"},
+        { "name": "Dimension (MM)", "details": "112 (H) x 112 x 81 (D) mm"},
+        { "name": "Weight (Kg)", "details": "240g"}
+      ]
+    },
+    { "name": "Operaitng",
+      "members": [
+        { "name": "Image Sensor", "details": "1/3” Sony Exmor CMOS"},
+        { "name": "TV Lines", "details": "960P / 960H (1.4 MP. 1500TVL)"},
+        { "name": "S / N Ratio", "details": "More than 50dB "},
+        { "name": "IR Distance", "details": " 24 PCS IR LED (up to 20 Meters)"},
+        { "name": "Sync System", "details": "Internal"},
+        { "name": "Lens", "details": "2.8-12mm varifocal lens "},
+        { "name": "Min.illumination", "details": "0.001 Lux / F2.0"},
+        { "name": "OSD", "details": "Built - In"},
+        { "name": "Electronic Shutter", "details": "Auto: PAL 1/25s-1/50,000 sec"},
+        { "name": "IR Cut Filter", "details": "Yes"},
+        { "name": "Auto IRIS", "details": "No"},
+        { "name": "Voltage / Current", "details": "DC12V 1000mA"}
+      ]
+    }
+  ]
+}

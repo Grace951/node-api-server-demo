@@ -1,0 +1,79 @@
+{
+  "_id": "alarm-880",
+  "images": [
+    "/api/img/products/alarm_880-1.png",
+    "/api/img/products/alarm_880-2.png",
+    "/api/img/products/alarm_880-3.png"
+  ],
+  "docs": [
+    {"desc": "ICP_CC488_Data_sheet.pdf", "size": 380, "filetype": "pdf", "src":"/api/docs/ICP_CC488_Data_sheet.pdf"},
+    {"desc": "ICP_CC488_Operation_Manual.pdf", "size": 612, "filetype": "pdf", "src":"/api/docs/ICP_CC488_Operation_Manual.pdf"},
+    {"desc": "ICP_CC488_Installation_Manual.pdf", "size": 2309, "filetype": "pdf", "src":"/api/docs/ICP_CC488_Installation_Manual.pdf"},
+    {"desc": "ICP_CC488_Quick_Installation_Guide.pdf", "size": 1111, "filetype": "pdf", "src":"/api/docs/ICP_CC488_Quick_Installation_Guide.pdf"},
+    {"desc": "ICP_CC488_Commercial_Brochure.pdf", "size": 3419, "filetype": "pdf", "src":"/api/docs/ICP_CC488_Commercial_Brochure.pdf"},
+    {"desc": "ICP_CP508LW_Data_sheet.pdf", "size": 248, "filetype": "pdf", "src":"/api/docs/ICP_CP508LW_Data_sheet.pdf"},
+    {"desc": "ICP_CP508LW_Operation_Manual.pdf", "size": 237, "filetype": "pdf", "src":"/api/docs/ICP_CP508LW_Operation_Manual.pdf"},
+    {"desc": "ISC_BPR2_Data_sheet.pdf", "size": 625, "filetype": "pdf", "src":"/api/docs/ISC_BPR2_Data_sheet.pdf"},
+    {"desc": "ISC_BPR2_Installation_Manual.pdf", "size": 1378, "filetype": "pdf", "src":"/api/docs/ISC_BPR2_Installation_Manual.pdf"},
+    {"desc": "ISC_BPR2_Quick_Selection_Guide.pdf", "size": 2566, "filetype": "pdf", "src":"/api/docs/ISC_BPR2_Quick_Selection_Guide.pdf"},
+    {"desc": "ISC_BPR2_Commercial_Brochure.pdf", "size": 826, "filetype": "pdf", "src":"/api/docs/ISC_BPR2_Commercial_Brochure.pdf"}
+  ],
+  "member": [
+    {"desc": "ICP-CC488 Panel Dialler", "qty": 1},
+    {"desc": "ICP-CP508LW LCD Icon Codepad", "qty": 1},
+    {"desc": "ISC-BPR2  Blue Line Gen2 PIR Motion Detectors", "qty": 3},
+    {"desc": "Plug Pack", "qty": 1},
+    {"desc": "Back-up Battery", "qty": 1},
+    {"desc": "Internal Piezo Screamer", "qty": 1},
+    {"desc": "External Siren, Strobe & Horn", "qty": 1},
+    {"desc": "Tamper", "qty": 1}
+  ],
+  "optional": [
+    {"desc": "Additional Motion Detectors, Pet Sensitive Detectors"},
+    {"desc": "Door / Window sensors"},
+    {"desc": "Remote Arm and Disarm Kit"},
+    {"desc": "Smoke Detectors"}
+  ],
+  "name": "Solution 880 Kit",
+  "brand": "BOSCH",
+  "spec": [
+    { "name": "ICP-CC488 Panel Dialler",
+      "members": [
+        { "name": "Current Draw <br>In alarm", "details": "115 mA"},
+        { "name": "Current Draw <br>In alarm with codepad", "details": "105 mA"},
+        { "name": "Current Draw <br>In standby", "details": "65 mA"},
+        { "name": "Power - Primary", "details": "240 VAC, 18 VAC at 1.3 A from a TF008 Plug Pack"},
+        { "name": "Power - Secondary", "details": "12 VDC, 6.5 Ah from a rechargeable sealed lead/acid battery"},
+        { "name": "Relative Humidity", "details": "10% to 95% non-condensing"},
+        { "name": "Temperature (Operating)", "details": "0°C to +45°C (+32°F to +113°F)"},
+        { "name": "Dimensions (packed in carton)", "details": "306 mm x 262 mm x 84 mm (12.1 in. x 10.3 in. x 3.3 in.)"},
+        { "name": "Weight", "details": "2.5 kg (5.5 lb)"}
+      ]
+    },
+    { "name": "ICP-CP508LW LCD Icon Codepad",
+      "members": [
+        { "name": "Dimensions", "details": "7.2 cm x 12.7 cm x 2.3 cm(2.8 in. x 5 in. x 1 in.)"},
+        { "name": "Storage Temperature", "details": "+0°C to +50°C (+32°F to 122°F)"},
+        { "name": "Relative Humidity", "details": "20% to 90% (non-condensing)"},
+        { "name": "Radio Frequency Interference (RFI)", "details": "Complies with AS/NZS3548"},
+        { "name": "Operating Voltage", "details":  "11 VDC to 14 VDC"},
+        { "name": "Current Draw", "details": "50 mA (maximum)"}
+      ]
+    },
+    { "name": "ISC-BPR2  Blue Line Gen2 PIR Motion Detectors",
+      "members": [
+        { "name": "Current (standby/alarm)", "details": "10 mA at 12 VDC"},
+        { "name": "Voltage (operating)", "details": "9 VDC to 15 VDC"},
+        { "name": "Environment", "details": "Complies with EN50130-5 Class II"},
+        { "name": "Pet Immunity1", "details": "One or two pets up to 20 kg (45 lb) or numerous rodents."},
+        { "name": "Relative Humidity", "details":  "0 to 95%, non-condensingFor UL Listed product installations, 0 to 85%, non-condensing"},
+        { "name": "Temperature (operating)", "details": "-30°C to +55°C (-20°F to +130°F)For UL Listed product installations, 0°C to +49°C (+32°F to +120°F)"},
+        { "name": "Color", "details": "white"},
+        { "name": "Dimensions", "details": "105 mm x 61 mm x 44  mm (4.2 in. x 2.4 in. x 1.7 in.)"},
+        { "name": "Material", "details": "High-impact ABS plastic"},
+        { "name": "Radio Frequency Interference (RFI) Immunity", "details": "No alarm or setup on critical frequencies in the range from 150 kHz to 2 GHz at field strengths less than 30 V/m."},
+        { "name": "Relay", "details": "Solid state, supervised, Form A normally-closed (NC) contacts rated for ≤100 mA, 25 VDC, 2.5 W, <20 Ω closed"}
+      ]
+    }
+  ]
+}

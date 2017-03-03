@@ -1,0 +1,78 @@
+{
+  "_id": "alarm-880-wireless",
+  "images": [
+    "/api/img/products/alarm_880_wireless-1.png",
+    "/api/img/products/alarm_880_wireless-2.png",
+    "/api/img/products/alarm_880_wireless-3.png",
+    "/api/img/products/alarm_880_wireless-4.png"
+  ],
+  "docs": [
+    {"desc": "ICP_CC488_Data_sheet.pdf", "size": 380, "filetype": "pdf", "src":"/api/docs/ICP_CC488_Data_sheet.pdf"},
+    {"desc": "ICP_CC488_Operation_Manual.pdf", "size": 612, "filetype": "pdf", "src":"/api/docs/ICP_CC488_Operation_Manual.pdf"},
+    {"desc": "ICP_CC488_Installation_Manual.pdf", "size": 2309, "filetype": "pdf", "src":"/api/docs/ICP_CC488_Installation_Manual.pdf"},
+    {"desc": "ICP_CC488_Quick_Installation_Guide.pdf", "size": 1111, "filetype": "pdf", "src":"/api/docs/ICP_CC488_Quick_Installation_Guide.pdf"},
+    {"desc": "ICP_CC488_Commercial_Brochure.pdf", "size": 3419, "filetype": "pdf", "src":"/api/docs/ICP_CC488_Commercial_Brochure.pdf"},
+    {"desc": "ICP_CP508LW_Data_sheet.pdf", "size": 248, "filetype": "pdf", "src":"/api/docs/ICP_CP508LW_Data_sheet.pdf"},
+    {"desc": "ICP_CP508LW_Operation_Manual.pdf", "size": 237, "filetype": "pdf", "src":"/api/docs/ICP_CP508LW_Operation_Manual.pdf"},
+    {"desc": "RF3212E_Installation_Manual.pdf", "size": 76, "filetype": "pdf", "src":"/api/docs/RF3212E_Installation_Manual.pdf"},
+    {"desc": "RF3212E_Data_sheet.pdf", "size": 124, "filetype": "pdf", "src":"/api/docs/RF3212E_Data_sheet.pdf"},
+    {"desc": "ISC_BPR2_Commercial_Brochure.pdf", "size": 826, "filetype": "pdf", "src":"/api/docs/ISC_BPR2_Commercial_Brochure.pdf"},
+    {"desc": "RF940E_InGuide_Installation_Manual.pdf", "size": 425, "filetype": "pdf", "src":"/api/docs/RF940E_InGuide_Installation_Manual.pdf"},
+    {"desc": "RF940E_Data_sheet.pdf", "size": 474, "filetype": "pdf", "src":"/api/docs/RF940E_Data_sheet.pdf"}
+  ],
+  "member": [
+    {"desc": "ICP-CC488 Panel Dialler", "qty": 1},
+    {"desc": "ICP-CP508LW LCD Icon Codepad", "qty": 1},
+    {"desc": "RF940E Wireless PIR Motion Detectors", "qty": 3},
+    {"desc": "RF3212E DSRF Receiver", "qty": 1},
+    {"desc": "HCT-4UL 4 Button Ultima Premium Remote Control", "qty": 2},
+    {"desc": "Plug Pack", "qty": 1},
+    {"desc": "Back-up Battery", "qty": 1},
+    {"desc": "Internal Piezo Screamer", "qty": 1},
+    {"desc": "External Siren, Strobe & Horn", "qty": 1},
+    {"desc": "Tamper", "qty": 1}
+  ],
+  "optional": [
+    {"desc": "Additional Motion Detectors, Pet Sensitive Detectors"},
+    {"desc": "Door / Window sensors"},
+    {"desc": "Smoke Detectors"}
+  ],
+  "name": "Solution 880 Kit",
+  "brand": "BOSCH",
+  "spec": [
+    { "name": "ICP-CC488 Panel Dialler",
+      "members": [
+        { "name": "Current Draw <br>In alarm", "details": "115 mA"},
+        { "name": "Current Draw <br>In alarm with codepad", "details": "105 mA"},
+        { "name": "Current Draw <br>In standby", "details": "65 mA"},
+        { "name": "Power - Primary", "details": "240 VAC, 18 VAC at 1.3 A from a TF008 Plug Pack"},
+        { "name": "Power - Secondary", "details": "12 VDC, 6.5 Ah from a rechargeable sealed lead/acid battery"},
+        { "name": "Relative Humidity", "details": "10% to 95% non-condensing"},
+        { "name": "Temperature (Operating)", "details": "0°C to +45°C (+32°F to +113°F)"},
+        { "name": "Dimensions (packed in carton)", "details": "306 mm x 262 mm x 84 mm (12.1 in. x 10.3 in. x 3.3 in.)"},
+        { "name": "Weight", "details": "2.5 kg (5.5 lb)"}
+      ]
+    },
+    { "name": "ICP-CP508LW LCD Icon Codepad",
+      "members": [
+        { "name": "Dimensions", "details": "7.2 cm x 12.7 cm x 2.3 cm(2.8 in. x 5 in. x 1 in.)"},
+        { "name": "Storage Temperature", "details": "+0°C to +50°C (+32°F to 122°F)"},
+        { "name": "Relative Humidity", "details": "20% to 90% (non-condensing)"},
+        { "name": "Radio Frequency Interference (RFI)", "details": "Complies with AS/NZS3548"},
+        { "name": "Operating Voltage", "details":  "11 VDC to 14 VDC"},
+        { "name": "Current Draw", "details": "50 mA (maximum)"}
+      ]
+    },
+    { "name": "RF940E Wireless PIR Motion Detectors",
+      "members": [
+        { "name": "Relative Humidity", "details": "Up to 95%, non-condensing"},
+        { "name": "Temperature (operating)", "details": "0°C to +49°C"},
+        { "name": "Dimensions", "details": "11.1 cm x 6.0 cm x 4.3 cm"},
+        { "name": "Batteries", "details": "Two 3 VDC Lithium batteries."},
+        { "name": "Battery Life", "details":  "Approximately 5 years under normal operating conditions with the recommended battery types"},
+        { "name": "Frequency", "details": "433.42 MHz"},
+        { "name": "Maximum RF Power", "details": "less than 10 mW"}
+      ]
+    }
+  ]
+}

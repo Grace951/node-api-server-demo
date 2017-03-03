@@ -1,0 +1,46 @@
+{
+  "_id": "seirb700vpd",
+  "images": [
+    "/api/img/products/seirb700vpd.jpg"
+  ],
+  "docs": [
+      {"desc": "SEIRB700VPD_Specification.pdf", "size": 224, "filetype": "pdf", "src":"/api/docs/SEIRB700VPD_Specification.pdf"}
+  ],
+  "name": "SEIRB700VPD",
+  "brand": "Secuzone",
+  "description": ["IR LED: 5X72PCS IR range: 60M",
+                  "2.8-12mm Manual Zoom Lens (2M Pixels) ",
+                  "Real WDR, DEFOR, OSD, 3D NR",
+                  "Water resistance: IP66 3-Axis cable built-in bracket ",
+                  "DC12V/AC24V double voltage ",
+                  "Size: 255W)x110(H)x105(D)mm ",
+                  "Weight: 1.7Kg"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SEIRB700VPD"},
+        { "name": "Brand", "details": "Secuzone"},
+        { "name": "Working Temperature", "details": "-10 degree - +50 degree"},
+        { "name": "Dimension (MM)", "details": "255(W) x 110(H) x 105(D) mm "},
+        { "name": "Weight (Kg)", "details": "1700g"}
+      ]
+    },
+    { "name": "Camera",
+      "members": [
+        { "name": "Image Sensor", "details": "1/3” Panasonic 2.1 Megapixel CMOS Sensor"},
+        { "name": "TV Lines", "details": "720TVL, Real WDR, DEFOG, OSD, 3D NR,"},
+        { "name": "S / N Ratio", "details": "More than 52db (AGC Off) "},
+        { "name": "IR Distance", "details": "60 meters (5 x 72PCS IR LED)"},
+        { "name": "Sync System", "details": "Internal"},
+        { "name": "Lens", "details": "2.8-12mm Manual Zoom Lens (2M Pixels)"},
+        { "name": "Min.illumination", "details": "0.001 Lux / F2.0"},
+        { "name": "OSD", "details": "Built - In"},
+        { "name": "Electronic Shutter", "details": "Auto: PAL 1/50-1/100,000 sec "},
+        { "name": "Scanning System ", "details": "PAL 625 Lines, 50 Field/Sec "},
+        { "name": "White Balance ", "details": "AUTO "},
+        { "name": "Voltage / Current", "details": "AC24V / DC12V 550mA"}
+      ]
+    }
+  ]
+}

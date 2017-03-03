@@ -1,17 +1,17 @@
 require('../database/database');
 var Products = require('../models/product');
 
-var CAT = require('../backup/NVR.json');
+var Product = require('../backup/products/ALARM.json');
 
-console.log("=================================", CAT.length);
-for (let i = 0; i < CAT.length; i++){
-	//console.log("--------------------------------------", CAT[i].id);
+console.log("=================================", Product.length);
+for (let i = 0; i < Product.length; i++){
+	//console.log("--------------------------------------", Product[i].id);
 	Products.ProductModel.update(
-		{_id: CAT[i]._id},
-		CAT[i]
+		{_id: Product[i]._id},
+		Product[i]
 		, { multi: true }
 		, function(err, numberAffected) {
 	     console.log(err, numberAffected);
 	});
 }
-//mongoimport -h ds019829.mlab.com:19829 -d react-redux-demo -c products -u grace -p 1qazXSW2 --file .\public\json\details\sd4.json
+

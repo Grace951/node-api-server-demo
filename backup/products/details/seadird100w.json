@@ -1,0 +1,43 @@
+{
+  "_id": "seadird100w",
+  "images": [
+    "/api/img/products/seadird100w.jpg"
+  ],
+  "docs": [
+      {"desc": "SEADIRD100W_Specification.pdf", "size": 274, "filetype": "pdf", "src":"/api/docs/SEADIRD100W_Specification.pdf"}
+  ],
+  "name": "SEADIRD100W",
+  "brand": "Secuzone",
+  "description": ["1/4” CMOS Sensor 1.0MP / 720P / 960H with IR Cut ",
+                  "Fixed 3.6mm Lens , IR up to 20 meters, Vandalproof ",
+                  "DWDR., 3D NR, Sense-up , OSD",
+                  "DC12V"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SEADIRD100W"},
+        { "name": "Brand", "details": "Secuzone"},
+        { "name": "Working Temperature", "details": "-10 degree - +50 degree"},
+        { "name": "Dimension (MM)", "details": "94 x 69 (H) mm"},
+        { "name": "Weight (Kg)", "details": "400g"}
+      ]
+    },
+    { "name": "Camera",
+      "members": [
+        { "name": "Image Sensor", "details": "OV9712S"},
+        { "name": "TV Lines", "details": "720P / 960H (1.0MP. 1200TVL)"},
+        { "name": "S / N Ratio", "details": "More than 50dB "},
+        { "name": "IR Distance", "details": "5 x 24PCS IR LED (up to 20 Meters)"},
+        { "name": "Sync System", "details": "Internal"},
+        { "name": "Lens", "details": "3.6mm ﬁxed lens "},
+        { "name": "Min.illumination", "details": "0.001 Lux / F2.0"},
+        { "name": "OSD", "details": "Built - In"},
+        { "name": "Electronic Shutter", "details": "Auto: PAL 1/25s-1/50,000 sec"},
+        { "name": "IR Cut Filter", "details": "Yes"},
+        { "name": "Auto IRIS", "details": "No"},
+        { "name": "Voltage / Current", "details": "DC12V 500mA"}
+      ]
+    }
+  ]
+}

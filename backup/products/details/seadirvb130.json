@@ -1,0 +1,44 @@
+{
+  "_id": "seadirvb130",
+  "images": [
+    "/api/img/products/seadirvb130.jpg"
+  ],
+  "docs": [
+      {"desc": "SEADIRVB130_Specification.pdf", "size": 348, "filetype": "pdf", "src":"/api/docs/SEADIRVB130_Specification.pdf"}
+  ],
+  "name": "SEADIRVB130",
+  "brand": "Secuzone",
+  "description": ["1.4 MP, 960P, 1500TVL",
+                  "2.8-12mm, Varifocal Lens",
+                  "OSD, IR Cut Filter",
+                  "IR Up to 60 Meters",
+                  "Weatherproof"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SEADIRVB130"},
+        { "name": "Brand", "details": "Secuzone"},
+        { "name": "Working Temperature", "details": "-10 degree - +50 degree"},
+        { "name": "Dimension (MM)", "details": "312 x 133 (H) x 101.5 (D) mm"},
+        { "name": "Weight (Kg)", "details": "1.8kg"}
+      ]
+    },
+    { "name": "Camera",
+      "members": [
+        { "name": "Image Sensor", "details": "IMX238"},
+        { "name": "TV Lines", "details": "960P / 960H (1.4MP. 1500TVL)"},
+        { "name": "S / N Ratio", "details": "More than 50dB "},
+        { "name": "IR Distance", "details": "5 x 72 PCS IR LED (up to 60 Meters)"},
+        { "name": "Sync System", "details": "Internal"},
+        { "name": "Lens", "details": "2.8-12 mm varifocal lens "},
+        { "name": "Min.illumination", "details": "0.001 Lux / F2.0"},
+        { "name": "OSD", "details": "Built - In"},
+        { "name": "Electronic Shutter", "details": "Auto: PAL 1/25s-1/50,000 sec"},
+        { "name": "IR Cut Filter", "details": "Yes"},
+        { "name": "Auto IRIS", "details": "No"},
+        { "name": "Voltage / Current", "details": "DC12V 1000mA"}
+      ]
+    }
+  ]
+}

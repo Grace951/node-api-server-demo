@@ -1,0 +1,96 @@
+{
+  "_id": "scv-3120p",
+  "images": [
+    "/api/img/products/scv-3120p.png"
+  ],
+  "docs": [
+      {"desc": "SCV-3120P-Specifications.pdf", "size": 409, "filetype": "pdf", "src":"/api/docs/SCV-3120P-Specifications.pdf"},
+      {"desc": "SCV-3120P_Manual.pdf", "size": 21611, "filetype": "pdf", "src":"/api/docs/SCV-3120P_Manual.pdf"}
+  ],
+  "name": "SCV-3120P",
+  "brand": "Samsung",
+  "description": ["High resolution of 600TV lines (Color), 700TV lines (B/W)   ",
+                  "Min. illumination 0.7Lux@F1.65 (Color), 0.07Lux (B/W)",
+                  "Powerful 12x zoom (3.69 ~ 44.32mm), digital 16x",
+                  "WDR, VPS, True Day / Night (ICR), Intelligent video, MD",
+                  "Two types of installation(flush or surface mount)",
+                  "Intelligent video analytics",
+                  "IP66, Coax : CCVC, RS-485"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SCV-3120P"},
+        { "name": "Brand", "details": "Samsung"},
+        { "name": "Dimensions(WxHxD) ", "details": " Ø160 x 134.5mm (Ø6.3” x 5.3”)"},
+        { "name": "Weight", "details": "1.28Kg (2.82 lb)"},
+        { "name": "Working Temperature", "details": "-10°C ~ +50°C (+14°F ~ +122°F) "},
+        { "name": "Working Humidity", "details": "20% ~ 90% RH"},
+        { "name": "ingress Protection", "details": "IP66 Grade"}
+      ]
+    },
+    { "name": "Video",
+      "members": [
+        { "name": "imaging device", "details": "1/4” Double scan CCD"},
+        { "name": "Total Pixels", "details": "795(H) x 596(V)"},
+        { "name": "Effective Pixels", "details": "752(H) x 582(V)"},
+        { "name": "Scanning System", "details": "2 : 1 Interlace"},
+        { "name": "Synchronization", "details": "Internal"},
+        { "name": "Frequency", "details": "H : 15.625KHz / V : 50Hz"},
+        { "name": "Horizontal Resolution", "details": "Color : 600TV lines, B/W : 700TV lines "},
+        { "name": "Min. Illumination", "details": "Color : 0.7Lux@F1.65 (50IRE), 0.001Lux (Sens-up, 512x)<br>B/W : 0.07Lux@F1.65 (50IRE), 0.0001Lux (Sens-up, 512x)"},
+        { "name": "S / N Ratio", "details": " 52dB (AGC off, Weight on)"},
+        { "name": "Video Output", "details": "CVBS : 1.0 Vpp / 75Ω composite"}
+      ]
+    },
+    { "name": "Lens",
+      "members": [
+        { "name": "Focal Length (Zoom Ratio) ", "details": "3.69 ~ 44.32mm (12x)"},
+        { "name": "Max. Aperture Ratio", "details": "1 : 1.65(Wide) ~ 3.7(Tele)"},
+        { "name": "Min. object Distance", "details": "1m (3.28ft)"},
+        { "name": "Angular Field of View", "details": "H : 54.44°(Wide) ~ 4.64°(Tele) / V : 41.42°(Wide) ~ 3.52°(Tele)"},
+        { "name": "Zoom Movement Speed", "details": " 1.9sec (Wide to tele)"}
+      ]
+    },
+    { "name": "PAN / TILT / ROTATE",
+      "members": [
+        { "name": "Pan Range", "details": "0° ~ 355°"},
+        { "name": "Tilt Range", "details": "0° ~ 90°"},
+        { "name": "Rotate Range", "details": " 0° ~ 355°"}
+      ]
+    },
+    { "name": "Operational",
+      "members": [
+        { "name": "On Screen Display", "details": "English, French, German, Spanish, Italian, Chinese, Russian, Polish, Czech, Romanian, Serbian, Swedish, Danish, Turkish, Portuguese"},
+        { "name": "Camera Title", "details": "Off / On (Displayed 54 characters) "},
+        { "name": "Day & Night", "details": "Day / Night / Auto / Ext"},
+        { "name": "Backlight Compensation", "details": "Off / On (Area setting)"},
+        { "name": "Wide Dynamic Range ", "details": "160x"},
+        { "name": "Contrast Enhancement ", "details": "XDR (Off / Low / Mid / High)"},
+        { "name": "Digital Noise Reduction ", "details": "Adaptive 3D+2D (Off / Low / Mid / High / User)"},
+        { "name": "Digital Image Stabilization", "details": "Off / On"},
+        { "name": "Motion Detection", "details": "Off / Tracking / Detection"},
+        { "name": "Privacy Mask", "details": "Off / On (12 programmable zones with polygonal masking)"},
+        { "name": "Sens-up (Frame integration)", "details": "2x ~ 512x"},
+        { "name": "Gain Control", "details": "Off / On"},
+        { "name": "White Balance", "details": "ATW1 / ATW2 / AWC (Manual) / 3200K / 5600K "},
+        { "name": "Electronic Shutter Speed", "details": "1/50 ~ 1/120,000sec"},
+        { "name": "Digial Zoom", "details": "Off / On (1x ~ 16x) "},
+        { "name": "Reverse", "details": "Off / H / V / H/V"},
+        { "name": "Profile", "details": "Standard / ITS / Backlight / Day & Night / Gaming / Custom "},
+        { "name": "VPS", "details": "Off / On"},
+        { "name": "Intelligent Video Analytics", "details": " Fixed / Moved"},
+        { "name": "PIP", "details": " Off / On"},
+        { "name": "Alarm", "details": " 1 Out"},
+        { "name": "Communication", "details": "Coaxial control (SPC-300 compatible), RS-485"},
+        { "name": "Protocol", "details": "Coax : CCVC <br>RS-485 : Samsung-T/E, Pelco-D/P, Panasonic, Bosch, Honeywell, Vicon "}
+      ]
+    },
+    { "name": "Electrical",
+      "members": [
+        { "name": "Input Voltage / Current", "details": "Dual (24V AC & 12V DC ±10%)"},
+        { "name": "Power Consumption", "details": "Max. 6W "}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "_id": "scd-2080rp",
+  "images": [
+    "/api/img/products/scd-2080rp.png",
+    "/api/img/products/scd-2080rp-1.png"
+  ],
+  "docs": [
+      {"desc": "SCD-2080RP_Specifications.pdf", "size": 189, "filetype": "pdf", "src":"/api/docs/SCD-2080RP_Specifications.pdf"}
+  ],
+  "name": "SCD-2080RP",
+  "brand": "Samsung",
+  "description": ["1/3” Super HAD color CCD",
+                  "Built-in W-V, the latest generation of Winner DSP engine",
+                  "Built-in 3.6X (2.8 ~ 10mm) varifocal lens with auto iris",
+                  "High resolution of 600TV lines (Color), 700TV lines (B/W)",
+                  "Min. illumination 0Lux (IR LED on), IR distance 20m  ",
+                  "True Day & Night (ICR), MD, SSNR III",
+                  "Coax : Pelco-C (Coaxitron), 12V DC"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SCD-2080RP"},
+        { "name": "Brand", "details": "Samsung"},
+        { "name": "Color / Material", "details": "Ivory / Plastic (Dome cover : Smoked)"},
+        { "name": "Dimensions(WxHxD) ", "details": "Ø115.8 x 92.7mm (Ø4.56” x 3.65”)"},
+        { "name": "Weight", "details": "310g (0.68 lb)"},
+        { "name": "Working Temperature", "details": "-10°C ~ +55°C (+14°F ~ +131°F)"},
+        { "name": "Working Humidity", "details": "Less than 90% RH"}
+      ]
+    },
+    { "name": "Video",
+      "members": [
+        { "name": "imaging device", "details": "1/3” Super HAD CCD II"},
+        { "name": "Total Pixels", "details": "795(H) x 596(V)"},
+        { "name": "Effective Pixels", "details": "752(H) x 582(V)"},
+        { "name": "Scanning System", "details": "2 : 1 Interlace"},
+        { "name": "Synchronization", "details": "Internal"},
+        { "name": "Frequency", "details": "H : 15.625KHz / V : 50Hz"},
+        { "name": "Horizontal Resolution", "details": "Color : 600TV lines, B/W : 700TV lines"},
+        { "name": "Min. Illumination", "details": "Color : 0.15Lux@F1.2 (50IRE), 0.0003Lux (Sens-up, 512x)<br>B/W : 0Lux (IR LED on)"},
+        { "name": "S / N Ratio", "details": "52dB (AGC off, Weight on)"},
+        { "name": "Video Output", "details": "CVBS : 1.0 Vpp / 75Ω composite"}
+      ]
+    },
+    { "name": "Lens",
+      "members": [
+        { "name": "Focal Length (Zoom Ratio)", "details": "2.8 ~ 10mm (3.6x) varifocal"},
+        { "name": "Max. Aperture Ratio", "details": "1 : 1.2(Wide) ~ 2.8(Tele)"},
+        { "name": "Angular Field of View", "details": "H : 94.4˚(Wide) ~ 28˚(Tele) / V : 69.2˚(Wide) ~ 21˚(Tele)"},
+        { "name": "Min. Object Distance", "details": "0.2m (0.66ft)"},
+        { "name": "Focus Control", "details": "Simple focus (Motorized V/F) / Manual"},
+        { "name": "Lens Type", "details": "DC auto iris"},
+        { "name": "Mount Type", "details": "Board type"}
+      ]
+    },
+    { "name": "PAN / TILT / ROTATE",
+      "members": [
+        { "name": "Pan Range", "details": "0° ~ 352°"},
+        { "name": "Tilt Range", "details": "0° ~ 73°"},
+        { "name": "Rotate Range", "details": "0° ~ 348°"}
+      ]
+    },
+    { "name": "Operational",
+      "members": [
+        { "name": "On Screen Display", "details": "English, French, German, Spanish, Italian, Chinese, Russian, Polish, Czech, Romanian, Serbian, Swedish, Danish, Turkish, Portuguese"},
+        { "name": "Camera Title", "details": "Off / On (Displayed 15 characters)"},
+        { "name": "Day & Night", "details": "Auto (ICR) / External / Color / B/W"},
+        { "name": "Backlight Compensation", "details": "Off / BLC / HLC"},
+        { "name": "Contrast Enhancement", "details": "SSDR (Off / On)"},
+        { "name": "Digital Noise Reduction", "details": "SSNR III  (Off / On)"},
+        { "name": "Digital Image Stabilization", "details": "Off / On"},
+        { "name": "Motion Detection", "details": "Off / On (8 programmable zones)"},
+        { "name": "Privacy Mask", "details": "Off / On (12 programmable zones)"},
+        { "name": "Sens-up (Frame integration)", "details": "2x ~ 512x"},
+        { "name": "Gain Control", "details": "Off / Low / High "},
+        { "name": "White Balance", "details": "ATW / Outdoor / Indoor / Manual / AWC (1,700°K ~ 11,000°K)"},
+        { "name": "Electronic Shutter Speed", "details": "1/50 ~ 1/120,000sec"},
+        { "name": "Reverse", "details":"H-Rev / V-Rev "},
+        { "name": "Digial Zoom", "details": "Off / On (1x ~ 16x) "},
+        { "name": "Communication", "details": "Coaxial control (SPC-300 compatible)"},
+        { "name": "Protocol", "details": "Coax : Pelco-C (Coaxitron)"},
+        { "name": "IR Distance", "details": "20m (65.62ft) (IR LED 12ea)"}
+      ]
+    },
+    { "name": "Electrical",
+      "members": [
+        { "name": "Input Voltage / Current", "details": "12V DC ±10%"},
+        { "name": "Power Consumption", "details": "Max. 3.5W "}
+      ]
+    }
+  ]
+}

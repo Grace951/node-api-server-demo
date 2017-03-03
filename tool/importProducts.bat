@@ -10,6 +10,4 @@ set importdb="C:\Program Files\MongoDB\Server\3.4\bin\mongoimport.exe"
 
 :: Access the values
 setlocal enableDelayedExpansion
-for /l %%N in (1 1 %file.count%) do %importdb% -h ds019829.mlab.com:19829 -d react-redux-demo -c products -u grace -p 1qazXSW2 --file !file.%%N!
-
-REM mongoimport -h ds019829.mlab.com:19829 -d react-redux-demo -c products -u grace -p 1qazXSW2 --file D:\ChingChing\dev\node-api-server-demo\public\json\details\4ch-ir-bullet-kit.json
+for /l %%N in (1 1 %file.count%) do %importdb% -h <host>:<port> -d <db> -c products -u <user> -p <password> --file !file.%%N!

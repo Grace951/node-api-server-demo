@@ -1,0 +1,85 @@
+{
+  "_id": "sco-2120rp",
+  "images": [
+    "/api/img/products/sco-2120rp.png"
+  ],
+  "docs": [
+      {"desc": "SCO-2120R.pdf", "size": 301, "filetype": "pdf", "src":"/api/docs/SCO-2120R.pdf"},
+      {"desc": "SCO-2120_Manual.pdf", "size": 9516, "filetype": "pdf", "src":"/api/docs/SCO-2120_Manual.pdf"}
+  ],
+  "name": "SCO-2120RP",
+  "brand": "Samsung",
+  "description": ["12x optical zoom (3.9 ~ 46mm)",
+                  "Equipped with high performance Adaptive Illumination IR LEDs",
+                  "70m monitoring range",
+                  "Dustproof & waterproof integrated camera housing rated to IP66"
+                  ],
+  "spec": [
+    { "name": "General",
+      "members": [
+        { "name": "Model", "details": "SCO-2120RP"},
+        { "name": "Brand", "details": "Samsung"},
+        { "name": "Ingress Protection", "details": "IP66"},
+        { "name": "IR Distance", "details": "70m (230ft)"},
+        { "name": "IR LED", "details": "32EA"},
+        { "name": "Dimensions(WxHxD) ", "details": "85.9 x 85.4 x 314.1mm (3.38” x 3.36” x 12.37”)"},
+        { "name": "Weight", "details": "1.2Kg (2.65 lb)"},
+        { "name": "Working Temperature", "details": "-10°C ~ +50°C (+14°F ~ +122°F)"},
+        { "name": "Working Humidity", "details": "20% ~ 80% RH"},
+        { "name": "Storage Temperature", "details": "-20°C ~ +60°C (-4°F ~ +140°F)"},
+        { "name": "Storage Humidity", "details": "20% ~ 95% RH"}
+      ]
+    },
+    { "name": "Video",
+      "members": [
+        { "name": "imaging device", "details": "1/4” Super HAD CCD"},
+        { "name": "Total Pixels", "details": "795(H) x 596(V)"},
+        { "name": "Effective Pixels", "details": "752(H) x 582(V)"},
+        { "name": "Scanning System", "details": "2 : 1 Interlace"},
+        { "name": "Synchronization", "details": "Internal / Line lock"},
+        { "name": "Frequency", "details": "H : 15.625KHz / V : 50Hz"},
+        { "name": "Horizontal Resolution", "details": "Color : 600TV lines / B/W : 700TV lines "},
+        { "name": "Min. Illumination", "details": "Color : 0.2Lux (50IRE@F1.67), 0.0004Lux (Sens-up, 512X) <br> B/W : 0Lux (LED on)"},
+        { "name": "S / N Ratio", "details": " 52dB (AGC off, Weight on)"},
+        { "name": "Video Output", "details": "CVBS : 1.0 Vpp / 75Ω composite"}
+      ]
+    },
+    { "name": "Lens",
+      "members": [
+        { "name": "Zoom Ratio", "details": "12x (Optical), 16x (Digital)"},
+        { "name": "Focal Length", "details": "3.9 ~ 46mm (F1.67 ~ 1.88)"},
+        { "name": "Max. Aperture Ratio", "details": "1 : 1.67(Wide) ~ 1.88(Tel"},
+        { "name": "Angular Field of View", "details": "H : 51.54°(Wide) ~ 4.5°(Tele) / V : 39.24°(Wide) ~ 3.38°(Tele)"},
+        { "name": "Min. object Distance", "details": "1.8m (5.91ft)"},
+        { "name": "Focus", "details": "Auto / Manual / One push "},
+        { "name": "Iris Control", "details": "Auto / Manual "}
+      ]
+    },
+    { "name": "Operational",
+      "members": [
+        { "name": "On Screen Display", "details": "English, French, German, Spanish, Italian, Chinese, Russian, Polish, Czech, Romanian, Serbian, Swedish, Danish, Turkish, Portuguese"},
+        { "name": "Camera Title", "details": "Off / On (Displayed 15 characters) "},
+        { "name": "Day & Night", "details": "Auto (ICR) / Color / B/W"},
+        { "name": "SSDR", "details": "On / Off (Level adjustable)"},
+        { "name": "Backlight Compensation", "details": "BLC / HLC / Off"},
+        { "name": "Digital Image Stabilization", "details": "Off / On"},
+        { "name": "Motion Detection", "details": "Off / On (8 programmable zones)"},
+        { "name": "Privacy Mask", "details": "Off / On (12 programmable zones)"},
+        { "name": "Sens-up (Frame integration)", "details": "Auto / Off (Selectable limit ~ 512X)"},
+        { "name": "Gain Control", "details": "Low / High / Off"},
+        { "name": "White Balance", "details": "AWC, Manual, Indoor, Outdoor, ATW (1,700°K ~ 11,000°K)"},
+        { "name": "Electronic Shutter Speed", "details": "Fixed (1/50 / Flickerless) "},
+        { "name": "Digial Zoom", "details": "Off / On (1x ~ 16x) "},
+        { "name": "Flip / Mirror", "details": "On / Off"},
+        { "name": "Communication", "details": "RS-485, Coaxial control"},
+        { "name": "2D+3D Noise Filter (SSNR III )", "details": "On / Off"}
+      ]
+    },
+    { "name": "Electrical",
+      "members": [
+        { "name": "Input Voltage / Current", "details": "Dual (12V DC / 24V AC)"},
+        { "name": "Power Consumption", "details": "24V AC 6.8W / 12V DC 6.5W 550mA (LED on)"}
+      ]
+    }
+  ]
+}

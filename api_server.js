@@ -9,12 +9,14 @@ var helmet = require('helmet');
 const cors = require('cors');
 
 require('./database/database');
-
+const oneDay = 86400000;
 var apiPort = process.env.PORT || 3003;
 var app = express();
-
 app.use(helmet());
-app.use(helmet.noCache());
+
+//app.use(helmet.noCache());
+// disable cache manually, because images need to cache
+
 app.use(helmet.contentSecurityPolicy({
 	directives: {
 		defaultSrc: ["'none'"],
@@ -34,7 +36,13 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
-app.use(cors());
+
+var corsOptions = {
+  origin: "https://react-redux-demo-chingching.herokuapp.com",
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
+};
+app.use(cors(corsOptions));
+
 // app.use(function (req, res, next) {
 
 //     // Website you wish to allow to connect
@@ -54,7 +62,7 @@ app.use(cors());
 //     next();
 // });
 
-app.use( express.static(path.resolve(__dirname, './public/')));
+app.use( express.static(path.resolve(__dirname, './public/'), { maxAge: oneDay * 7 }));
 route(app);
 
 app.listen(apiPort, (err) => {

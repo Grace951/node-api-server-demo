@@ -38,7 +38,7 @@ exports.signup = function (req,res, next){
 		if (!result.isEmpty()) {
 			throw new ResError({status: 400, errMsg: result.array().reduce((prev, next) => prev + `. ${next.msg}`, "")
 			});
-	}
+		}
 		return User.findOne({email}, {password: false});
 	})
 	.then((user)=>{

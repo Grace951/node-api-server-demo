@@ -17,18 +17,18 @@ app.use(helmet());
 //app.use(helmet.noCache());
 // disable cache manually, because images need to cache
 
-app.use(helmet.contentSecurityPolicy({
-	directives: {
-		defaultSrc: ["'none'"],
-		scriptSrc: ["'self'", "'unsafe-inline'"],
-		styleSrc: ["'self'", "'unsafe-inline'"],
-		imgSrc: ["'self'", "data:"],
-		fontSrc: ["'self'"],
-		frameSrc: ["'self'", "https://accounts.google.com/","https://staticxx.facebook.com/"],
-		connectSrc: ["'self'", "https://react-redux-demo-chingching.herokuapp.com/"],
-		reportUri: "/cspviolation"
-	},
-}));
+// app.use(helmet.contentSecurityPolicy({
+// 	directives: {
+// 		defaultSrc: ["'none'"],
+// 		scriptSrc: ["'self'", "'unsafe-inline'"],
+// 		styleSrc: ["'self'", "'unsafe-inline'"],
+// 		imgSrc: ["'self'", "data:"],
+// 		fontSrc: ["'self'"],
+// 		frameSrc: ["'self'", "https://accounts.google.com/","https://staticxx.facebook.com/"],
+// 		connectSrc: ["'self'", "https://react-redux-demo-chingching.herokuapp.com/"],
+// 		reportUri: "/cspviolation"
+// 	},
+// }));
 app.use(helmet.referrerPolicy({ policy: 'no-referrer' }));
 app.use(expressValidator());
 app.use(bodyParser.urlencoded({
@@ -38,7 +38,7 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 
 var corsOptions = {
-  origin: "https://react-redux-demo-chingching.herokuapp.com",
+  origin: "*",
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
 };
 app.use(cors(corsOptions));

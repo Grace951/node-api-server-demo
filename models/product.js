@@ -88,6 +88,9 @@ function getBriefObject (id){
     if (category.cat === 'All')
         delete category.cat;
     
+    let remote = (id === 'DVR' || id === 'NVR')?false:true;
+    let backup = (id === 'DVR' || id === 'NVR')?false:true;
+    
     return ProductModel
         .find(category,{
             docs: false,
@@ -96,6 +99,8 @@ function getBriefObject (id){
             // _id: false,
             member: false,
             optional: false,
+            // remote,
+            // backup
         })
         .sort({brand: 'asc'})        
         // .populate('cat', 'categoryName -_id')

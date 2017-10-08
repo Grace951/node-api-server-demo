@@ -4,7 +4,7 @@ const mime = require('mime');
 const crypto = require('crypto');
 const fs = require('fs');
 const ResError =  require('./util').ResError;
-
+let Products = require('../models/product');
 const multer  = require( 'multer');
 
 exports.imageStorage =   multer.diskStorage({
